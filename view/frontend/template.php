@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<!--    FACEBOOK    -->
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
+
 <head>
                 <meta charset="utf-8" />
 
@@ -28,11 +33,7 @@
                 <link href="public/cs/style.css" rel="stylesheet" /> 
             </head>
 
-    <!--    FACEBOOK    -->
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
-
+    
     <body>
         <div class="alignement">
 
