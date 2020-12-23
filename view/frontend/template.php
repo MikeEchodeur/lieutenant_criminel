@@ -33,9 +33,8 @@
         
     <!--    FACEBOOK    -->
 
-<div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
-        
+<div id="fb-root"><script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script></div>
+
         <div class="alignement">
  
 
