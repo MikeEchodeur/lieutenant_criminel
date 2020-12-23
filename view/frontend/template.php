@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+    <!--    FACEBOOK    -->
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
+
+    <body>
+        <div class="alignement">
+            <head>
                 <meta charset="utf-8" />
 
                 <!-- ############# FAVICON ############ -->
@@ -21,22 +29,12 @@
                 <meta name="msapplication-TileColor" content="#ffffff">
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
                 <meta name="theme-color" content="#ffffff">
-                <link rel="shortcut icon" type="image/x-icon" href="public/image/favicon.ico">
-                 <link rel="icon" href='/../lieutenant_criminel/public/image/favicon/favicon-32x32.png' type="image/icon type">
+                <link rel="shortcut icon" type="image/x-icon" href="public/image/favicon.ico" />
                 <!-- ###################################### -->
                 
                 <title><?= $title ?></title>
                 <link href="public/cs/style.css" rel="stylesheet" /> 
             </head>
-
-    <body>
-        
-    <!--    FACEBOOK    -->
-
-<div id="fb-root"><script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script></div>
-
-        <div class="alignement">
- 
 
             <header class="banniere">
                 <a href="home.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
