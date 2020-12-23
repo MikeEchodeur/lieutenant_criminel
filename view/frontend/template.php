@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-    <!--    FACEBOOK    -->
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
-
-    <body>
-        <div class="alignement">
-            <head>
+<head>
                 <meta charset="utf-8" />
 
                 <!-- ############# FAVICON ############ -->
@@ -36,6 +29,10 @@
                 <link href="public/cs/style.css" rel="stylesheet" /> 
             </head>
 
+
+    <body>
+        <div class="alignement">
+            
             <header class="banniere">
                 <a href="home.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
             </header>
@@ -61,15 +58,7 @@
                         <?= $content ?>
                     </section>
 
-                    <section class="fb-page">
-                        <a href="https://www.facebook.com/moitiedemilouf/">PAGE OFFICIELLE</a><br />
-                        <br />
-                        <div class="fb-page" data-href="https://www.facebook.com/moitiedemilouf" data-tabs="timeline" data-width="250" data-height="750" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                            <blockquote cite="https://www.facebook.com/moitiedemilouf" class="fb-xfbml-parse-ignore">
-                                <a href="https://www.facebook.com/moitiedemilouf">MIKE ECHO</a>
-                            </blockquote>
-                        </div>
-                    </section>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmoitiedemilouf&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
 
 
