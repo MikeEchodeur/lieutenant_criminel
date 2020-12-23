@@ -37,7 +37,7 @@
             </head>
 
             <header class="banniere">
-                <a href="home.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
+                <a href="index.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
             </header>
 
             <div class="position-under_banniere">
