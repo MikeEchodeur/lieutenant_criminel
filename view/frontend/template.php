@@ -22,8 +22,7 @@
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
                 <meta name="theme-color" content="#ffffff">
                 <link rel="shortcut icon" type="image/x-icon" href="public/image/favicon.ico" />
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
-
+                
                 <!-- ###################################### -->
                 
                 <title><?= $title ?></title>
@@ -32,7 +31,7 @@
 
     <!--    FACEBOOK    -->
 
-<div id="fb-root"></div>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBeuzevillette-120901391281872%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
     <body>
         <div class="alignement">
