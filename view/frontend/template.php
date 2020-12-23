@@ -22,8 +22,6 @@
                 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
                 <meta name="theme-color" content="#ffffff">
                 <link rel="shortcut icon" type="image/x-icon" href="public/image/favicon.ico" />
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
-
                 <!-- ###################################### -->
                 
                 <title><?= $title ?></title>
@@ -33,6 +31,7 @@
     <!--    FACEBOOK    -->
 
 <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
 
     <body>
         <div class="alignement">
