@@ -44,17 +44,17 @@
 
             <div class="position-under_banniere">
                	<nav>
-            		<a href="home.php">Accueil</a></br>
-                    <a href="home.php?action=rules">Règles d'engagement</a><br />
-                    <a href="home.php?action=contact">Contact</a><br />
+            		<a href="index.php">Accueil</a></br>
+                    <a href="index.php?action=rules">Règles d'engagement</a><br />
+                    <a href="index.php?action=contact">Contact</a><br />
                     <?php 
                     if ($_SESSION == NULL)
                     {?>
-                        <a href="home.php?action=connexion">Connexion</a>
+                        <a href="index.php?action=connexion">Connexion</a>
                     <?php }
                     else
                     {?>
-                        <a href="home.php?action=disconnect">Déconnexion</a>
+                        <a href="index.php?action=disconnect">Déconnexion</a>
                     <?php } ?>
                 </nav>
                     

@@ -30,7 +30,7 @@ while ($data = $req->fetch())
 	if (isset($_SESSION['username']))
 	{
 	?>
-	<form method="post" action="home.php?article_id=<?= $data['id']?>">
+	<form method="post" action="index.php?article_id=<?= $data['id']?>">
 		<p>
 			<label for="add_comment">Ajoutez votre commentaire :</label><br />
 			<textarea name="add_comment" id="add_comment"></textarea>

@@ -11,7 +11,7 @@
 	    </p>
 	</form>
 
-	<a href="home.php?action=inscription">Inscription</a>
+	<a href="index.php?action=inscription">Inscription</a>
 </div>
 
 <?php $content = ob_get_clean(); ?>

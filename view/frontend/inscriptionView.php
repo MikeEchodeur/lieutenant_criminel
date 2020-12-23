@@ -3,7 +3,7 @@
 <?php ob_start(); ?>
 
 <p>Inscrivez-vous :</p>
-	<form action="home.php?action=inscription" method="post">
+	<form action="index.php?action=inscription" method="post">
     <p>
 	    <label for="username"> Pseudo</label> : <input type="text" name="username" id="username" required/> </br>
 	    <label for="password"> Mot de passe</label> : <input type="password" name="password" id="password" required/> </br>

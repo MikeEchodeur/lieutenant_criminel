@@ -11,7 +11,7 @@
 		while ($data = $req->fetch())
 		{ ?>
 				<article class="news">
-					<a href="home.php?article_id=<?= $data['id']?>">
+					<a href="index.php?article_id=<?= $data['id']?>">
 						<p>
 							<img src="<?= $data['image'];?>" width="340" height="340"/>
 						</p>
@@ -25,7 +25,7 @@
 						
 
 						<p>
-							<?= strip_tags(substr($data['contenu'], 0, 400)). '...'; ?><a href="home.php?article_id=<?= $data['id']?>" class="suite">Lire la suite</a>
+							<?= strip_tags(substr($data['contenu'], 0, 400)). '...'; ?><a href="index.php?article_id=<?= $data['id']?>" class="suite">Lire la suite</a>
 							<br />
 						</p>
 					</div>

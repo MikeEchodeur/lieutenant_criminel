@@ -43,7 +43,7 @@
                 <a href="admin.php"><img src="../../public/image/Mike-echologo.png" alt="Banniere du site" width="150" height="150" /></a>
             </header>
             
-            <a href="../../home.php">
+            <a href="../../index.php">
                 <div class="backToWebSite">Retour au site</div>
             </a></br>
            
