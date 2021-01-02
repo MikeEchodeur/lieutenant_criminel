@@ -14,17 +14,17 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%
-}*/
+}
 
 .banniere
 {
 	position: fixed;
 	z-index: 0;
-}
+}*/
 
 /* ############ NAVIGATION ############ */
 
-div[class="position-under_banniere"]
+/*div[class="main_block"]
 {
 	display: flex;
 	flex-direction: column;
@@ -34,7 +34,7 @@ div[class="position-under_banniere"]
 	background-color: #FBFFE3;
 	position: relative;
 	top: 290px;
-}
+}*/
 div[class="body&FB"]
 {
 	display: flex;
@@ -43,7 +43,7 @@ div[class="body&FB"]
 	justify-content: space-between;
 }
 
-nav a
+/*nav a
 {
 	text-decoration: none;
 	padding: 20px;
@@ -55,7 +55,7 @@ nav a:hover
 	background-color: #F2F5E1;
 	color: #827528;
 }
-
+/*
 nav
 {
 	width: 100%;
@@ -70,7 +70,7 @@ nav
 	top: 0px;
 	z-index: 100;
 
-}
+}*/
 
 /* TEXTE */
 
@@ -218,7 +218,7 @@ div[class="contact_head"]
 	text-align: center;
 }
 
-/* #################### PIED DE PAGE #################*/
+/* #################### PIED DE PAGE #################
 
 footer
 {
@@ -229,4 +229,4 @@ footer
 	background-color: #303030;
 	height: 175px;
 	color: white;
-}
+}*/

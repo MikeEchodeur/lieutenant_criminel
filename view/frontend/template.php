@@ -7,7 +7,7 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v8.0" nonce="56uyCiBA"></script>
 
     <body>
-        <div class="alignement">
+        <!-- A supprimer sass ? <div class="alignement">-->
             <head>
                 <meta charset="utf-8" />
 
@@ -40,7 +40,7 @@
                 <a href="index.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
             </header>
 
-            <div class="position-under_banniere">
+            <div class="main_block">
                	<nav>
             		<a href="index.php">Accueil</a></br>
                     <a href="index.php?action=rules">Règles d'engagement</a><br />
@@ -87,7 +87,7 @@
                 </footer>
             </div>
             
-        </div>
+        <!--</div>-->
 
     </body>
 </html>
