@@ -33,7 +33,7 @@
                 <!-- ###################################### -->
                 
                 <title><?= $title ?></title>
-                <link href="public/cs/style.css" rel="stylesheet" /> 
+                <link href="public/css/style.css" rel="stylesheet" /> 
             </head>
 
             <header class="banniere">
