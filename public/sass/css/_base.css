@@ -21,3 +21,10 @@ body {
   background-color: #FBFFE3;
   position: relative;
   top: 290px; }
+
+.bodyAndFb {
+  display: flex;
+  flex-direction: row;
+  width: 1150px;
+  min-height: 900px;
+  justify-content: space-between; }

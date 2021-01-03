@@ -56,7 +56,7 @@
                     <?php } ?>
                 </nav>
                     
-                <div class="body&FB">
+                <div class="bodyAndFb">
                     <section class="page">
                         <?= $content ?>
                     </section>
