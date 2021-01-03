@@ -29,7 +29,6 @@
             </head>
 
     <body>
-        <div class="alignement">
             
             <header class="banniere">
                 <a href="index.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
