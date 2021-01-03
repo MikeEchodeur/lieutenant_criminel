@@ -33,7 +33,7 @@
                 <!-- ###################################### -->
                 
                 <title><?= $title ?></title>
-                <link href="public/css/style.css" rel="stylesheet" /> 
+                <link href="public/css/style.min.css" rel="stylesheet" /> 
             </head>
 
             <header class="banniere">
@@ -57,7 +57,7 @@
                 </nav>
                     
                 <div class="bodyAndFb">
-                    <section class="page">
+                    <section class="select_block">
                         <?= $content ?>
                     </section>
 

@@ -1,0 +1,37 @@
+.ensembleArticles {
+  display: flex;
+  flex-wrap: wrap; }
+
+.news {
+  margin: 20px;
+  width: 200px;
+  background-color: gray;
+  text-align: center;
+  border: 1px black solid;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px black; }
+  .news:hover {
+    transition: box-shadow 0.1s;
+    box-shadow: 0px 0px 0px black; }
+  .news img {
+    border-radius: 10px;
+    border: 1px black solid;
+    margin-top: 5px; }
+  .news h3 {
+    color: white; }
+  .news p {
+    color: white; }
+
+.newArticle {
+  border: 1px black solid;
+  text-align: center;
+  align-self: center;
+  margin-top: 5px;
+  padding: 20px;
+  width: 210px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  background-color: #FFCD38; }
+  .newArticle:hover {
+    transition: box-shadow 0.1s;
+    box-shadow: 0px 0px 0px black; }

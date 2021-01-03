@@ -21,3 +21,9 @@ h2 em {
 section a {
   text-decoration: none;
   z-index: 2; }
+
+.select_block p {
+  line-height: 27px;
+  width: 750px;
+  font-size: 17px;
+  color: #6D6D6D; }
