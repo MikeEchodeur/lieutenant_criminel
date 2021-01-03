@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
                 <meta charset="utf-8" />
 
@@ -36,7 +35,7 @@
                 <a href="index.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
             </header>
 
-            <div class="position-under_banniere">
+            <div class="main_block">
                	<nav>
             		<a href="index.php">Accueil</a></br>
                     <a href="index.php?action=rules">Règles d'engagement</a><br />
@@ -52,8 +51,8 @@
                     <?php } ?>
                 </nav>
                     
-                <div class="body&FB">
-                    <section class="page">
+                <div class="bodyAndFb">
+                    <section class="select_block">
                         <?= $content ?>
                     </section>
 
@@ -75,7 +74,6 @@
                 </footer>
             </div>
             
-        </div>
 
     </body>
 </html>

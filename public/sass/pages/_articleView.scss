@@ -1,0 +1,22 @@
+.focus_article
+{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	img
+	{
+		align-self: center;
+		max-width: 100%;
+		max-height: 500px;
+	}
+	blockquote
+	{
+		margin-left: 0;
+		margin-right: 0;
+		border-left: 10px #9BBE4B solid;
+		background-color: #F9FFDB;
+		padding-bottom: 5px;
+		padding-left: 25px;
+	}
+}

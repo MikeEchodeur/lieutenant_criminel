@@ -10,7 +10,7 @@
 $req = getArticle();
 while ($data = $req->fetch())
 { ?>
-	<div class="new">
+	<div class="focus_article">
 		<h2>
 			<?= $data['titre']; ?><br />
 			<em>le <?= $data['date_creation_fr']; ?></em>

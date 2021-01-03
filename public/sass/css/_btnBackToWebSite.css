@@ -1,0 +1,20 @@
+.backToWebSite {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: 0%;
+  top: 50%;
+  height: 100px;
+  width: 90px;
+  border: 1px black solid;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: #FBFFE3;
+  transition: all 2s; }
+  .backToWebSite:hover {
+    display: flex;
+    justify-content: center;
+    transition: padding 2s;
+    padding-right: 100px;
+    padding-left: 100px;
+    width: auto; }

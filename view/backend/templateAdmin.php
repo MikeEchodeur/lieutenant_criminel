@@ -26,10 +26,10 @@
             <!-- ###################################### -->
             
             <title><?= $title ?></title>
-            <link href="../../public/cs/adminStyle.css" rel="stylesheet" />
+            <link href="../../public/css/adminStyle.min.css" rel="stylesheet" />
         </head>
 
-        <div class="dispoHead">
+        <div class="dispoHeader">
             <header>
         		<a href="admin.php"><img src="../../public/image/Mike-echologo.png" alt="Banniere du site" width="150" height="150" /></a>
             </header>
