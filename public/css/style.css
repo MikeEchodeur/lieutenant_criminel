@@ -51,7 +51,8 @@ h2 em {
 
 section a {
   text-decoration: none;
-  z-index: 2; }
+  z-index: 2;
+  color: #474843; }
 
 .select_block p {
   line-height: 27px;
