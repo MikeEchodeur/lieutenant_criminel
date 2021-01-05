@@ -1,9 +1,8 @@
 body{
 	margin: auto;
-	display: flex;
-	flex-direction: column;
+	@include flex_column;
 	align-items: center;
-	background-color: #FBFFE3;
+	background-color: $site_bg_color;
 	width: 100%;
 	min-width: 1024px;
 	height: auto;
@@ -16,12 +15,11 @@ body{
 }
 
 .main_block{
-	display: flex;
-	flex-direction: column;
+	@include flex_column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	background-color: #FBFFE3;
+	background-color: $site_bg_color;
 	position: relative;
 	top: 290px;
 }
