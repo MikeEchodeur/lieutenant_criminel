@@ -3,6 +3,9 @@ $title_color: #474843;
 h1, h3, h2
 {
 	color: $title_color;
+	@include mobile-only{
+		font-size: 20px;
+	}
 }
 
 h2 a

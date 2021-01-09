@@ -5,7 +5,6 @@ body {
   align-items: center;
   background-color: #FBFFE3;
   width: 100%;
-  min-width: 1024px;
   height: auto; }
 
 .banniere {
@@ -29,10 +28,14 @@ body {
   justify-content: space-between; }
   @media screen and (max-width: 599px) {
     .bodyAndFb {
-      flex-direction: column; } }
+      flex-direction: column;
+      width: 100%; } }
 
 h1, h3, h2 {
   color: #474843; }
+  @media screen and (max-width: 599px) {
+    h1, h3, h2 {
+      font-size: 20px; } }
 
 h2 a {
   color: #474843; }
@@ -112,7 +115,18 @@ footer {
     margin-right: 20px;
     margin-left: 20px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px black; }
+    box-shadow: 0px 0px 5px black;
+    width: 340px;
+    height: 340px; }
+  @media screen and (max-width: 599px) {
+    .article {
+      width: auto;
+      height: auto; }
+      .article__texte__resume {
+        display: none; }
+      .article img {
+        width: 150px;
+        height: 150px; } }
 
 .suite {
   color: #5F7528; }
