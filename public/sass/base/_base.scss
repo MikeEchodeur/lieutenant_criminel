@@ -3,7 +3,6 @@ body{
 	@include flex_column;
 	align-items: center;
 	background-color: $site_bg_color;
-	width: 100%;
 	height: auto;
 }
 
@@ -21,6 +20,9 @@ body{
 	background-color: $site_bg_color;
 	position: relative;
 	top: 290px;
+	@include mobile-only{
+		width: 100%;
+	}
 }
 .bodyAndFb{
 		display: flex;
