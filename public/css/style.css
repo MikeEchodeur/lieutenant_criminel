@@ -24,10 +24,12 @@ body {
 
 .bodyAndFb {
   display: flex;
-  flex-direction: row;
   width: 1150px;
   min-height: 900px;
   justify-content: space-between; }
+  @media screen and (max-width: 599px) {
+    .bodyAndFb {
+      flex-direction: column; } }
 
 h1, h3, h2 {
   color: #474843; }
