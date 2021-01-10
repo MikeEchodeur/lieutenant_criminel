@@ -25,7 +25,9 @@
     <!-- ###################################### -->
     
     <title><?= $title ?></title>
-    <link href="public/css/style.min.css" rel="stylesheet" /> 
+    <link href="public/css/style.min.css" rel="stylesheet" />
+    <link href="public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> <!-- Ajout des favicons --> 
 </head>
 
     <!--    FACEBOOK    -->
@@ -35,7 +37,7 @@
 
 	<!-- ############################ -->
 
-    <body>
+    <body id=" ">
  
             <header class="banniere">
                 <a href="index.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>

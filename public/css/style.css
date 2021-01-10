@@ -88,6 +88,9 @@ footer {
   background-color: #303030;
   height: 175px;
   color: white; }
+  footer .fas:hover{
+    font-size:  21px;
+}
 
 .block_news {
   display: flex;
