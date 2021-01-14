@@ -7,4 +7,16 @@ footer
 	background-color: #303030;
 	height: 175px;
 	color: white;
+	span{
+		color: white; 
+		
+	}
+	.fas:hover{
+    font-size:  21px;
+	}
+	#copyright a
+	{
+		text-decoration: underline;
+		color: white;
+	}
 }

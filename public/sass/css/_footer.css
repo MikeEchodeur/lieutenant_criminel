@@ -6,3 +6,10 @@ footer {
   background-color: #303030;
   height: 175px;
   color: white; }
+  footer span {
+    color: white; }
+  footer .fas:hover {
+    font-size: 21px; }
+  footer #copyright a {
+    text-decoration: underline;
+    color: white; }
