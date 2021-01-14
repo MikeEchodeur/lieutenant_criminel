@@ -88,7 +88,8 @@ nav {
       color: #827528; }
   @media screen and (max-width: 599px) {
     nav {
-      width: 100%; } }
+      width: 100%;
+      display: none; } }
 
 footer {
   display: flex;
@@ -109,6 +110,10 @@ footer {
     opacity: .8;
     transition: box-shadow 0.1s;
     box-shadow: 0px 0px 0px black; }
+  @media screen and (max-width: 599px) {
+    .block_news {
+      flex-direction: row;
+      flex-wrap: wrap; } }
 
 .article {
   width: auto;
@@ -125,13 +130,15 @@ footer {
     height: 340px; }
   @media screen and (max-width: 599px) {
     .article {
-      width: auto;
+      width: 48%;
       height: auto; }
-      .article__texte__resume {
+      .article__texte {
         display: none; }
       .article img {
+        margin: auto;
         width: 150px;
-        height: 150px; } }
+        height: 150px;
+        float: none; } }
 
 .suite {
   color: #5F7528; }

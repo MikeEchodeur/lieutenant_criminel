@@ -23,5 +23,6 @@ nav
 	}
 	@include mobile-only{
 		width: 100%;
+		display: none;
 		}
 }

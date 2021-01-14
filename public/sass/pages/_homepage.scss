@@ -10,6 +10,10 @@
 		transition: box-shadow 0.1s;
 		box-shadow: 0px 0px 0px black;
 	}
+	@include mobile-only{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }
 
 .article
@@ -29,16 +33,16 @@
 		height: 340px;
 	}
 	@include mobile-only{
-		width: auto;
+		width: 48%;
 		height: auto;
 		&__texte{
-			&__resume{
 			display: none;
-			}
 		}
 		img{
+			margin: auto;
 			width: 150px;
 			height: 150px;
+			float: none;
 		}
 	}
 }
