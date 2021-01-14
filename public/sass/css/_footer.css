@@ -18,7 +18,8 @@ footer {
   border-radius: 50%;
   position: -webkit-sticky;
   position: sticky;
-  bottom: 20px; }
+  bottom: 20px;
+  margin-bottom: 10px; }
   #chevron .fas {
     color: white;
     margin-left: 5.2px;
