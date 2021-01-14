@@ -62,6 +62,12 @@
                     </section>
                 </div>
 
+                 <div id="chevron">
+                        <a href="# ">
+                            <span class="fas fa-chevron-up"></span>
+                        </a>
+                    </div>
+
 
                 <?php include("footer.php"); ?>
 
