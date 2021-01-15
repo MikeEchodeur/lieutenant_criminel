@@ -24,8 +24,10 @@
 			<p>Amusez vous bien, rigolez, n’hésitez pas à participer et partager.</p>
 		</div>
 
-		<a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-69" class="share-twitter sd-button share-icon" href="https://lieutenant-criminel.com/regles-dengagement/?share=twitter&amp;nb=1" target="_blank" title="Cliquez pour partager sur Twitter"><span>Twitter</span></a>
-		<a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-69" class="share-facebook sd-button share-icon" href="https://lieutenant-criminel.com/regles-dengagement/?share=facebook&amp;nb=1" target="_blank" title="Cliquez pour partager sur Facebook"><span>Facebook</span></a>
+		<br>
+
+		<a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-69" class="share-twitter sd-button share-icon" href="https://lieutenant-criminel.com/regles-dengagement/?share=twitter&amp;nb=1" target="_blank" title="Cliquez pour partager sur Twitter"><span><i class="fab fa-twitter"></i> Retweeter</span></a>
+		<a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-69" class="share-facebook sd-button share-icon" href="https://lieutenant-criminel.com/regles-dengagement/?share=facebook&amp;nb=1" target="_blank" title="Cliquez pour partager sur Facebook"><span><i class="fab fa-facebook"></i> Partager</span></a>
 		
 </div>
 
