@@ -23,6 +23,8 @@ nav
 	}
 	@include mobile-only{
 		width: 100%;
-		display: none;
+		a{
+			padding: 0px;
+		}
 		}
 }

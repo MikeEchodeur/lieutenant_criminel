@@ -88,8 +88,9 @@ nav {
       color: #827528; }
   @media screen and (max-width: 599px) {
     nav {
-      width: 100%;
-      display: none; } }
+      width: 100%; }
+      nav a {
+        padding: 0px; } }
 
 footer {
   display: flex;
@@ -113,7 +114,8 @@ footer {
   @media screen and (max-width: 599px) {
     .block_news {
       flex-direction: row;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      justify-content: space-around; } }
 
 .article {
   width: auto;
@@ -130,7 +132,7 @@ footer {
     height: 340px; }
   @media screen and (max-width: 599px) {
     .article {
-      width: 48%;
+      width: auto;
       height: auto; }
       .article__texte {
         display: none; }

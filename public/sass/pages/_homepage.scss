@@ -13,6 +13,7 @@
 	@include mobile-only{
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 }
 
@@ -33,7 +34,7 @@
 		height: 340px;
 	}
 	@include mobile-only{
-		width: 48%;
+		width: auto;
 		height: auto;
 		&__texte{
 			display: none;

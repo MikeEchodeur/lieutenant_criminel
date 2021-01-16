@@ -11,9 +11,9 @@
 	{ ?>
 			<article class="article">
 				<a href="index.php?article_id=<?= $data['id']?>">
-					<p>
+					<div>
 						<img src="<?= $data['image'];?>"/>
-					</p>
+					</div>
 				
 				<div class="article__texte">
 					<h2 class="article__texte__title">
