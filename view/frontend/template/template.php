@@ -39,7 +39,13 @@
     <body>
  
             <header class="banniere">
-                <a href="index.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
+                <a href="index.php">
+                    <picture>
+                        <source media="(max-width: 799px" srcset="public/image/mike-echo_fb.jpg">
+                        <source media="(min-width: 800px)" srcset="public/image/banner-me.jpg">
+                        <img src="public/image/Mike-echologo.png" alt="Banniere du site">
+                    </picture>
+                </a>
             </header>
 
             <div class="main_block">
