@@ -1,11 +1,16 @@
+$title_color: #474843;
+
 h1, h3, h2
 {
-	color: #474843
+	color: $title_color;
+	@include mobile-only{
+		font-size: 20px;
+	}
 }
 
 h2 a
 {
-	color : #474843;
+	color : $title_color;
 }
 
 h1
@@ -32,7 +37,7 @@ section a
 {
 	text-decoration: none;
 	z-index: 2;
-	color : #474843;
+	color : $title_color;
 }
 
 .select_block p
@@ -41,4 +46,5 @@ section a
 	width: 750px;
 	font-size: 17px;
 	color : #6D6D6D;
+
 }

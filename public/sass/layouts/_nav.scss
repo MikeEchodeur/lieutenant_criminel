@@ -5,7 +5,7 @@ nav
 	display: flex;
 	border: 1px solid;
 	border-color: #F2F5E1;
-	background-color: #FBFFE3;
+	background-color: $site_bg_color;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0px;
@@ -22,17 +22,26 @@ nav
 		}
 	}
 
-	button
-	{
-		text-align: left;
-		color: grey;
-		display: flex;
-	}
+	
 	.div_collapse
 	{
 		margin:7px;
 		height:30px;
 		left: 10px;
-		
+		button
+		{
+		text-align: left;
+		color: grey;
+		display: flex;
+		}
+	}
+
+	@include mobile-only
+	{
+		width: 100%;
+		a{
+			padding: 0px;
+		}
 	}
 }
+
