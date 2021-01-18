@@ -32,11 +32,14 @@ body{
 }
 .bodyAndFb{
 		display: flex;
-		width: 1150px;
+		width: 80%;
+		max-width: 1150px;
 		min-height: 900px;
 		justify-content: space-between;
 		@include mobile-only{
 			flex-direction: column;
 			width: 100%;
+			padding-left: 14px;
+			padding-right: 14px;
 		}
 	}

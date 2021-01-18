@@ -30,13 +30,16 @@ body {
 
 .bodyAndFb {
   display: flex;
-  width: 1150px;
+  width: 80%;
+  max-width: 1150px;
   min-height: 900px;
   justify-content: space-between; }
   @media screen and (max-width: 599px) {
     .bodyAndFb {
       flex-direction: column;
-      width: 100%; } }
+      width: 100%;
+      padding-left: 14px;
+      padding-right: 14px; } }
 
 h1, h3, h2 {
   color: #474843; }
@@ -71,6 +74,9 @@ section a {
   width: 750px;
   font-size: 17px;
   color: #6D6D6D; }
+  @media screen and (max-width: 599px) {
+    .select_block p {
+      width: 100%; } }
 
 nav {
   width: 100%;
@@ -207,8 +213,15 @@ footer {
 .share-twitter {
   color: #1DA1F2; }
 
+@media screen and (max-width: 599px) {
+  .rules {
+    width: 100%; } }
+
 div[class="contact_head"] {
   text-align: center; }
+  @media screen and (max-width: 599px) {
+    div[class="contact_head"] img {
+      width: 100%; } }
 
 .connect {
   text-align: center; }

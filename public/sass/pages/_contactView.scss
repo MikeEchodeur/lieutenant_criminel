@@ -1,4 +1,9 @@
 div[class="contact_head"]
 {
 	text-align: center;
+	@include mobile-only{
+		img{
+			width: 100%;
+		}	
+	}
 }

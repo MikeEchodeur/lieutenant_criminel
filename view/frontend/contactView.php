@@ -5,7 +5,7 @@
 
 <?php ob_start(); ?>
 <p>
-<h1>Contact</h1>
+	<h1>Contact</h1>
 </p>
 <div class="contact_head">
 	<p>
