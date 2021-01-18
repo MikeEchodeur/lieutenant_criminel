@@ -1,7 +1,7 @@
 footer {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   margin-top: 10px;
   background-color: #303030;
@@ -9,6 +9,13 @@ footer {
   color: white; }
   footer #copyright a {
     text-decoration: underline;
+    color: white; }
+
+#link_admin {
+  position: absolute;
+  left: 10px;
+  bottom: 10px; }
+  #link_admin a {
     color: white; }
 
 #chevron {
