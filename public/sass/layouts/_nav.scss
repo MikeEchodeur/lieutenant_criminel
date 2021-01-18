@@ -2,11 +2,10 @@ nav
 {
 	width: 100%;
 	text-transform: uppercase;
-	justify-content: center;
 	display: flex;
 	border: 1px solid;
 	border-color: #F2F5E1;
-	background-color: #FBFFE3;
+	background-color: $site_bg_color;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0px;
@@ -14,11 +13,35 @@ nav
 
 	a{
 		text-decoration: none;
-		padding: 20px;
+		text-align: center;
+		margin-right: 20px; // PB QUAND C'EST EN FORMAT MOBILE
 		color: #6D6D6D;
 		&:hover{
 			background-color: #F2F5E1;
 			color: #827528;
 		}
 	}
+
+	
+	.div_collapse
+	{
+		margin:7px;
+		height:30px;
+		left: 10px;
+		button
+		{
+		text-align: left;
+		color: grey;
+		display: flex;
+		}
+	}
+
+	@include mobile-only
+	{
+		width: 100%;
+		a{
+			padding: 0px;
+		}
+	}
 }
+

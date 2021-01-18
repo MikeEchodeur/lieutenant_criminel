@@ -4,13 +4,16 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #FBFFE3;
-  width: 100%;
-  min-width: 1024px;
   height: auto; }
 
 .banniere {
   position: fixed;
-  z-index: 0; }
+  z-index: 0;
+  width: 100%;
+  height: 290px; }
+  .banniere img {
+    width: 100%;
+    height: 100%; }
 
 .main_block {
   display: flex;
@@ -21,16 +24,25 @@ body {
   background-color: #FBFFE3;
   position: relative;
   top: 290px; }
+  @media screen and (max-width: 599px) {
+    .main_block {
+      width: 100%; } }
 
 .bodyAndFb {
   display: flex;
-  flex-direction: row;
   width: 1150px;
   min-height: 900px;
   justify-content: space-between; }
+  @media screen and (max-width: 599px) {
+    .bodyAndFb {
+      flex-direction: column;
+      width: 100%; } }
 
 h1, h3, h2 {
   color: #474843; }
+  @media screen and (max-width: 599px) {
+    h1, h3, h2 {
+      font-size: 20px; } }
 
 h2 a {
   color: #474843; }
@@ -63,7 +75,6 @@ section a {
 nav {
   width: 100%;
   text-transform: uppercase;
-  justify-content: center;
   display: flex;
   border: 1px solid;
   border-color: #F2F5E1;
@@ -74,23 +85,55 @@ nav {
   z-index: 100; }
   nav a {
     text-decoration: none;
-    padding: 20px;
+    text-align: center;
+    margin-right: 20px;
     color: #6D6D6D; }
     nav a:hover {
       background-color: #F2F5E1;
       color: #827528; }
+  nav .div_collapse {
+    margin: 7px;
+    height: 30px;
+    left: 10px; }
+    nav .div_collapse button {
+      text-align: left;
+      color: grey;
+      display: flex; }
+  @media screen and (max-width: 599px) {
+    nav {
+      width: 100%; }
+      nav a {
+        padding: 0px; } }
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 10px;
   background-color: #303030;
   height: 175px;
   color: white; }
-  footer .fas:hover{
-    font-size:  21px;
-}
+  footer #copyright a {
+    text-decoration: underline;
+    color: white; }
+
+#chevron {
+  height: 30px;
+  width: 30px;
+  background-color: grey;
+  border-radius: 50%;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 20px;
+  margin-bottom: 10px; }
+  #chevron .fas {
+    color: white;
+    margin-left: 6px;
+    margin-top: 2.7px;
+    font-size: 21px; }
+    #chevron .fas:hover {
+      opacity: 0.3; }
 
 .block_news {
   display: flex;
@@ -102,6 +145,11 @@ footer {
     opacity: .8;
     transition: box-shadow 0.1s;
     box-shadow: 0px 0px 0px black; }
+  @media screen and (max-width: 599px) {
+    .block_news {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; } }
 
 .article {
   width: auto;
@@ -113,7 +161,20 @@ footer {
     margin-right: 20px;
     margin-left: 20px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px black; }
+    box-shadow: 0px 0px 5px black;
+    width: 340px;
+    height: 340px; }
+  @media screen and (max-width: 599px) {
+    .article {
+      width: auto;
+      height: auto; }
+      .article__texte {
+        display: none; }
+      .article img {
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        float: none; } }
 
 .suite {
   color: #5F7528; }
@@ -138,6 +199,13 @@ footer {
 .ME {
   font-weight: bold;
   color: #99BB4A; }
+
+.share-facebook {
+  color: #3B5998;
+  padding-left: 12px; }
+
+.share-twitter {
+  color: #1DA1F2; }
 
 div[class="contact_head"] {
   text-align: center; }

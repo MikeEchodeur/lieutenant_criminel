@@ -18,6 +18,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="public/image/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="public/image/favicon/favicon-16x16.png">
     <link rel="manifest" href="public/image/favicon/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -25,8 +26,15 @@
     <!-- ###################################### -->
     
     <title><?= $title ?></title>
+
+    <!-- AJOUT LIBRAIRIE POUR BOOTSTRAP POUR LE COLLAPSE -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
     <link href="public/css/style.min.css" rel="stylesheet" />
-    <link href="public/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> <!-- Ajout des favicons --> 
 </head>
 
@@ -40,7 +48,13 @@
     <body id=" ">
  
             <header class="banniere">
-                <a href="index.php"><img src="public/image/banner-me.jpg" alt="Banniere du site" /></a>
+                <a href="index.php">
+                    <picture>
+                        <source media="(max-width: 799px" srcset="public/image/mike-echo_fb.jpg">
+                        <source media="(min-width: 800px)" srcset="public/image/banner-me.jpg">
+                        <img src="public/image/Mike-echologo.png" alt="Banniere du site">
+                    </picture>
+                </a>
             </header>
 
             <div class="main_block">
@@ -63,10 +77,15 @@
                     </section>
                 </div>
 
+                 <div id="chevron">
+                        <a href="# ">
+                            <span class="fas fa-chevron-up"></span>
+                        </a>
+                    </div>
+
 
                 <?php include("footer.php"); ?>
 
             </div>
-
     </body>
 </html>
