@@ -1,0 +1,25 @@
+form{
+	background: #D3BF8D;
+	border-radius: 8px;
+	border:solid;
+	display: flex;
+	p{
+		display: flex;
+		flex-direction: column;
+		
+		margin: auto 8px;
+		textarea{
+			min-height: 75px;
+		}
+		input{
+			margin-bottom: 8px;
+			width: 39%;
+		}
+		input[type=submit]{
+			display: absolute;
+			width: 75px;
+			height: 35px;
+			margin: 8px auto;
+		}
+	}
+}

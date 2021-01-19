@@ -1,0 +1,19 @@
+form {
+  background: #D3BF8D;
+  border-radius: 8px;
+  border: solid;
+  display: flex; }
+  form p {
+    display: flex;
+    flex-direction: column;
+    margin: auto 8px; }
+    form p textarea {
+      min-height: 75px; }
+    form p input {
+      margin-bottom: 8px;
+      width: 39%; }
+    form p input[type=submit] {
+      display: absolute;
+      width: 75px;
+      height: 35px;
+      margin: 8px auto; }
