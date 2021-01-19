@@ -134,18 +134,20 @@ footer {
 #chevron {
   height: 30px;
   width: 30px;
-  background-color: grey;
+  background-color: #D3BF8D;
   border-radius: 50%;
   position: -webkit-sticky;
   position: sticky;
   bottom: 20px;
-  margin-bottom: 10px; }
+  margin-bottom: 8px;
+  margin-top: 10px; }
   #chevron .fas {
     color: white;
     margin-left: 6px;
     margin-top: 2.7px;
     font-size: 21px; }
     #chevron .fas:hover {
+      color: black;
       opacity: 0.3; }
 
 .block_news {
@@ -224,6 +226,14 @@ footer {
 @media screen and (max-width: 599px) {
   .rules {
     width: 100%; } }
+.rules .share-insta {
+  color: #C32AA3;
+  font-size: 30px; }
+.rules .share-youtube {
+  color: #E62117;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-size: 30px; }
 
 div[class="contact_head"] {
   text-align: center; }
@@ -233,3 +243,37 @@ div[class="contact_head"] {
 
 .connect {
   text-align: center; }
+
+form {
+  background: #D3BF8D;
+  border-radius: 8px;
+  border: solid;
+  display: flex; }
+  form p {
+    display: flex;
+    flex-direction: column;
+    margin: auto 8px; }
+    form p textarea {
+      min-height: 75px; }
+    form p input {
+      margin-bottom: 8px;
+      width: 39%; }
+    form p input[type=submit] {
+      display: absolute;
+      width: 75px;
+      height: 35px;
+      margin: 8px auto; }
+
+.center {
+  display: flex;
+  justify-content: space-around; }
+
+.share-insta {
+  color: #C32AA3;
+  font-size: 30px; }
+
+.share-youtube {
+  color: #E62117;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-size: 30px; }
