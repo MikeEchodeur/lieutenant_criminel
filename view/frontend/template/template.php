@@ -70,7 +70,7 @@
                         
                         <div class="center"> <!-- CI DESSOUS CSS DU RULEVIEW POUR LA COULEUR ET LA TAILLE DES PICTOGRAMMES -->
                             <a href="https://www.facebook.com/moitiedemilouf/" class="share-facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/lieutenant.criminel/" class="share-insta"><i style='font-size: 30px;'class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/lieutenant.criminel/" class="share-insta"><i class="fab fa-instagram"></i></a>
                             <a href="youtube ???" class="share-youtube"><i class="fab fa-youtube"></i></a>
                         </div>
 
