@@ -11,3 +11,7 @@
   cursor: not-allowed;
   pointer-events: none;
   font-size: 30px; }
+
+.share-fb {
+  color: #3B5998;
+  font-size: 30px; }
