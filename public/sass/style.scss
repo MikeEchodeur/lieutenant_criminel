@@ -1,3 +1,5 @@
+@import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/base";
 @import "./base/typography";
 @import "./layouts/nav";
@@ -7,3 +9,5 @@
 @import "./pages/rulesView";
 @import "./pages/contactView";
 @import "./pages/connectView";
+@import "./layouts/form";
+@import "./layouts/container";

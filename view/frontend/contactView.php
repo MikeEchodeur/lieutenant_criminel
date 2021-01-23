@@ -5,7 +5,7 @@
 
 <?php ob_start(); ?>
 <p>
-<h1>Contact</h1>
+	<h1>Contact</h1>
 </p>
 <div class="contact_head">
 	<p>
@@ -14,17 +14,18 @@
 	</p>
 </div>
 
-<form method="post" action="">
+<form method="post" action="" id="biendesigne">
 	<p>
-		<label for="username" required><b>Nom ou surnom</b> (obligatoire)</label><br />
-		<input type="text" name="username" id="username" required/><br />
-		<label for="email" required><b>E-mail</b> (obligatoire)</label><br />
-		<input type="email" name="email" id="email" required/><br />
-		<label for="website"><b>Site Web</b></label><br />
-		<input type="url" name="website" id="website" /><br />
-		<label for="contact_comment" required><b>Commentaire</b> (obligatoire)</label><br />
-		<textarea name="contact_comment" id="contact_comment" required></textarea><br />
-		<input type="submit" value="Envoyer" />
+		<label for="username" required><b>Nom ou surnom</b> (obligatoire)</label>
+		<input type="text" name="username" id="username" placeholder="Sgt Touneuf" required>
+		<label for="email" required><b>E-mail</b> (obligatoire)</label>
+		<input type="email" name="email" id="email" placeholder="CuicuiJeSuisUnFruit@intradef.gouv.fr" required>
+		<label for="website"><b>Site Web</b></label>
+		<input type="url" name="website" id="website" placeholder="www.ISuckMyCDS.fr">
+		<label for="contact_comment" required><b>Commentaire</b> (obligatoire)</label>
+		<textarea name="contact_comment" id="contact_comment" placeholder="Mes respects Mike,
+Trop mdr ce que tu fais. Je suis ton plus grand fan. Ahouuu la colo" required></textarea>
+		<input type="submit" value="Envoyer">
 	</p>
 
 </form>

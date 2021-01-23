@@ -10,6 +10,11 @@
 		transition: box-shadow 0.1s;
 		box-shadow: 0px 0px 0px black;
 	}
+	@include mobile-only{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
 }
 
 .article
@@ -20,11 +25,27 @@
 	overflow: hidden;
 	img
 	{
+		width: 30%;
 		float: left;
 		margin-right: 20px;
 		margin-left: 20px;
 		border-radius: 5px;
 		box-shadow: 0px 0px 5px black;
+		max-width: 340px;
+		max-height: 340px;
+	}
+	@include mobile-only{
+		width: auto;
+		height: auto;
+		&__texte{
+			display: none;
+		}
+		img{
+			margin: auto;
+			width: 150px;
+			height: 150px;
+			float: none;
+		}
 	}
 }
 

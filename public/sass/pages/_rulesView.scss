@@ -14,3 +14,14 @@
 {
 	color:#1DA1F2;
 }
+
+
+
+.rules
+{
+	@include mobile-only
+	{
+		width: 100%;
+	}
+	
+}

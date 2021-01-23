@@ -1,0 +1,10 @@
+@mixin flex_column{
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin mobile-only {
+	@media screen and (max-width: map-get($breakpoints, mobile)){
+		@content;
+	}
+}
