@@ -259,6 +259,8 @@ form {
   border-radius: 8px;
   border: solid;
   display: flex; }
+  form .form_contact {
+    width: 100%; }
   form p {
     display: flex;
     flex-direction: column;
@@ -267,7 +269,9 @@ form {
       min-height: 75px; }
     form p input {
       margin-bottom: 8px;
-      width: 39%; }
+      width: 200px; }
+    form p input[type=email] {
+      width: 300px; }
     form p input[type=submit] {
       display: absolute;
       width: 75px;

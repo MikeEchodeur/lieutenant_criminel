@@ -3,6 +3,9 @@ form{
 	border-radius: 8px;
 	border:solid;
 	display: flex;
+	.form_contact{
+			width: 100%;
+		}
 	p{
 		display: flex;
 		flex-direction: column;
@@ -13,8 +16,11 @@ form{
 		}
 		input{
 			margin-bottom: 8px;
-			width: 39%;
+			width: 200px;
 		}
+		input[type=email]{
+				width: 300px;
+			}
 		input[type=submit]{
 			display: absolute;
 			width: 75px;

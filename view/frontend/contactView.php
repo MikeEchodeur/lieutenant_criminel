@@ -14,8 +14,8 @@
 	</p>
 </div>
 
-<form method="post" action="" id="biendesigne">
-	<p>
+<form method="post" action="">
+	<p class="form_contact">
 		<label for="username" required><b>Nom ou surnom</b> (obligatoire)</label>
 		<input type="text" name="username" id="username" placeholder="Sgt Touneuf" required>
 		<label for="email" required><b>E-mail</b> (obligatoire)</label>
