@@ -1,7 +1,13 @@
 div[class="contact_head"]
 {
+	padding: 1%;
+	width: 100%;
 	text-align: center;
-	@include mobile-only{
+	p img{
+		width: 100%;
+	}
+	@include mobile-only
+	{
 		img{
 			width: 100%;
 		}	
