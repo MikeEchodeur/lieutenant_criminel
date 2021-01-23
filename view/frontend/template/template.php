@@ -84,7 +84,7 @@
                     </section>
                 </div>
 
-                 <div id="chevron">
+                 <div class="chevron">
                         <a href="# ">
                             <span class="fas fa-chevron-up"></span>
                         </a>

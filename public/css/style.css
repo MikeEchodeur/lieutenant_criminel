@@ -123,18 +123,11 @@ footer {
   background-color: #303030;
   height: 175px;
   color: white; }
-  footer #copyright a {
+  footer .copyright a {
     text-decoration: underline;
     color: white; }
 
-#link_admin {
-  position: absolute;
-  left: 10px;
-  bottom: 10px; }
-  #link_admin a {
-    color: white; }
-
-#chevron {
+.chevron {
   height: 30px;
   width: 30px;
   background-color: #D3BF8D;
@@ -144,12 +137,12 @@ footer {
   bottom: 20px;
   margin-bottom: 8px;
   margin-top: 10px; }
-  #chevron .fas {
+  .chevron .fas {
     color: white;
     margin-left: 6px;
     margin-top: 2.7px;
     font-size: 21px; }
-    #chevron .fas:hover {
+    .chevron .fas:hover {
       color: black;
       opacity: 0.3; }
 

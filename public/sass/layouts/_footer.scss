@@ -8,23 +8,14 @@ footer
 	background-color: #303030;
 	height: 175px;
 	color: white;
-	#copyright a
+	.copyright a
 		{
 			text-decoration: underline;
 			color: white;
 		}
 }
 
-#link_admin{
-	position:absolute;
-	left: 10px;
-	bottom:10px;
-	a{color: white;}
-}
-
-
-
-#chevron
+.chevron
 	{
 		height: 30px;
 		width: 30px;
