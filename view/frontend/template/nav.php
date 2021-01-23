@@ -8,9 +8,17 @@
     </div>
 	
     <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
-        <a href="index.php">Accueil</a></br>
-        <a href="index.php?action=rules">Règles d'engagement</a><br />
-        <a href="index.php?action=contact">Contact</a><br />
+        <a href="index.php">Accueil</a><br>
+        <a href="index.php?action=rules">Règles d'engagement</a><br>
+        <a href="index.php?action=contact">Contact</a><br>
+
+        <!-- FAIRE APPARAITRE L'ADMINISTRATION DU SITE ICI-->
+        <?php
+        if (isset($_SESSION['groupe']) == 'admin') 
+            { ?>
+            <a href="view/backend/admin.php">Administration</a>
+        <?php } ?>
+        
         <?php 
         if ($_SESSION == NULL)
         {?>
@@ -20,5 +28,6 @@
         {?>
             <a href="index.php?action=disconnect">Déconnexion</a>
         <?php } ?>
+
     </div>
 </nav>
