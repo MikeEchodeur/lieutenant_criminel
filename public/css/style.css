@@ -146,12 +146,54 @@ footer {
   margin-top: 10px; }
   #chevron .fas {
     color: white;
-    margin-left: 4.7px;
-    margin-top: 1.6px;
+    margin-left: 6px;
+    margin-top: 2.7px;
     font-size: 21px; }
     #chevron .fas:hover {
       color: black;
       opacity: 0.3; }
+
+form {
+  background: #D3BF8D;
+  border-radius: 8px;
+  border: solid;
+  display: flex; }
+  form .form_contact {
+    width: 100%; }
+  form p {
+    display: flex;
+    flex-direction: column;
+    margin: auto 8px; }
+    form p textarea {
+      min-height: 75px; }
+    form p input {
+      margin-bottom: 8px;
+      width: 200px; }
+    form p input[type=email] {
+      width: 300px; }
+    form p input[type=submit] {
+      display: absolute;
+      width: 75px;
+      height: 35px;
+      margin: 8px auto; }
+
+.center {
+  display: flex;
+  justify-content: space-around; }
+
+.share-insta {
+  color: #C32AA3;
+  font-size: 30px; }
+
+.share-youtube {
+  color: #E62117;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-size: 30px; }
+
+.share-fb {
+  color: #3B5998;
+  font-size: 30px; }
 
 .block_news {
   display: flex;
@@ -253,45 +295,3 @@ div[class="contact_head"] {
 
 .connect {
   text-align: center; }
-
-form {
-  background: #D3BF8D;
-  border-radius: 8px;
-  border: solid;
-  display: flex; }
-  form .form_contact {
-    width: 100%; }
-  form p {
-    display: flex;
-    flex-direction: column;
-    margin: auto 8px; }
-    form p textarea {
-      min-height: 75px; }
-    form p input {
-      margin-bottom: 8px;
-      width: 200px; }
-    form p input[type=email] {
-      width: 300px; }
-    form p input[type=submit] {
-      display: absolute;
-      width: 75px;
-      height: 35px;
-      margin: 8px auto; }
-
-.center {
-  display: flex;
-  justify-content: space-around; }
-
-.share-insta {
-  color: #C32AA3;
-  font-size: 30px; }
-
-.share-youtube {
-  color: #E62117;
-  cursor: not-allowed;
-  pointer-events: none;
-  font-size: 30px; }
-
-.share-fb {
-  color: #3B5998;
-  font-size: 30px; }
