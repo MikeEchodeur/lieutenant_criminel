@@ -17,10 +17,13 @@
 				
 				<div class="article__texte">
 					<h2 class="article__texte__title">
-						<?= $data['titre']; ?><br />
-				</a>
-						<em>Publié le <?= $data['date_creation_fr']; ?></em>
+						<?= $data['titre']; ?>
 					</h2>
+				</a>
+					<em class="article__texte__date">
+						Publié le <?= $data['date_creation_fr']; ?>
+					</em>
+					
 					
 
 					<p class="article__texte__resume">
