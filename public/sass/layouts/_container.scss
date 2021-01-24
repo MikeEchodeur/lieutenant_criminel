@@ -1,11 +1,13 @@
-.center{
+.picto_sociaux{
 	display: flex;
-	justify-content: space-around;
+	justify-content: end;
+	font-size: 30px;
+	position: sticky;
+	left: 75%;
 }
 
 .share-insta{
 color:#C32AA3;
-font-size: 30px;
 &:hover{
 	color: #C32AA3;
 }
@@ -14,8 +16,7 @@ font-size: 30px;
 .share-youtube
 {
 	color: #E62117;
-	cursor: not-allowed;	
-	font-size: 30px;
+	cursor: not-allowed;
 	&:hover{
 		color: #E62117;
 	}
@@ -24,7 +25,6 @@ font-size: 30px;
 .share-fb
 {
 	color:#3B5998;
-	font-size: 30px;
 	&:hover{
 		color: #3B5998;
 	}

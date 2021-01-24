@@ -182,26 +182,26 @@ form {
         color: inherit;
         text-decoration: none; }
 
-.center {
+.picto_sociaux {
   display: flex;
-  justify-content: space-around; }
+  justify-content: end;
+  font-size: 30px;
+  position: sticky;
+  left: 75%; }
 
 .share-insta {
-  color: #C32AA3;
-  font-size: 30px; }
+  color: #C32AA3; }
   .share-insta:hover {
     color: #C32AA3; }
 
 .share-youtube {
   color: #E62117;
-  cursor: not-allowed;
-  font-size: 30px; }
+  cursor: not-allowed; }
   .share-youtube:hover {
     color: #E62117; }
 
 .share-fb {
-  color: #3B5998;
-  font-size: 30px; }
+  color: #3B5998; }
   .share-fb:hover {
     color: #3B5998; }
 

@@ -29,6 +29,10 @@
         {?>
             <a href="index.php?action=disconnect">Déconnexion</a>
         <?php } ?>
-
+    </div>
+    <div class="picto_sociaux"> <!-- CI DESSOUS CSS DU RULEVIEW POUR LA COULEUR ET LA TAILLE DES PICTOGRAMMES -->
+        <a href="https://www.facebook.com/moitiedemilouf/" target="_blank" class="share-fb"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/lieutenant.criminel/" target="_blank" class="share-insta"><i class="fab fa-instagram"></i></a>
+        <a href="youtube ???" class="share-youtube"><i class="fab fa-youtube"></i></a>
     </div>
 </nav>
