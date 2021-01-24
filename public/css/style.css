@@ -12,9 +12,30 @@ body {
   max-width: 1357px;
   width: 100%;
   height: 290px; }
-  .banniere img {
-    width: 100%;
-    height: 100%; }
+  .banniere a {
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    .banniere a img {
+      width: 100%;
+      height: 100%; }
+    .banniere a h1 {
+      text-transform: capitalize;
+      color: black;
+      font-family: 'Black Ops One', cursive;
+      position: absolute;
+      margin-top: 6px; }
+      @media (max-width: 799px) {
+        .banniere a h1 {
+          display: none; } }
+    .banniere a .logo_banniere {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 18%; }
+      @media (max-width: 799px) {
+        .banniere a .logo_banniere {
+          display: none; } }
 
 .main_block {
   display: flex;
@@ -109,6 +130,25 @@ nav {
       text-align: left;
       color: grey;
       display: flex; }
+  nav .picto_sociaux {
+    display: flex;
+    justify-content: end;
+    font-size: 30px;
+    position: sticky;
+    left: 75%; }
+    nav .picto_sociaux .share-insta {
+      color: #C32AA3; }
+      nav .picto_sociaux .share-insta:hover {
+        color: #C32AA3; }
+    nav .picto_sociaux .share-youtube {
+      color: #E62117;
+      cursor: not-allowed; }
+      nav .picto_sociaux .share-youtube:hover {
+        color: #E62117; }
+    nav .picto_sociaux .share-fb {
+      color: #3B5998; }
+      nav .picto_sociaux .share-fb:hover {
+        color: #3B5998; }
   @media screen and (max-width: 599px) {
     nav {
       width: 100%; }
@@ -181,26 +221,6 @@ form {
       form p input[type=submit] a, form p .inscription a {
         color: inherit;
         text-decoration: none; }
-
-.picto_sociaux {
-  display: flex;
-  justify-content: end;
-  font-size: 30px;
-  position: sticky;
-  left: 75%; }
-  .picto_sociaux .share-insta {
-    color: #C32AA3; }
-    .picto_sociaux .share-insta:hover {
-      color: #C32AA3; }
-  .picto_sociaux .share-youtube {
-    color: #E62117;
-    cursor: not-allowed; }
-    .picto_sociaux .share-youtube:hover {
-      color: #E62117; }
-  .picto_sociaux .share-fb {
-    color: #3B5998; }
-    .picto_sociaux .share-fb:hover {
-      color: #3B5998; }
 
 .block_news {
   display: flex;

@@ -13,9 +13,33 @@ body{
 	max-width: 1357px;
 	width: 100%;
 	height: 290px;
-	img{
+	a{
+		position:relative;
+		display: flex;
+		justify-content: center;
+		img{
 		width: 100%;
 		height: 100%;
+		}
+		h1{
+			text-transform: capitalize;
+			color: black;
+			font-family: 'Black Ops One', cursive;
+			position:absolute;
+			margin-top: 6px;
+			@media (max-width: 799px){
+				display: none;
+			}
+		}
+		.logo_banniere{
+			position: absolute;
+		    width: 100px;
+		    height: 100px;
+		    top: 18%;
+		    @media (max-width: 799px){
+				display: none;
+			}
+		}
 	}
 }
 

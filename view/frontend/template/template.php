@@ -34,7 +34,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-    <link href="public/css/style.min.css" rel="stylesheet" />
+    <link href="public/css/style.min.css" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">  <!-- Ajout police type Militaire -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> <!-- Ajout des favicons --> 
 </head>
 
@@ -49,11 +51,14 @@
  
             <header class="banniere">
                 <a href="index.php">
+                    <h1 media="(min-width: 800px)">Mike Echo</h1>
                     <picture>
                         <source media="(max-width: 799px" srcset="public/image/mike-echo_fb.jpg">
                         <source media="(min-width: 800px)" srcset="public/image/banner-me.jpg">
                         <img src="public/image/Mike-echologo.png" alt="Banniere du site">
                     </picture>
+                    <img media="(min-width: 800px)" class="logo_banniere" src="public/image/Mike-echologo.png">
+                    
                 </a>
             </header>
 
