@@ -4,28 +4,24 @@
 	font-size: 30px;
 	position: sticky;
 	left: 75%;
-}
-
-.share-insta{
-color:#C32AA3;
-&:hover{
-	color: #C32AA3;
-}
-}
-
-.share-youtube
-{
-	color: #E62117;
-	cursor: not-allowed;
-	&:hover{
-		color: #E62117;
+	.share-insta{
+		color:#C32AA3;
+		&:hover{
+			color: #C32AA3;
+		}
 	}
+	.share-youtube{
+		color: #E62117;
+		cursor: not-allowed;
+		&:hover{
+			color: #E62117;
+		}
 }
 
-.share-fb
-{
-	color:#3B5998;
-	&:hover{
-		color: #3B5998;
+	.share-fb{
+		color:#3B5998;
+		&:hover{
+			color: #3B5998;
+		}
 	}
 }
