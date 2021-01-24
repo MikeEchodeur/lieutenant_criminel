@@ -8,6 +8,12 @@ function homeView()
 	require('view/frontend/homeView.php');
 }
 
+function allArticlesView()
+{
+	getArticles();
+	require('view/frontend/allArticlesView.php');
+}
+
 function articleView()
 {
 	getArticles();

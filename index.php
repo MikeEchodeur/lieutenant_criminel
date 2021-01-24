@@ -24,6 +24,10 @@ if (isset($_GET['action']))
 	{
 		contactView();
 	}
+	elseif ($_GET['action'] == 'articles')
+	{
+		allArticlesView();
+	}
 	else
 	{
 		errorView();
