@@ -6,18 +6,26 @@
 .share-insta{
 color:#C32AA3;
 font-size: 30px;
+&:hover{
+	color: #C32AA3;
+}
 }
 
 .share-youtube
 {
 	color: #E62117;
-	cursor: not-allowed;
-	pointer-events: none;
+	cursor: not-allowed;	
 	font-size: 30px;
+	&:hover{
+		color: #E62117;
+	}
 }
 
 .share-fb
 {
 	color:#3B5998;
 	font-size: 30px;
+	&:hover{
+		color: #3B5998;
+	}
 }

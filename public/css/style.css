@@ -150,13 +150,19 @@ form {
   background: #D3BF8D;
   border-radius: 8px;
   border: solid;
-  display: flex; }
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center; }
   form .form_contact {
     width: 100%; }
   form p {
     display: flex;
     flex-direction: column;
     margin: auto 8px; }
+    form p label {
+      text-align: left; }
     form p textarea {
       min-height: 75px; }
     form p input {
@@ -164,11 +170,16 @@ form {
       width: 200px; }
     form p input[type=email] {
       width: 300px; }
-    form p input[type=submit] {
+    form p input[type=submit], form p .inscription {
       display: absolute;
-      width: 75px;
+      width: 100px;
       height: 35px;
-      margin: 8px auto; }
+      margin: 8px auto;
+      border-radius: 8px;
+      cursor: pointer; }
+      form p input[type=submit] a, form p .inscription a {
+        color: inherit;
+        text-decoration: none; }
 
 .center {
   display: flex;
@@ -177,16 +188,21 @@ form {
 .share-insta {
   color: #C32AA3;
   font-size: 30px; }
+  .share-insta:hover {
+    color: #C32AA3; }
 
 .share-youtube {
   color: #E62117;
   cursor: not-allowed;
-  pointer-events: none;
   font-size: 30px; }
+  .share-youtube:hover {
+    color: #E62117; }
 
 .share-fb {
   color: #3B5998;
   font-size: 30px; }
+  .share-fb:hover {
+    color: #3B5998; }
 
 .block_news {
   display: flex;
@@ -287,4 +303,8 @@ div[class="contact_head"] {
       width: 100%; } }
 
 .connect {
-  text-align: center; }
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }

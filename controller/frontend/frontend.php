@@ -44,7 +44,7 @@ function connectView()
 	    {
             if (password_verify($_POST['password'], $data['password']))
             {
-        		echo 'THEORIQUEMENT LA JE ME CONNECTE';
+        		// echo 'THEORIQUEMENT LA JE ME CONNECTE';
         		$_SESSION['id'] = $data['id'];
         		$_SESSION['username'] = $data['username'];
         		$_SESSION['groupe'] = $data['groupe'];

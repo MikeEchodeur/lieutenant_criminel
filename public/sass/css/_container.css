@@ -1,0 +1,22 @@
+.center {
+  display: flex;
+  justify-content: space-around; }
+
+.share-insta {
+  color: #C32AA3;
+  font-size: 30px; }
+  .share-insta:hover {
+    color: #C32AA3; }
+
+.share-youtube {
+  color: #E62117;
+  cursor: not-allowed;
+  font-size: 30px; }
+  .share-youtube:hover {
+    color: #E62117; }
+
+.share-fb {
+  color: #3B5998;
+  font-size: 30px; }
+  .share-fb:hover {
+    color: #3B5998; }

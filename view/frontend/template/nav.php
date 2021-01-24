@@ -16,7 +16,7 @@
         <?php
         if (isset($_SESSION['groupe']) == 'admin') 
             { ?>
-            <a href="view/backend/admin.php">Administration</a>
+            <a href="view/backend/admin.php">Administration</a> <br>
         <?php } ?>
         
         <?php 
