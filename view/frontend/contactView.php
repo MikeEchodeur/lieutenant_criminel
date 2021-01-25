@@ -22,6 +22,13 @@
 		<input type="email" name="email" id="email" placeholder="CuicuiJeSuisUnFruit@intradef.gouv.fr" required>
 		<label for="website"><b>Site Web</b></label>
 		<input type="url" name="website" id="website" placeholder="www.ISuckMyCDS.fr">
+		<label for="sujet">Sujet <span class="blue">*</span></label>                 
+            <select name="sujet" id="sujet">
+            <option value="">Quel est le sujet de votre message ?</option>
+            <option value="Demande d'info">Je voudrais avoir plus d'infos sur tes services</option>
+            <option value="Demande de devis">J'aimerais recevoir un devis</option>
+            <option value="Autre question">Autre</option>
+            </select>
 		<label for="contact_comment" required><b>Commentaire</b> (obligatoire)</label>
 		<textarea name="contact_comment" id="contact_comment" placeholder="Mes respects Mike,
 Trop mdr ce que tu fais. Je suis ton plus grand fan. Ahouuu la colo" required></textarea>
