@@ -25,15 +25,15 @@ body {
       color: black;
       font-family: 'Black Ops One', cursive;
       position: absolute;
-      margin-top: 6px; }
+      margin-top: 2px; }
       @media (max-width: 799px) {
         .banniere a h1 {
           display: none; } }
     .banniere a .logo_banniere {
       position: absolute;
-      width: 100px;
-      height: 100px;
-      top: 18%; }
+      width: 85px;
+      height: 85px;
+      top: 45px; }
       @media (max-width: 799px) {
         .banniere a .logo_banniere {
           display: none; } }
