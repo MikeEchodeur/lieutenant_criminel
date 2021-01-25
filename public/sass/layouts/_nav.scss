@@ -10,11 +10,14 @@ nav
 	position: sticky;
 	top: 0px;
 	z-index: 100;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: 'Black Ops One', cursive;
 
 	a{
 		text-decoration: none;
 		text-align: center;
-		margin-right: 20px; // PB QUAND C'EST EN FORMAT MOBILE
+		margin-right: 20px;
 		color: #6D6D6D;
 		&:hover{
 			background-color: #F2F5E1;
