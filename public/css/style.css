@@ -225,6 +225,12 @@ form {
         color: inherit;
         text-decoration: none; }
 
+.thank-you {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 22px; }
+
 .block_news {
   display: flex;
   flex-direction: column; }

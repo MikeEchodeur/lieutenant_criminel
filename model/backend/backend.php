@@ -85,89 +85,121 @@ function retirerArticle()
 
 	$req->closeCursor();
 }
+################################ PARTIE FORM MAIL #############################
 
-################################ PARTIE FORMULAIRE DE CONTACT #############################
-   
-    $array = array("username" => "","email" => "","phone" => "","message" => "","sujet" => "", "sujetError" => "","usernameError" => "","messageError" => "","emailError" => "", 'isSuccess' => 'false');
+$array = array("username" => "", "email" => "", "phone" => "", "website" => "", "sujet" => "", "message_contact" => "","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
+    $emailTo = "tristancien@live.fr";
 
-    $emailTo = 'tristan@nuoma.fr';
+    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+    { 
+        $array["username"] = test_input($_POST["username"]);
+        $array["email"] = test_input($_POST["email"]);
+        $array["phone"] = test_input($_POST["phone"]);
+        $array["website"] = test_input($_POST["website"]);
+        $array["sujet"] = test_input($_POST["sujet"]);
+        $array["message_contact"] = test_input($_POST["message_contact"]);
+        $array["isSuccess"] = true; 
+        $emailText = "";
+        $emailSujet = "Formulaire Contact - ";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $array["username"] = verifyInput($_POST['username']);
-        $array["message"] = verifyInput($_POST['message']);
-        $array["email"] = verifyInput($_POST['email']);
-        $array["sujet"] = verifyInput($_POST['sujet']);
-        $array["isSuccess"] = true;
-        $emailText = '';
-        $web = '';
+        if (empty($array["username"]))
+        {
+            $array["usernameError"] = "Et oui je veux tout savoir. Même ton nom !";
+            $array["isSuccess"] = false; 
+        } 
+        else
+        {
+            $emailText .= "Nom : {$array['username']}\n";
+        }
+
+        if(!isEmail($array["email"])) 
+        {
+            $array["emailError"] = "T'essaies de me rouler ? C'est pas un email ça  !";
+            $array["isSuccess"] = false; 
+        } 
+        else
+        {
+            $emailText .= "Email: {$array['email']}\n";
+        }
+
+        if (!isPhone($array["phone"]))
+        {
+            $array["phoneError"] = "Que des chiffres et des espaces, stp...";
+            $array["isSuccess"] = false; 
+        }
+        else
+        {
+            $emailText .= "Telephone: {$array['phone']}\n";
+        }
         
-        if(empty($array["name"]))
+        if (!isWebsite($array["website"]))
         {
-            $array["nameError"] = "Eh oui je veux tout connaitre même ton nom !";
-            $array["isSuccess"] = false;
+            $array["websiteError"] = "Un vrai site stp";
+            $array["isSuccess"] = false; 
         }
         else
-            $emailText .= "Nom : {$array["username"]} \n";
+        {
+        $emailText .= "Site Web: {$array['website']}\n";
+        }
         
-        if(!isEmail($array["email"]))
-        {
-            $array["emailError"] = "Pour te contacter ça sera plus pratique";
-            $array["isSuccess"] = false;
-        }
-        else
-            $emailText .= "Mail : {$array["email"]} \n";
-
-        if(empty($web["web"]))
-        {
-        	$array["messageError"] = "Ecris-moi quelque chose ;)";
-            $array["isSuccess"] = false;
-        }
-        else
-        {
-           $web .= "Site Web : {$array["web"]} \n";
-        }
-                
-        if(empty($array["sujet"]))
+        if (empty($array["sujet"]))
         {
             $array["sujetError"] = "Sélectionne un sujet";
-            $array["isSuccess"] = false;
-        }
-           
-        if(empty($array["contact_comment"]))
-        {
-            $array["messageError"] = "Ecris-moi quelque chose ;)";
-            $array["isSuccess"] = false;
+            $array["isSuccess"] = false; 
         }
         else
-           $emailText .= "Message : {$array["contact_comment"]} \n";
-      
-        
-        
-        if($array["isSuccess"])
         {
-            
-            $headers = "From: {$array["username"]} <{$array["email"]}> <{$array["web"]}>\r\n Reply-To: {$array["email"]}";
-            mail($emailTo, $array["sujet"], $emailText, $headers);
+            $emailSujet .= "{$array['sujet']}\n";
+        }
+
+        if (empty($array["message_contact"]))
+        {
+            $array["message_contactError"] = "Qu'est-ce que tu veux me dire ?";
+            $array["isSuccess"] = false; 
+        }
+        else
+        {
+            $emailText .= "Message: {$array['message_contact']}\n";
         }
         
-           echo json_encode($array);
+        if($array["isSuccess"]) 
+        {
+            $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']}";
+            mail($emailTo, $emailSujet, $emailText, $headers);
         }
-        }
+        
+        echo json_encode($array);
+        
     }
 
-function isEmail($var)
-{
-    return filter_var($var, FILTER_VALIDATE_EMAIL);
-}
-function verifyInput($var)
-{
-    $var = trim($var);
-    $var = stripslashes($var);
-    $var = htmlspecialchars($var);
-    return $var;
-}
-
+    function isEmail($email) 
+    {
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+    function isPhone($phone) 
+    {
+        return preg_match("/^[0-9 ]*$/",$phone);
+    }
+    function isWebsite($website) 
+    {
+        return filter_var($website, FILTER_VALIDATE_URL);
+    }
+    
+    function test_input($data) 
+    {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+    
+    function test_input_url($data) 
+    {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
 
 ################################ PARTIE GESTION COMMENTAIRES #############################
 
