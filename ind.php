@@ -15,11 +15,7 @@
     
     <body>
         
-       <div class="container">
-            <div class="divider"></div>
-            <div class="heading">
-                <h2>Contactez-moi</h2>
-            </div>
+       
                 
            <div class="row">
                <div class="col-lg-10 col-lg-offset-1">

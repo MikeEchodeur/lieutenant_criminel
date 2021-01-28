@@ -9,7 +9,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
-        <script src="../../js/script.js"></script>
+        <!-- <script src="../../js/script.js"></script> -->
     </head>
     
     
@@ -17,12 +17,42 @@
         
        <div class="container">
             <div class="divider"></div>
-            <div class="heading">
-                <h2>Contactez-moi</h2>
-            </div>
-                
+                            
            <div class="row">
                <div class="col-lg-10 col-lg-offset-1">
+                <script type="text/javascript">$(function () {
+    
+    $('#contact-form').submit(function(e) {
+        e.preventDefault();
+        $('.comments').empty();
+        var postdata = $('#contact-form').serialize();
+        
+        $.ajax({
+            type: 'POST',
+            url: 'php/contact.php',
+            data: postdata,
+            dataType: 'json',
+            success: function(json) {
+                 
+                if(json.isSuccess) 
+                {
+                    $('#contact-form').append("<p class='thank-you'>La réponse arrivera en même temps que ton colis au SMCAT</p>");
+                    $('#contact-form')[0].reset();
+                }
+                else
+                {
+                    $('#username + .comments').html(json.usernameError);
+                    $('#email + .comments').html(json.emailError);
+                    $('#website + .comments').html(json.websiteError);
+                    $('#phone + .comments').html(json.phoneError);
+                    $('#message_contact + .comments').html(json.message_contactError);
+                    $('#sujet + .comments').html(json.sujetError);
+                }                
+            }
+        });
+    });
+
+})</script>
                     <form id="contact-form" method="post" action="" role="form">
                         <div class="row">
                             <div class="col-md-6">
