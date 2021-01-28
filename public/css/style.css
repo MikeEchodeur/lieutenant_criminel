@@ -7,7 +7,6 @@ body {
   height: auto; }
 
 .banniere {
-  position: fixed;
   z-index: 0;
   max-width: 1357px;
   width: 100%;
@@ -29,6 +28,9 @@ body {
     .main_block {
       width: 100%; } }
 
+.select_block {
+  max-width: 1000px; }
+
 .bodyAndFb {
   display: flex;
   width: 80%;
@@ -41,6 +43,10 @@ body {
       width: 100%;
       padding-left: 14px;
       padding-right: 14px; } }
+
+.fbAndShare {
+  position: sticky;
+  top: 45px; }
 
 h1, h3, h2 {
   color: #474843; }
@@ -123,7 +129,8 @@ footer {
   margin-top: 10px;
   background-color: #303030;
   height: 175px;
-  color: white; }
+  color: white;
+  z-index: 100; }
   footer .copyright a {
     text-decoration: underline;
     color: white; }

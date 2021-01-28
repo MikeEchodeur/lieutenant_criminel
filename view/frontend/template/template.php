@@ -47,50 +47,46 @@
 
     <body id=" ">
  
-            <header class="banniere">
-                <a href="index.php">
-                    <picture>
-                        <source media="(max-width: 799px" srcset="public/image/mike-echo_fb.jpg">
-                        <source media="(min-width: 800px)" srcset="public/image/banner-me.jpg">
-                        <img src="public/image/Mike-echologo.png" alt="Banniere du site">
-                    </picture>
-                </a>
-            </header>
+        <header class="banniere">
+            <a href="index.php">
+                <picture>
+                    <source media="(max-width: 799px" srcset="public/image/mike-echo_fb.jpg">
+                    <source media="(min-width: 800px)" srcset="public/image/banner-me.jpg">
+                    <img src="public/image/Mike-echologo.png" alt="Banniere du site">
+                </picture>
+            </a>
+        </header>
 
-            <div class="main_block">
+        <?php include("nav.php"); ?>
 
-               	<?php include("nav.php"); ?>
-                    
-                <div class="bodyAndFb">
-                    <section class="select_block">
-                        <?= $content ?>
-                    </section>
+        <div class="main_block">        
+            <section class="select_block">
+                <?= $content ?>
+            </section>
 
-                    <section class="fb-page">
-                        
-                        <div class="center"> <!-- CI DESSOUS CSS DU RULEVIEW POUR LA COULEUR ET LA TAILLE DES PICTOGRAMMES -->
-                            <a href="https://www.facebook.com/moitiedemilouf/" target="_blank" class="share-fb"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/lieutenant.criminel/" target="_blank" class="share-insta"><i class="fab fa-instagram"></i></a>
-                            <a href="youtube ???" class="share-youtube"><i class="fab fa-youtube"></i></a>
-                        </div>
-
-                        <div class="fb-page" data-href="https://www.facebook.com/moitiedemilouf" data-tabs="timeline" data-width="250" data-height="750" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                            <blockquote cite="https://www.facebook.com/moitiedemilouf" class="fb-xfbml-parse-ignore">
-                                <a href="https://www.facebook.com/moitiedemilouf">MIKE ECHO</a>
-                            </blockquote>
-                        </div>
-                    </section>
+            <section class="fbAndShare">
+                <div class="center"> <!-- CI DESSOUS CSS DU RULEVIEW POUR LA COULEUR ET LA TAILLE DES PICTOGRAMMES -->
+                    <a href="https://www.facebook.com/moitiedemilouf/" target="_blank" class="share-fb"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/lieutenant.criminel/" target="_blank" class="share-insta"><i class="fab fa-instagram"></i></a>
+                    <a href="youtube ???" class="share-youtube"><i class="fab fa-youtube"></i></a>
                 </div>
 
-                 <div class="chevron">
-                        <a href="# ">
-                            <span class="fas fa-chevron-up"></span>
-                        </a>
-                    </div>
+                <div class="fb-page" data-href="https://www.facebook.com/moitiedemilouf" data-tabs="timeline" data-width="250" data-height="750" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/moitiedemilouf" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/moitiedemilouf">MIKE ECHO</a>
+                    </blockquote>
+                </div>
+            </section>
 
-
-                <?php include("footer.php"); ?>
-
+            <div class="chevron">
+                <a href="# ">
+                    <span class="fas fa-chevron-up"></span>
+                </a>
             </div>
+        </div>
+
+
+        <?php include("footer.php"); ?>
+
     </body>
 </html>
