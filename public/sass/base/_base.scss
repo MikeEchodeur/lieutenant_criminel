@@ -8,7 +8,6 @@ body{
 
 .banniere
 {
-	position: fixed;
 	z-index: 0;
 	max-width: 1357px;
 	width: 100%;
@@ -45,27 +44,26 @@ body{
 }
 
 .main_block{
-	@include flex_column;
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	width: 100%;
 	background-color: $site_bg_color;
 	position: relative;
-	top: 230px;
 	@include mobile-only{
+		flex-direction: column;
+		align-items: center;
 		width: 100%;
 	}
 }
-.bodyAndFb{
-		display: flex;
-		width: 80%;
-		max-width: 1150px;
-		min-height: 900px;
-		justify-content: space-between;
-		@include mobile-only{
-			flex-direction: column;
-			width: 100%;
-			padding-left: 14px;
-			padding-right: 14px;
-		}
-	}
+
+.select_block
+{
+	max-width: 1000px;
+}
+
+.fbAndShare{
+	position: sticky;
+	top: 46px;
+}
