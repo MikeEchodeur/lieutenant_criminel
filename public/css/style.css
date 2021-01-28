@@ -10,12 +10,12 @@ body {
   z-index: 0;
   max-width: 1357px;
   width: 100%;
-  height: 230px; }
+  height: 100%; }
   .banniere a {
     position: relative;
     display: flex;
     justify-content: center;
-    height: 230px; }
+    height: 100%; }
     .banniere a img {
       width: 100%;
       height: 100%; }
@@ -24,17 +24,9 @@ body {
       color: black;
       font-family: 'Black Ops One', cursive;
       position: absolute;
-      margin-top: 2px; }
+      margin-top: 40px; }
       @media (max-width: 799px) {
         .banniere a h1 {
-          display: none; } }
-    .banniere a .logo_banniere {
-      position: absolute;
-      width: 85px;
-      height: 85px;
-      top: 45px; }
-      @media (max-width: 799px) {
-        .banniere a .logo_banniere {
           display: none; } }
 
 .main_block {
@@ -42,6 +34,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  min-height: 750px;
   width: 100%;
   background-color: #FBFFE3;
   position: relative; }
