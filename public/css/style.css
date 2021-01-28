@@ -10,15 +10,12 @@ body {
   z-index: 0;
   max-width: 1357px;
   width: 100%;
-  height: 230px; }
+  height: 400px; }
   .banniere a {
     position: relative;
-    display: flex;
-    justify-content: center;
-    height: 230px; }
+    display: flex; }
     .banniere a img {
-      width: 100%;
-      height: 100%; }
+      position: fixed; }
     .banniere a h1 {
       text-transform: capitalize;
       color: black;
@@ -43,6 +40,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  min-height: 750px;
   background-color: #FBFFE3;
   position: relative; }
   @media screen and (max-width: 599px) {
@@ -56,7 +54,7 @@ body {
 
 .fbAndShare {
   position: sticky;
-  top: 46px; }
+  top: 10%; }
 
 h1, h3, h2 {
   color: #474843; }
