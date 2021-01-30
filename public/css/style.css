@@ -7,7 +7,6 @@ body {
   height: auto; }
 
 .banniere {
-  border: solid green;
   max-width: 1357px;
   width: 100%;
   min-height: 291px; }
@@ -15,7 +14,6 @@ body {
     .banniere {
       height: 280; } }
   .banniere a {
-    border: solid red;
     max-width: 1357px;
     width: 100%;
     position: fixed;
@@ -23,7 +21,6 @@ body {
     justify-content: center;
     align-items: center; }
     .banniere a h1 {
-      border: solid silver;
       z-index: 99;
       text-transform: capitalize;
       color: black;
@@ -32,7 +29,6 @@ body {
         .banniere a h1 {
           display: none; } }
     .banniere a picture {
-      border: solid yellow;
       position: absolute;
       top: 0px; }
       @media (max-width: 799px) {
