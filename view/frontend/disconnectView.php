@@ -4,6 +4,9 @@
 <div class='connect'>
 	<p>Vous avez bien été déconnecté</p>
 </div>
+
+<?php include("template/facebook.php"); ?>
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template/template.php'); ?>

@@ -4,7 +4,8 @@
 <!-- Partie body du site -->
 
 <?php ob_start(); ?>
-<section class="block_news">
+<div class="mainAndFb">
+	<section class="block_news">
 	<?php 
 	$req = getArticles();
 	while ($data = $req->fetch())
@@ -36,7 +37,11 @@
 	<?php 
 	} 
 	?>
-</section>
+	</section>
+
+	<?php include("template/facebook.php"); ?>
+
+</div>
 
 <?php $content = ob_get_clean(); ?>
 

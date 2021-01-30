@@ -55,6 +55,8 @@ while ($data = $req->fetch())
 }
 ?>
 
+<?php include("template/facebook.php"); ?>
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template/template.php'); ?>

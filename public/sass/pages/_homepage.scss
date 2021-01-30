@@ -1,6 +1,8 @@
 .block_news{
 	display: flex;
 	flex-direction: column;
+	max-width: 1000px;
+	margin: auto;
 	h2{
 		color: #6F4843;
 	}

@@ -43,7 +43,9 @@ body{
 	}
 }
 
-.main_block{
+.select_block
+{
+	border: solid silver;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -59,12 +61,17 @@ body{
 	}
 }
 
-.select_block
-{
-	max-width: 1000px;
+.mainAndFb{
+	border:solid yellow;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1024px;
+	width: 100%;
 }
 
 .fbAndShare{
+	border: solid red;
 	position: sticky;
 	top: 46px;
+	height: 750px;
 }
