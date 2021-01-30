@@ -78,12 +78,6 @@
                     </blockquote>
                 </div>
             </section>
-
-            <div class="chevron">
-                <a href="# ">
-                    <span class="fas fa-chevron-up"></span>
-                </a>
-            </div>
         </div>
 
 
