@@ -12,7 +12,8 @@ body{
 	width: 100%;
 	min-height: 291px;
 	@media (max-width: 799px){
-				height: 280;
+			min-height: 280px;
+			height: 280px;
 			}
 	a{
 		max-width: 1357px;
