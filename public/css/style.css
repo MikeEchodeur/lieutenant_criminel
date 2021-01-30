@@ -12,7 +12,8 @@ body {
   min-height: 291px; }
   @media (max-width: 799px) {
     .banniere {
-      height: 280; } }
+      min-height: 280px;
+      height: 280px; } }
   .banniere a {
     max-width: 1357px;
     width: 100%;
