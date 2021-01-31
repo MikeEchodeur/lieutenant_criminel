@@ -23,7 +23,7 @@
         
         $.ajax({
             type: 'POST',
-            url: 'php/contact.php',
+            url: 'contact.php',
             data: postdata,
             dataType: 'json',
             success: function(json) {
