@@ -13,41 +13,7 @@
 		Mes respects la famille, si vous voulez nous contacter, nous envoyer une photo de vos seins ou une photo sympa faites le par la page facebook. Pour tout article ou vidéo passez par le mail
 	</p>
 </div>
-<script type="text/javascript">
-	$(function () {
-    
-    $('#contact-form').submit(function(e) {
-        e.preventDefault();
-        $('.comments').empty();
-        var postdata = $('#contact-form').serialize();
-        
-        $.ajax({
-            type: 'POST',
-            url: 'view/frontend/contact.php',
-            data: postdata,
-            dataType: 'json',
-            success: function(json) {
-                 
-                if(json.isSuccess) 
-                {
-                    $('#contact-form').append("<p class='thank-you'>La réponse arrivera en même temps que ton colis au SMCAT</p>");
-                    $('#contact-form')[0].reset();
-                }
-                else
-                {
-                    $('#username + .comments').html(json.usernameError);
-                    $('#email + .comments').html(json.emailError);
-                    $('#website + .comments').html(json.websiteError);
-                    $('#phone + .comments').html(json.phoneError);
-                    $('#message_contact + .comments').html(json.message_contactError);
-                    $('#sujet + .comments').html(json.sujetError);
-                }                
-            }
-        });
-    });
 
-})
-</script>
 <form id="contact-form" method="post" action="" role="form">
                         <div class="row">
                             <div class="col-md-6">
