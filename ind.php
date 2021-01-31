@@ -7,18 +7,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <script src="js/script.js"></script>
     </head>
     
     
     <body>
         
-       
-                
+       <div class="container">
+            <div class="divider"></div>
+                            
            <div class="row">
                <div class="col-lg-10 col-lg-offset-1">
+
                     <form id="contact-form" method="post" action="" role="form">
                         <div class="row">
                             <div class="col-md-6">
