@@ -23,7 +23,7 @@
         
         $.ajax({
             type: 'POST',
-            url: 'view/frontend/contact.php',
+            url: 'https://nuoma.fr/lieutenant_criminel/view/frontend/template/php/contact.php',
             data: postdata,
             dataType: 'json',
             success: function(json) {
