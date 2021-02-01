@@ -8,8 +8,7 @@
     </div>
 	
     <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
-        <a href="index.php">Accueil</a><br>
-        <a href="index.php?action=articles">Articles</a><br>
+        <a href="index.php">Articles</a><br>
         <a href="index.php?action=rules">Règles d'engagement</a><br>
         <a href="index.php?action=contact">Contact</a><br>
 

@@ -38,5 +38,5 @@ elseif (isset($_GET['article_id']))
 }
 else 
 {
-	homeView();
+	allArticlesView();
 }

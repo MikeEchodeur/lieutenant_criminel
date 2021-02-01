@@ -1,7 +1,7 @@
 <?php $title = 'Lieutenant Criminel'; ?>
 
 
-<!-- Partie body du site -->
+<!-- Partie body du site PAGE EN CONSTRUCTION APRES MISE EN PLACE DE LA V1 -->
 
 <?php ob_start(); ?>
 

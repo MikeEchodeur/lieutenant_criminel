@@ -20,11 +20,13 @@ body {
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-decoration: none; }
     .banniere a h1 {
       z-index: 99;
       text-transform: capitalize;
       color: black;
+      padding-top: 50px;
       font-family: 'Black Ops One', cursive; }
       @media (max-width: 799px) {
         .banniere a h1 {
@@ -37,7 +39,6 @@ body {
           height: 280px; } }
 
 .select_block {
-  border: solid silver;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -46,21 +47,19 @@ body {
   width: 100%;
   background-color: #FBFFE3;
   position: relative; }
-  @media screen and (max-width: 599px) {
-    .select_block {
-      flex-direction: column;
-      align-items: center;
-      width: 100%; } }
 
 .mainAndFb {
-  border: solid yellow;
   display: flex;
   justify-content: space-between;
   max-width: 1024px;
   width: 100%; }
+  @media screen and (max-width: 599px) {
+    .mainAndFb {
+      flex-direction: column;
+      align-items: center;
+      width: 100%; } }
 
 .fbAndShare {
-  border: solid red;
   position: sticky;
   top: 46px;
   height: 750px; }
@@ -343,8 +342,3 @@ div[class="contact_head"] {
   display: flex;
   justify-content: center;
   flex-direction: column; }
-
-.homeArticle {
-  background-color: #D3BF8D;
-  border: solid red;
-  width: 100%; }
