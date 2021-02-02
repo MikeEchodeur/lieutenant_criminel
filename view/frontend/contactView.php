@@ -16,6 +16,8 @@
         	</p>
         </div>
 
+        <?php ?>
+
         <form id="contact-form" method="post" action="" role="form">
             <div class="row">
                 <div class="col-md-6">
