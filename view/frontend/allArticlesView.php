@@ -11,16 +11,21 @@
 	while ($data = $req->fetch())
 	{ ?>
 			<article class="article">
-				<a href="index.php?article_id=<?= $data['id']?>">
-					<div>
+				<div class="article__img">
+					<a href="index.php?article_id=<?= $data['id']?>">
 						<img src="<?= $data['image'];?>"/>
-					</div>
+					</a>
+				</div>
+				
+					
 				
 				<div class="article__texte">
-					<h2 class="article__texte__title">
-						<?= $data['titre']; ?>
-					</h2>
-				</a>
+					<a href="index.php?article_id=<?= $data['id']?>">
+						<h2 class="article__texte__title">
+							<?= $data['titre']; ?>
+						</h2>
+					</a>
+				
 					<em class="article__texte__date">
 						Publié le <?= $data['date_creation_fr']; ?>
 					</em>
