@@ -195,37 +195,46 @@ form {
   display: flex;
   flex-direction: column; }
   form select {
-    border-radius: 4px; }
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 100%; }
 
-.contact-form {
-  width: 99%;
-  align-items: flex-start; }
-  .contact-form p {
+form.contact-form {
+  width: 95%;
+  align-self: center; }
+  form.contact-form p {
     display: flex;
     flex-direction: column;
     margin: auto 8px; }
-    .contact-form p label {
+    form.contact-form p label {
       text-align: left; }
-    .contact-form p textarea {
+    form.contact-form p textarea {
       min-height: 75px; }
-    .contact-form p input {
+    form.contact-form p input {
       margin-bottom: 8px;
       width: 200px; }
-    .contact-form p select[name=sujet] {
-      margin-top: 8px; }
-    .contact-form p input[type=email] {
+    form.contact-form p input[type=email] {
       width: 300px; }
 
-.textarea_contact {
-  flex-direction: column; }
-
-div.libele_contact {
+div.libele_double {
   margin: 8px;
   display: flex;
-  justify-content: space-between; }
-  div.libele_contact div.libele_contact_inside {
+  justify-content: space-between;
+  width: 100%; }
+  @media (max-width: 890px) {
+    div.libele_double {
+      display: block; } }
+  div.libele_double div.libele_double_inside {
     width: 45%;
     margin-right: 20px; }
+    @media (max-width: 890px) {
+      div.libele_double div.libele_double_inside {
+        width: 300px;
+        margin-right: 0px; } }
+
+div.libele_simple {
+  margin: 8px; }
 
 div.div_send {
   display: flex;
