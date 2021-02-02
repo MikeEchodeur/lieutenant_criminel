@@ -22,7 +22,7 @@
                 <div class="libele_contact">
                     <div class="libele_contact_inside">
                         <label for="username">Nom <span class="blue">*</span></label>
-                        <input id="username" type="text" name="username" class="form-control" placeholder="Aide toi de ta bande patro Bitoss">
+                        <input id="username" type="text" name="username" class="form-control" placeholder="Comme ta bande patro Bitoss">
                         <p class="comments"></p>
                     </div>
                     <div class="libele_contact_inside">
