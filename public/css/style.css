@@ -262,30 +262,41 @@ input[type=submit], .inscription {
       justify-content: space-around; } }
 
 .article {
-  width: auto;
-  height: 360px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-height: 300px;
   margin-top: 30px;
-  overflow: hidden; }
-  .article img {
-    width: 30%;
-    float: left;
-    margin-right: 20px;
-    margin-left: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px black;
-    max-width: 340px;
-    max-height: 340px; }
+  overflow: hidden;
+  padding: 5px; }
+  .article__img {
+    width: 220px;
+    height: 220px;
+    margin-right: 10px; }
+    .article__img img {
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px black;
+      width: 100%;
+      height: 100%; }
+  .article__texte {
+    width: 75%; }
   @media screen and (max-width: 599px) {
     .article {
       display: flex;
       flex-direction: column-reverse;
-      justify-content: space-between;
       align-items: center;
       width: 48%;
       height: auto;
       border: 2px solid black;
       border-radius: 10px;
       background-color: #D3BF8D; }
+      .article__img {
+        margin-right: 0px;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center; }
       .article__texte {
         display: flex;
         flex-direction: column;
