@@ -19,28 +19,31 @@
         <?php ?>
 
         <form id="contact-form" method="post" action="" role="form">
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="username">Nom <span class="blue">*</span></label>
-                    <input id="username" type="text" name="username" class="form-control" placeholder="Votre Nom">
-                    <p class="comments"></p>
+                <div class="libele_contact">
+                    <div class="libele_contact_inside">
+                        <label for="username">Nom <span class="blue">*</span></label>
+                        <input id="username" type="text" name="username" class="form-control" placeholder="Aide toi de ta bande patro Bitoss">
+                        <p class="comments"></p>
+                    </div>
+                    <div class="libele_contact_inside">
+                        <label for="email">Email <span class="blue">*</span></label>
+                        <input id="email" type="text" name="email" class="form-control" placeholder="CuicuiJeSuisUnFruit@intradef.gouv.fr">
+                        <p class="comments"></p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <label for="email">Email <span class="blue">*</span></label>
-                    <input id="email" type="text" name="email" class="form-control" placeholder="Votre Email">
-                    <p class="comments"></p>
+                <div class="libele_contact">
+                    <div class="libele_contact_inside">
+                        <label for="phone">Téléphone</label>
+                        <input id="phone" type="tel" name="phone" class="form-control" placeholder="Pas celui de la Jessica du Shogun">
+                        <p class="comments"></p>
+                    </div>
+                    <div class="libele_contact_inside">
+                        <label for="website">Site Web</label>
+                        <input id="website" type="url" name="website" class="form-control" placeholder="www.ISuckMyCDS.fr">
+                        <p class="comments"></p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <label for="phone">Téléphone</label>
-                    <input id="phone" type="tel" name="phone" class="form-control" placeholder="Votre Téléphone">
-                    <p class="comments"></p>
-                </div>
-                <div class="col-md-6">
-                    <label for="website">Site Web</label>
-                    <input id="website" type="url" name="website" class="form-control" placeholder="www.ISuckMyCDS.fr">
-                    <p class="comments"></p>
-                </div>
-                <div class="col-md-12">
+                <div>
                     <label for="sujet">Sujet <span class="blue">*</span></label>                 
                     <select name="sujet" id="sujet">
                     <option value="">Quel est le sujet de votre message ?</option>
@@ -50,18 +53,17 @@
                     <option value="Autre question">Autre</option>
                     </select>
                 </div>
-                <div class="col-md-12">
+                <div class="textarea_contact">
                     <label for="message_contact">Message <span class="blue">*</span></label>
-                    <textarea id="message_contact" name="message_contact" class="form-control" placeholder="Votre Message" rows="4"></textarea>
+                    <textarea id="message_contact" name="message_contact" class="form-control" placeholder="Trop marrant Mike Echo" rows="4"></textarea>
                     <p class="comments"></p>
                 </div>
-                <div class="col-md-12">
+                <div>
                     <p class="blue"><strong>* Ces informations sont requises.</strong></p>
                 </div>
-                <div class="col-md-12">
-                    <input type="submit" class="button1" value="Envoyer">
+                <div class="div_send">
+                    <input type="submit" value="Envoyer">
                 </div>    
-            </div>
         </form>
     </section>
 

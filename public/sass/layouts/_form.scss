@@ -3,46 +3,73 @@ form{
 	border-radius: 8px;
 	border:solid;
 	display: flex;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	-webkit-box-align: center;
 	flex-direction: column;
 
-	align-items: center;
-
-
-	.form_contact{
-			width: 100%;
+	// -ms-flex-align: center;
+	// -webkit-align-items: center;
+	// -webkit-box-align: center;
+	// align-items: center;
+	select{
+			border-radius:4px;
 		}
-	p{
-		display: flex;
-		flex-direction: column;
-		
-		margin: auto 8px;
-		label{
-			text-align: left;
-		}
-		textarea{
-			min-height: 75px;
-		}
-		input{
-			margin-bottom: 8px;
-			width: 200px;
-		}
-		input[type=email]{
-				width: 300px;
-			}
-		input[type=submit], .inscription{
-			display: absolute;
-			width: 100px;
-			height: 35px;
-			margin: 8px auto;
-			border-radius: 8px;
-			cursor: pointer;
-			a{
-				color: inherit;
-				text-decoration: none;
-			}
-		}
-	}
 }
+
+.contact-form{
+		width: 99%;
+		align-items:flex-start;	
+		p{
+			display: flex;
+			flex-direction: column;
+			
+			margin: auto 8px;
+			label{
+				text-align: left;
+			}
+			textarea{
+				min-height: 75px;
+			}
+			input{
+				margin-bottom: 8px;
+				width: 200px;
+			}
+			select[name=sujet]{
+				margin-top: 8px;
+			}
+			input[type=email]{
+					width: 300px;
+				}
+		}
+}
+.textarea_contact{
+	flex-direction: column;
+}
+
+div.libele_contact{
+			margin:8px;
+			display: flex;
+			justify-content: space-between;
+			div.libele_contact_inside{
+				width: 45%;
+				margin-right: 20px;
+			}
+		}
+div.div_send
+{
+	display: flex;
+	justify-content: center;
+}
+
+
+input[type=submit], .inscription{
+				display: absolute;
+				width: 100px;
+				height: 35px;
+				margin-bottom: 8px;
+				justify-content: center;
+				border-radius: 8px;
+				cursor: pointer;
+				a{
+					color: inherit;
+					text-decoration: none;
+				}
+			}
