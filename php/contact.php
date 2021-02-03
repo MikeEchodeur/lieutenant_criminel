@@ -1,6 +1,6 @@
 <?php
 
-    $array = array("username" => "", "email" => "", "phone" => "", "website" => "", "sujet" => "", "message_contact" => "","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
+    $array = array("username" => "test", "email" => "test", "phone" => "", "website" => "", "sujet" => "test", "message_contact" => "test","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
     $emailTo = "tristancien@live.fr";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
