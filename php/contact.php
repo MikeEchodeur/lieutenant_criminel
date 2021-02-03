@@ -1,7 +1,10 @@
 <?php
 
-    $array = array("username" => "test", "email" => "test", "phone" => "", "website" => "", "sujet" => "test", "message_contact" => "test","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
+    $array = array("username" => "test", "email" => "test", "phone" => "", "website" => "", "sujet" => "test", "message_contact" => "test","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteEror" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
     $emailTo = "tristancien@live.fr";
+
+    $headers = "From: tristancien <tristancien@live.fr>\r\nReply-To: tristancien@live.fr}";
+    mail($emailTo, 'test', '$emailText', $headers);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
     { 
