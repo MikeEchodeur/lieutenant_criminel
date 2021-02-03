@@ -7,8 +7,8 @@ $(function () {
         
         $.ajax({
             type: 'POST',
-            url: 'lieutenant_criminel/model/backend/contact.php',
-            data: 'postdata',
+            url: '/model/backend/contact.php',
+            data: postdata,
             dataType: 'json',
             success: function(json) {
                  
