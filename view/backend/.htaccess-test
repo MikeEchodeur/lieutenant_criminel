@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Page d'administration protégée"
+AuthUserFile "C:/MAMP/htdocs/test/lieutenant_criminel/admin/.htpasswd"
+Require valid-user
