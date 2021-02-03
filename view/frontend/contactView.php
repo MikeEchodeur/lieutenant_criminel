@@ -16,8 +16,6 @@
             </p>
         </div>
 
-        <?php ?>
-
         <form class="contact-form" method="post" action="" role="form">
                 <div class=" libele_double">
                     <div class=" libele_double_inside">

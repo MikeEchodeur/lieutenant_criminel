@@ -80,6 +80,8 @@
             $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']}";
             mail($emailTo, $emailSujet, $emailText, $headers);
         }
+
+        mail($emailTo, $emailSujet, $emailText, $headers);
         
         echo json_encode($array);
         
