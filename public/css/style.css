@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: auto;
   display: flex;
@@ -342,6 +343,20 @@ form.contact-form {
     background-color: #F9FFDB;
     padding-bottom: 5px;
     padding-left: 25px; }
+
+.articleComment {
+  margin-bottom: 10px;
+  border: solid black 2px;
+  border-radius: 5px;
+  max-width: 600px; }
+  .articleComment__entête {
+    padding: 5px;
+    background-color: #D3BF8D;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px; }
+  .articleComment__texte {
+    padding: 5px;
+    border-radius: 5px; }
 
 .ME {
   font-weight: bold;

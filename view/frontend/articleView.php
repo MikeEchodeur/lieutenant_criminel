@@ -44,10 +44,18 @@
 			$req = getComments();
 			while ($data_comment = $req->fetch())
 			{ ?>
-				<p>
-					<?php
-					echo htmlspecialchars($data_comment['auteur']) . ' le ' . $data_comment['date_comments_fr'] . '</br>' . htmlspecialchars($data_comment['comment']); ?>
-				</p>
+				<div class="articleComment">
+						<div class="articleComment__entête">
+							<?php
+							echo htmlspecialchars($data_comment['auteur']); ?>
+							<br />
+							<em><?php echo 'Posté le ' . $data_comment['date_comments_fr']; ?></em>
+						</div>
+
+						<div class="articleComment__texte">
+							<?php echo htmlspecialchars($data_comment['comment']); ?>
+						</div>
+				</div>
 			<?php
 			}?>
 		</div>
