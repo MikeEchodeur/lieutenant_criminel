@@ -1,7 +1,7 @@
 <?php
 
     $array = array("username" => "", "email" => "", "phone" => "", "website" => "", "sujet" => "", "message_contact" => "","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
-    $emailTo = "tristan@nuoma.fr";
+    $emailTo = "tristancien@live.fr";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
     { 
@@ -80,8 +80,6 @@
             $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']}";
             mail($emailTo, $emailSujet, $emailText, $headers);
         }
-
-        mail($emailTo, $emailSujet, $emailText, $headers);
         
         echo json_encode($array);
         
