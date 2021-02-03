@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Page d'administration protégée"
-AuthUserFile "/home/ruqz3084/public_html/lieutenant_criminel/view/backend/.htpasswd"
+AuthUserFile "https://www.nuoma.fr/lieutenant_criminel/view/backend/.htpasswd"
 Require valid-user
