@@ -46,7 +46,7 @@
                     <select name="sujet" id="sujet">
                     <option value="">Quel est le sujet de votre message ?</option>
                     <option value="Remerciement">Remerciement</option>
-                    <option value="PUB">placement publicitaire</option>
+                    <option value="PUB">Placement Publicitaire</option>
                     <option value="Retex">Retex</option>
                     <option value="EVASAN">EVASAN</option>
                     <option value="Autre question">Autre</option>
