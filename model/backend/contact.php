@@ -77,7 +77,9 @@
         
         if($array["isSuccess"]) 
         {
-            $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']}";
+            $header = "MIME Version 1.0\r\n";
+            $header .= "Content-type : text/html; charset=UTF-8\r\n";
+            $headers .= "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']}";
             mail($emailTo, $emailSujet, $emailText, $headers);
         }
         
