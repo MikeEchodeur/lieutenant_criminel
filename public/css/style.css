@@ -196,35 +196,35 @@ form {
   display: flex;
   flex-direction: column; }
 
-form.contact-form {
+form#contact-form {
   width: 95%;
   align-self: center; }
-  form.contact-form div.libele_double {
+  form#contact-form div.libele_double {
     margin: 8px;
     display: flex;
     justify-content: space-between;
     width: 100%; }
     @media (max-width: 890px) {
-      form.contact-form div.libele_double {
+      form#contact-form div.libele_double {
         display: block; } }
-    form.contact-form div.libele_double div.libele_double_inside {
+    form#contact-form div.libele_double div.libele_double_inside {
       width: 45%;
       margin-right: 20px; }
       @media (max-width: 890px) {
-        form.contact-form div.libele_double div.libele_double_inside {
+        form#contact-form div.libele_double div.libele_double_inside {
           width: 300px;
           margin-right: 0px; } }
-  form.contact-form div.libele_simple {
+  form#contact-form div.libele_simple {
     margin: 8px; }
-  form.contact-form select {
+  form#contact-form select {
     border-radius: 4px;
     margin-top: 8px;
     margin-right: 8px;
     width: 100%; }
-  form.contact-form div.div_send {
+  form#contact-form div.div_send {
     display: flex;
     justify-content: center; }
-  form.contact-form input[type=submit], form.contact-form .inscription {
+  form#contact-form input[type=submit], form#contact-form .inscription {
     display: absolute;
     width: 100px;
     height: 35px;
@@ -232,21 +232,21 @@ form.contact-form {
     justify-content: center;
     border-radius: 8px;
     cursor: pointer; }
-    form.contact-form input[type=submit] a, form.contact-form .inscription a {
+    form#contact-form input[type=submit] a, form#contact-form .inscription a {
       color: inherit;
       text-decoration: none; }
-  form.contact-form p {
+  form#contact-form p {
     display: flex;
     flex-direction: column;
     margin: auto 8px; }
-    form.contact-form p label {
+    form#contact-form p label {
       text-align: left; }
-    form.contact-form p textarea {
+    form#contact-form p textarea {
       min-height: 75px; }
-    form.contact-form p input {
+    form#contact-form p input {
       margin-bottom: 8px;
       width: 200px; }
-    form.contact-form p input[type=email] {
+    form#contact-form p input[type=email] {
       width: 300px; }
 
 .block_news {

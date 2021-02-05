@@ -16,55 +16,63 @@
             </p>
         </div>
 
-        <form class="contact-form" method="post" action="" role="form">
-                <div class=" libele_double">
-                    <div class=" libele_double_inside">
-                        <label for="username">Nom (obligatoire) :</label>
-                        <input id="username" type="text" name="username" class="form-control" placeholder="Comme ta bande patro Bitoss">
-                        <p class="comments"></p>
-                    </div>
-                    <div class=" libele_double_inside">
-                        <label for="email">Email (obligatoire) :</label>
-                        <input id="email" type="text" name="email" class="form-control" placeholder="CuicuiJeSuisUnFruit@intradef.gouv.fr">
-                        <p class="comments"></p>
-                    </div>
-                </div>
-                <div class=" libele_double">
-                    <div class=" libele_double_inside">
-                        <label for="phone">Téléphone</label>
-                        <input id="phone" type="tel" name="phone" class="form-control" placeholder="Pas celui de la Jessica du Shogun">
-                        <p class="comments"></p>
-                    </div>
-                    <div class=" libele_double_inside">
-                        <label for="website">Site Web</label>
-                        <input id="website" type="url" name="website" class="form-control" placeholder="www.ISuckMyCDS.fr">
-                        <p class="comments"></p>
-                    </div>
-                </div>
-                <div class="libele_simple">
-                    <label for="sujet">Sujet (obligatoire) :</label>                 
-                    <select name="sujet" id="sujet">
-                    <option value="">Quel est le sujet de votre message ?</option>
-                    <option value="Remerciement">Remerciement</option>
-                    <option value="PUB">Placement Publicitaire</option>
-                    <option value="Retex">Retex</option>
-                    <option value="EVASAN">EVASAN</option>
-                    <option value="Autre question">Autre</option>
-                    </select>
-                </div>
-                <div class="libele_simple">
-                    <label for="message_contact">Message (obligatoire) :</label>
-                    <textarea id="message_contact" name="message_contact" class="form-control" placeholder="Trop marrant Mike Echo" rows="4"></textarea>
-                    <p class="comments"></p>
-                </div>
-                <div>
-                    <p class="blue"><strong>* Ces informations sont requises.</strong></p>
-                </div>
-                <div class="div_send">
-                    <input type="submit" value="Envoyer">
-                </div>    
-        </form>
-    </section>
+
+    <form id="contact-form" method="post" action="" role="form">
+        <div class=" libele_double">
+            <div class=" libele_double_inside">
+                <label for="username">Nom (obligatoire) :</label>
+                <input id="username" type="text" name="username" class="form-control" placeholder="Comme ta bande patro Bitoss">
+                <p class="comments"></p>
+            </div>
+
+            <div class=" libele_double_inside">
+                <label for="email">Email (obligatoire) :</label>
+                <input id="email" type="text" name="email" class="form-control" placeholder="CuicuiJeSuisUnFruit@intradef.gouv.fr">
+                <p class="comments"></p>
+            </div>
+        </div>
+
+        <div class=" libele_double">
+            <div class=" libele_double_inside">
+                <label for="phone">Téléphone :</label>
+                <input id="phone" type="tel" name="phone" class="form-control" placeholder="Pas celui de la Jessica du Shogun">
+                <p class="comments"></p>
+            </div>
+
+            <div class=" libele_double_inside">
+                <label for="website">Site Web :</label>
+                <input id="website" type="url" name="website" class="form-control" placeholder="www.ISuckMyCDS.fr">
+                <p class="comments"></p>
+            </div>
+        </div>
+
+        <div class="libele_simple">
+            <label for="sujet">Sujet (obligatoire) :</label>                 
+            <select name="sujet" id="sujet">
+            <option value="">Quel est le sujet de votre message ?</option>
+            <option value="Remerciement">Remerciement</option>
+            <option value="PUB">Placement Publicitaire</option>
+            <option value="Retex">Retex</option>
+            <option value="EVASAN">EVASAN</option>
+            <option value="Autre question">Autre</option>
+            </select>
+        </div>
+
+        <div class="libele_simple">
+            <label for="message_contact">Message (obligatoire) :</label>
+            <textarea id="message_contact" name="message_contact" class="form-control" placeholder="Trop marrant Mike Echo" rows="4"></textarea>
+            <p class="comments"></p>
+        </div>
+
+        <div>
+            <p class="blue"><strong>* Ces informations sont requises.</strong></p>
+        </div>
+
+        <div class="div_send">
+            <input type="submit" value="Envoyer">
+        </div>    
+    </form>
+</section>
 
     <?php include("template/facebook.php"); ?>
 
