@@ -64,6 +64,12 @@ nav
 				color: #3B5998;
 			}
 		}
+		.share-linkedin{
+			color:#0e76a8;
+			&:hover{
+				color: #0e76a8;
+			}
+		}
 	}
 
 	@include mobile-only

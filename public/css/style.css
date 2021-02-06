@@ -153,6 +153,10 @@ nav {
       color: #3B5998; }
       nav .picto_sociaux .share-fb:hover {
         color: #3B5998; }
+    nav .picto_sociaux .share-linkedin {
+      color: #0e76a8; }
+      nav .picto_sociaux .share-linkedin:hover {
+        color: #0e76a8; }
   @media screen and (max-width: 599px) {
     nav {
       width: 100%; }
