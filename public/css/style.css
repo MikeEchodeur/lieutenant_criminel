@@ -389,7 +389,4 @@ div[class="contact_head"] {
 
 .connect {
   width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column; }
+  text-align: center; }

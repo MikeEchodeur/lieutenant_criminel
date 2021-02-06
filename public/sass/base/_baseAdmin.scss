@@ -1,12 +1,15 @@
 body
 {
-	width: 100%;
 	margin: auto;
 	min-width: 1024px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: #D5D5D5;
+	@media (max-width: 799px){
+		min-width: 0px;
+		}
+
 	section{
 		min-height: 800px;
 		width: 1024px;
@@ -16,6 +19,10 @@ body
 		background-color: white;
 		display: flex;
 		flex-direction: column;
+		@media (max-width: 799px){
+			min-width: 0px;
+			width: 100%;
+		}
 	}
 }
 
@@ -25,6 +32,8 @@ body
 	display: flex;
 	width: 100%;
 	background-color: black;
+	@media (max-width: 799px){
+		}
 }
 
 nav

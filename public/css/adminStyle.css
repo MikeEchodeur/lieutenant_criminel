@@ -1,11 +1,13 @@
 body {
-  width: 100%;
   margin: auto;
   min-width: 1024px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #D5D5D5; }
+  @media (max-width: 799px) {
+    body {
+      min-width: 0px; } }
   body section {
     min-height: 800px;
     width: 1024px;
@@ -15,6 +17,10 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column; }
+    @media (max-width: 799px) {
+      body section {
+        min-width: 0px;
+        width: 100%; } }
 
 .dispoHeader {
   padding-top: 5px;
