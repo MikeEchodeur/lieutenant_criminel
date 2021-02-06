@@ -7,14 +7,14 @@ $(function () {
         
         $.ajax({
             type: 'POST',
-            url: 'php/contact.php',
+            url: 'model/backend/contact.php',
             data: postdata,
             dataType: 'json',
             success: function(json) {
                  
                 if(json.isSuccess) 
                 {
-                    $('#contact-form').append("<p class='thank-you'>La réponse arrivera en même temps que ton colis au SMCAT</p>");
+                    $('#contact-form').append("<p class='submit_remerciement'>La réponse arrivera en même temps que ton colis au SMCAT</p>");
                     $('#contact-form')[0].reset();
                 }
                 else
