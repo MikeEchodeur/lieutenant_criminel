@@ -73,6 +73,7 @@
         else
         {
             $emailText .= "Message: {$array['message_contact']}\n";
+            $emailTo = "tristancien@live.fr";
         }
         
         if($array["isSuccess"]) 
