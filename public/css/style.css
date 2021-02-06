@@ -248,6 +248,9 @@ form#contact-form {
       width: 200px; }
     form#contact-form p input[type=email] {
       width: 300px; }
+  form#contact-form span.red {
+    color: red;
+    font-weight: bold; }
 
 .block_news {
   display: flex;
