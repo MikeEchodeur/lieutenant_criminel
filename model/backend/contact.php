@@ -91,9 +91,7 @@
         
         if($array["isSuccess"]) 
         {
-            $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']} \r\n";
-            $headers .= 'MIME-Version 1.0' . "\r\n";
-            $headers .='Content-Type: text/html; charset="iso-8895-1"';
+            $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']}";
             mail($emailTo, $emailSujet, $emailText, $headers);
         }
         
