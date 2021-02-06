@@ -44,10 +44,10 @@
 	?>
 	</section>
 
-	<?php include("template/facebook.php"); ?>
+	<?php include("view/frontend/public/template/facebook.php"); ?>
 
 </div>
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template/template.php'); ?>
+<?php require('view/frontend/template/template.php'); ?>

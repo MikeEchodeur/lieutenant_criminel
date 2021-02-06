@@ -20,3 +20,20 @@
 		padding-left: 25px;
 	}
 }
+
+.articleComment{
+	margin-bottom: 10px;
+	border: solid black 2px;
+	border-radius: 5px;
+	max-width: 600px;
+	&__entête{
+		padding: 5px;
+		background-color: #D3BF8D;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+	&__texte{
+		padding: 5px;
+		border-radius: 5px;
+	}
+}
