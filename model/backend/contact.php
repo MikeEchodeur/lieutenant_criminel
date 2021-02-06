@@ -2,6 +2,7 @@
 
     $array = array("username" => "", "email" => "", "phone" => "", "website" => "", "sujet" => "", "message_contact" => "","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
     $emailTo = "tristan@nuoma.fr";
+    // lieutenant.criminel@yahoo.com
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
     { 
@@ -54,7 +55,7 @@
         {
         $emailText .= "Site Web: {$array['website']}\n";
         }
-        
+
         if (empty($array["sujet"]))
         {
             $array["sujetError"] = "Sélectionne un sujet";
@@ -65,6 +66,19 @@
             $emailSujet .= "{$array['sujet']}\n";
         }
 
+        switch ($array["sujet"]) {
+        case "PUB":
+            $emailTo = "tristancien@live.fr";
+            // mikeecho.contact@gmail.com
+            break;
+        case "EVASAN":
+            $emailTo = "tristancien@live.fr";
+            // mikeecho.evasan@gmail.com
+            break;
+        default:
+            break;
+        }
+
         if (empty($array["message_contact"]))
         {
             $array["message_contactError"] = "Qu'est-ce que tu veux me dire ?";
@@ -73,7 +87,6 @@
         else
         {
             $emailText .= "Message: {$array['message_contact']}\n";
-            $emailTo = "tristancien@live.fr";
         }
         
         if($array["isSuccess"]) 
