@@ -91,7 +91,10 @@
         
         if($array["isSuccess"]) 
         {
-            $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']}";
+            $headers = "From: {$array['username']} <{$array['email']}>\r\nReply-To: {$array['email']} \r\n";
+            $headers .='Content-Type: text/plain; charset="iso-8859-1"'."\r\n";
+            $headers .='Content-Transfer-Encoding: 8bit';
+
             mail($emailTo, $emailSujet, $emailText, $headers);
         }
         
