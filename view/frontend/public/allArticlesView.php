@@ -44,7 +44,7 @@
 	?>
 	</section>
 
-	<?php include("view/frontend/public/template/facebook.php"); ?>
+	<?php include("view/frontend/template/facebook.php"); ?>
 
 </div>
 
