@@ -14,7 +14,7 @@ $(function () {
                  
                 if(json.isSuccess) 
                 {
-                    $('#contact-form').append("<p class='thank-you'>La réponse arrivera en même temps que ton colis au SMCAT</p>");
+                    $('#contact-form').append("<p class='submit_remerciement'>La réponse arrivera en même temps que ton colis au SMCAT</p>");
                     $('#contact-form')[0].reset();
                 }
                 else
