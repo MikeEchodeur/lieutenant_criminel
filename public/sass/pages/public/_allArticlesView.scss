@@ -42,6 +42,9 @@
 	}
 	&__texte{
 		width: 75%;
+		a:hover{
+				color: #6F4843;
+			}
 	}
 	@include mobile-only{
 		display: flex;

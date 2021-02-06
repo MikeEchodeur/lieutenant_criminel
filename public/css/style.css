@@ -300,6 +300,8 @@ form#contact-form {
       height: 100%; }
   .article__texte {
     width: 75%; }
+    .article__texte a:hover {
+      color: #6F4843; }
   @media screen and (max-width: 599px) {
     .article {
       display: flex;
