@@ -22,7 +22,7 @@
                 <div class=" libele_double">
                     <div class=" libele_double_inside">
                         <label for="username">Nom <span class="red">*</span> :</label>
-                        <input id="username" type="text" name="username" class="form-control" placeholder="Comme ta bande patro Bitoss">
+                        <input id="username" type="text" name="username" class="form-control" placeholder="Marsouin Kulbutoké">
                         <p class="comments"></p>
                     </div>
                     <div class=" libele_double_inside">
@@ -39,7 +39,7 @@
                     </div>
                     <div class=" libele_double_inside">
                         <label for="website">Site Web</label>
-                        <input id="website" type="url" name="website" class="form-control" placeholder="www.ISuckMyCDS.fr">
+                        <input id="website" type="url" name="website" class="form-control" placeholder="http://www.ISuckMyCDS.fr">
                         <p class="comments"></p>
                     </div>
                 </div>

@@ -18,7 +18,7 @@
 
         if (empty($array["username"]))
         {
-            $array["usernameError"] = "Et oui je veux tout savoir. Même ton nom !";
+            $array["usernameError"] = "Aide toi de ta bande patro Bitoss";
             $array["isSuccess"] = false; 
         } 
         else
@@ -28,7 +28,7 @@
 
         if(!isEmail($array["email"])) 
         {
-            $array["emailError"] = "T'essaies de me rouler ? C'est pas un email ça  !";
+            $array["emailError"] = "Le truc avec un @ où tu reçois AIDDA !";
             $array["isSuccess"] = false; 
         } 
         else
@@ -38,7 +38,7 @@
 
         if (!isPhone($array["phone"]))
         {
-            $array["phoneError"] = "Que des chiffres et des espaces, stp...";
+            $array["phoneError"] = "Que des chiffres et des espaces";
             $array["isSuccess"] = false; 
         }
         else
@@ -48,7 +48,7 @@
         
         if (!isWebsite($array["website"]))
         {
-            $array["websiteError"] = "Un vrai site stp";
+            $array["websiteError"] = "Un site commence par http(s) !";
             $array["isSuccess"] = false; 
         }
         else
