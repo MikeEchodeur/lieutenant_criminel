@@ -4,11 +4,11 @@
 <div class="mainAndFb">
 	<div class='connect'>
 			<p>Page de connexion :</p>
-			<form action ="" method="post">
+			<form action ="" method="post" id="form_connect">
 			    <p class="form_contact">
 			        <label for="username"> Votre pseudo :</label> <input type="text" name="username" id="username" required> <br>
 			        <label for="password"> Mot de passe :</label> <input type="password" name="password" id="password" required> <br>
-			        <input type="submit" value="Connexion">
+			        <input type="submit" class="inscription" value="Connexion">
 			        <button class="inscription"><a href="index.php?action=inscription">Inscription</a></button>
 			    </p>
 			</form>

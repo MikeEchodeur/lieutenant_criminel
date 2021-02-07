@@ -200,6 +200,46 @@ form {
   border: solid;
   display: flex;
   flex-direction: column; }
+  form p {
+    display: flex;
+    flex-direction: column;
+    margin: auto 8px; }
+    form p label {
+      text-align: left; }
+    form p textarea {
+      min-height: 75px; }
+    form p input {
+      margin-bottom: 8px;
+      width: 200px; }
+    form p input[type=email] {
+      width: 300px; }
+  form select {
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 100%; }
+
+input[type=submit], .inscription {
+  display: absolute;
+  width: 100px;
+  height: 35px;
+  margin-bottom: 8px;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer; }
+  input[type=submit] a, .inscription a {
+    color: inherit;
+    text-decoration: none; }
+
+span.red {
+  color: red;
+  font-weight: bold; }
+
+.submit_remerciement {
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: green; }
 
 form#contact-form {
   width: 95%;
@@ -221,46 +261,13 @@ form#contact-form {
           margin-right: 0px; } }
   form#contact-form div.libele_simple {
     margin: 8px; }
-  form#contact-form select {
-    border-radius: 4px;
-    margin-top: 8px;
-    margin-right: 8px;
-    width: 100%; }
   form#contact-form div.div_send {
     display: flex;
     justify-content: center; }
-  form#contact-form input[type=submit], form#contact-form .inscription {
-    display: absolute;
-    width: 100px;
-    height: 35px;
-    margin-bottom: 8px;
-    justify-content: center;
-    border-radius: 8px;
-    cursor: pointer; }
-    form#contact-form input[type=submit] a, form#contact-form .inscription a {
-      color: inherit;
-      text-decoration: none; }
-  form#contact-form p {
-    display: flex;
-    flex-direction: column;
-    margin: auto 8px; }
-    form#contact-form p label {
-      text-align: left; }
-    form#contact-form p textarea {
-      min-height: 75px; }
-    form#contact-form p input {
-      margin-bottom: 8px;
-      width: 200px; }
-    form#contact-form p input[type=email] {
-      width: 300px; }
-  form#contact-form span.red {
-    color: red;
-    font-weight: bold; }
-  form#contact-form .submit_remerciement {
-    align-items: center;
-    font-weight: 600;
-    margin-bottom: 4px;
-    color: green; }
+
+form#form_connect {
+  width: 300px;
+  align-self: center; }
 
 .block_news {
   display: flex;
