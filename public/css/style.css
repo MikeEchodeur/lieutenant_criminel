@@ -212,6 +212,9 @@ form {
       width: 200px; }
     form p input[type=email] {
       width: 300px; }
+  form div.div_send {
+    display: flex;
+    justify-content: center; }
   form select {
     border-radius: 4px;
     margin-top: 8px;
@@ -275,13 +278,15 @@ form#contact-form {
           margin-right: 0px; } }
   form#contact-form div.libele_simple {
     margin: 8px; }
-  form#contact-form div.div_send {
-    display: flex;
-    justify-content: center; }
 
 form#form_connect {
   width: 300px;
   align-self: center; }
+
+form#form_registration {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .block_news {
   display: flex;
@@ -423,6 +428,12 @@ div[class="contact_head"] {
   flex-direction: column; }
 
 .connect {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
+
+.registration {
   width: 100%;
   text-align: center;
   display: flex;
