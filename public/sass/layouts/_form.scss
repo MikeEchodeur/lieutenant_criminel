@@ -37,6 +37,23 @@ form{
 	margin-right: 8px;
 	width: 100%;
 	}
+	div.libele_double{
+		margin:8px;
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		@media (max-width: 890px){
+			display: block;
+		}
+		div.libele_double_inside{
+			width: 45%;
+			margin-right: 20px;
+			@media (max-width: 890px){
+				width: 300px;
+				margin-right: 0px;
+			}
+		}
+	}
 }
 
 input[type=submit], .inscription{
@@ -52,8 +69,6 @@ input[type=submit], .inscription{
 		text-decoration: none;
 	}
 }
-
-
 	
 span.red{
 		color: red;
