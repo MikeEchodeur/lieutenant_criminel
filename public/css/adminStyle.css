@@ -20,18 +20,27 @@ body {
     @media (max-width: 799px) {
       body section {
         min-width: 0px;
-        width: 100%; } }
+        width: 100%;
+        box-shadow: none;
+        border: none; } }
 
 .dispoHeader {
-  padding-top: 5px;
   display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
   background-color: black; }
+  .dispoHeader header {
+    height: 100%;
+    width: 100%; }
+    .dispoHeader header img {
+      width: 100%;
+      height: 100%; }
 
 nav {
-  align-self: flex-end;
+  position: sticky;
+  top: 0px;
   width: 100%;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +89,8 @@ footer {
 
 .ensembleArticles {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 .news {
   margin: 20px;
@@ -90,6 +100,12 @@ footer {
   border: 1px black solid;
   border-radius: 15px;
   box-shadow: 0px 0px 5px black; }
+  @media (max-width: 799px) {
+    .news {
+      width: 45%;
+      margin: 0px;
+      margin-top: 10px;
+      margin-bottom: 10px; } }
   .news:hover {
     transition: box-shadow 0.1s;
     box-shadow: 0px 0px 0px black; }

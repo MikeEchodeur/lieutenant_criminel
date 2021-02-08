@@ -31,27 +31,25 @@
         </head>
 
         <div class="dispoHeader">
-            <header>
-        		<a href="admin.php"><img src="../../public/image/Mike-echologo.png" alt="Banniere du site" width="150" height="150" /></a>
-            </header>
-
-           	<nav>
-                <a href="admin.php">Accueil Admin</a></br>
-        		<a href="admin.php?action=articles">Gestion des articles</a></br>
-            </nav>
-
-            <header>
+            <header class="banniere">
                 <a href="admin.php">
-                    <img src="../../public/image/Mike-echologo.png" alt="Banniere du site" width="150" height="150" />
+                   <picture>
+                        <source media="(max-width: 799px" srcset="../../public/image/mike-echo_fb.jpg">
+                        <source media="(min-width: 800px)" srcset="../../public/image/banner-me.jpg">
+                        <img src="../../public/image/banner-me.jpg" alt="Banniere du site">
+                    </picture>
                 </a>
             </header>
             
             <a href="../../index.php">
                 <div class="backToWebSite">Retour au site</div>
-            </a></br>
-           
-
+            </a>
         </div>
+
+        <nav>
+            <a href="admin.php">Accueil Admin</a></br>
+            <a href="admin.php?action=articles">Gestion des articles</a></br>
+        </nav>
             
         <section class="contenu">
             <?= $content ?>
