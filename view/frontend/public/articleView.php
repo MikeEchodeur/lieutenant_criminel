@@ -22,22 +22,24 @@
 				<br />
 			</p>
 
-			<h2>Commentaires : </h2> 
+			<div class="writeComment">
+				<h2>Commentaires : </h2> 
 
-			<?php 
-			if (isset($_SESSION['username']))
-			{
-			?>
-			<form method="post" action="index.php?article_id=<?= $data['id']?>">
-				<p>
-					<label for="add_comment">Ajoutez votre commentaire :</label><br />
-					<textarea name="add_comment" id="add_comment"></textarea>
-				</p>
-				<input type="submit" name="new_comment" value="Envoyer"/>
-			</form>
-			<?php
-			}
-			?>
+				<?php 
+				if (isset($_SESSION['username']))
+				{
+				?>
+				<form method="post" action="index.php?article_id=<?= $data['id']?>">
+					<p>
+						<label for="add_comment">Ajoutez votre commentaire :</label><br />
+						<textarea name="add_comment" id="add_comment"></textarea>
+					</p>
+					<input type="submit" name="new_comment" value="Envoyer"/>
+				</form>
+				<?php
+				}
+				?>
+			</div>
 			<br />
 
 			<?php

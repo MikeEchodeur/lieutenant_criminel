@@ -21,6 +21,23 @@
 	}
 }
 
+.writeComment{
+	max-width: 750px;
+	textarea{
+		width: 100%;
+	}
+	form {
+		width: 100%;
+		p{
+			width: 90%;
+			margin: auto;
+		}
+		input{
+			margin-left: 43%;
+		}
+	}
+}
+
 .articleComment{
 	margin-bottom: 10px;
 	border: solid black 2px;

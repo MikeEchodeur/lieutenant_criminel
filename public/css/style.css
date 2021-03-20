@@ -194,8 +194,8 @@ form {
   background: #D3BF8D;
   border-radius: 8px;
   border: solid;
-  display: flex;
-  flex-direction: column; }
+  /*display: flex;
+  flex-direction: column;*/ }
 
 form.contact-form {
   width: 95%;
@@ -343,6 +343,18 @@ form.contact-form {
     background-color: #F9FFDB;
     padding-bottom: 5px;
     padding-left: 25px; }
+
+.writeComment {
+  max-width: 750px; }
+  .writeComment textarea {
+    width: 100%; }
+  .writeComment form {
+    width: 100%; }
+    .writeComment form p {
+      width: 90%;
+      margin: auto; }
+    .writeComment form input {
+      margin-left: 43%; }
 
 .articleComment {
   margin-bottom: 10px;
