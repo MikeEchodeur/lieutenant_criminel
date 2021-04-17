@@ -58,13 +58,13 @@ function connectView()
         	}
         	else
         	{
-        		echo 'T\'AS UN MAUVAIS MDP BATARD';
+        		echo 'Mauvais mot de passe';
         		require('view/frontend/public/connectView.php');
         	}
 	    }
 		else 
 		{
-		    echo 'ENTRE UN BON USERNAME MONGOLE';
+		    echo 'Entrez un surnom valide';
 		    require('view/frontend/public/connectView.php');
 		}
 	}
