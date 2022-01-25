@@ -3,7 +3,7 @@ session_start();
 
 require('controller/frontend/frontend.php');
 
-
+/*
 
 if (isset($_GET['action']))
 	if ($_GET['action'] == 'connexion')
