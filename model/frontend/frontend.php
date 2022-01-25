@@ -105,7 +105,7 @@ function dbConnect()
 {
 	try
 		{
-			$db = new PDO('mysql:host=localhost;dbname=u427970665_lc;charset=utf8', 'u427970665_Senshee', 'xvBy9$2705!', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			$db = new PDO('mysql:host=localhost;dbname=u427970665_lc;charset=utf8','u427970665_Senshee', 'xvBy9$2705!', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 			$db->query("SET lc_time_names = 'fr_FR'");
 			return $db;
 		}
