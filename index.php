@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-echo "test effectué";
-/*
-
 require('controller/frontend/frontend.php');
 
 
