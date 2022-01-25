@@ -76,7 +76,7 @@ function connectView()
 
 function inscriptionView()
 {
-	//Je m'asssure que les variables possède ou non des données
+	//Je m'asssure que les variables possèdent ou non des données
 	if (isset($_POST['username'], $_POST['password'], $_POST['confirmPassword'], $_POST['email']))
 	{
 
@@ -122,7 +122,7 @@ function inscriptionView()
 
 			inscription();
 
-			require('view/frontend/public/inscriptionView.php');
+			require('view/frontend/public/connectView.php');
 			echo 'INSCRIPTION VALIDEE';
 		}
 	}
@@ -130,6 +130,32 @@ function inscriptionView()
 	{
 		require('view/frontend/public/inscriptionView.php');
 	}	
+}
+
+function activationView()
+{
+	verifActivationAccount();
+	$clebdd = $row['cle'];
+	$actif = $row['actif'];
+	if($actif == '1')
+	{
+		echo "Votre compte est déjà actif";
+		require('view/frontend/public/activationView.php');
+	}
+	else 
+	{
+		if($cle == $clebdd)
+		{
+			echo "Votre compte a bien été activé";
+			activationAccount();
+			require('view/frontend/public/activationView.php');
+		}
+		else
+		{
+			echo "Erreur, votre compte ne peut pas être activé";
+			require('view/frontend/public/activationView.php');
+		}
+	}
 }
 
 

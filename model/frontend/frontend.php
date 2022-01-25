@@ -20,14 +20,31 @@ function inscription()
 	$pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
 	$username = strtolower($_POST['username']);
 	$email = strtolower($_POST['email']);
+	//Création aléatoire d'une clé
+	$cle = md5(microtime(TRUE)*100000);
 
 //entrée des valeurs de l'utilisateur dans la DB.
 	$db = dbConnect();
-	$req = $db->prepare('INSERT INTO user(username, password, email, date_inscription) VALUES(:username, :password, :email, CURDATE())');
+	$req = $db->prepare('INSERT INTO user(username, password, email, cle, date_inscription) VALUES(:username, :password, :email, :cle, CURDATE())');
 	$req->execute(array(
 		'username' => $username,
 		'password' => $pass_hache,
-		'email' => $email));
+		'email' => $email,
+		'cle' => $cle));
+
+	//Preparation du mail contenant le lien d'activation
+	$destinatire = $email;
+	$sujet = "Activer votre compte";
+	$header = "from : inscription@eidhendust.com";
+
+	$message = 'Bienvenue sur Mike Echo,
+
+	Pour activer votre compte, veuillez cliquer sur le lien ci-dessous ou copier/coller dans votre navigateur internet.
+
+	http://localhost/lieutnant_criminel/index.php?action=activation?log='.urlencode($login).'$cle='.urlencode($cle).'
+
+	-------------------
+	Ceci est un mail automatique, merci de ne pas y répondre.';
 
 	return $req;
 	$req->closeCursor();
@@ -43,6 +60,30 @@ function controlDbInscription()
 		$data = $req->fetch();
 
 	return $data;
+	$req->closeCursor();
+}
+
+function verifActivationAccount()
+{
+	// Récupération des variables nécessaires à l'activation
+	$login = $_GET['log'];
+	$cle = $_GET['cle'];
+
+	$db = dbConnect();
+	$req = $db->prepare('SELECT cle, actif FROM user WHERE login = :login');
+	$req->execute(array(':login' => $login)); 
+	$row = $req->fetch();
+
+	return $row;
+	$req->closeCursor();
+}
+
+function activationAccount()
+{
+	$db = dbConnect();
+	$req = $db->prepare("UPDATE user SET actif = 1 WHERE login = :login");
+	$req->bindParam(':login', $login);
+	$req->execute();
 	$req->closeCursor();
 }
 
