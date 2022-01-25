@@ -1,7 +1,12 @@
 <?php
 session_start();
 
+echo "test effectué";
+/*
+
 require('controller/frontend/frontend.php');
+
+
 
 if (isset($_GET['action']))
 	if ($_GET['action'] == 'connexion')
