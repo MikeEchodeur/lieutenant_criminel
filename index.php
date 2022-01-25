@@ -2,7 +2,7 @@
 session_start();
 
 require('controller/frontend/frontend.php');
-
+allArticlesView();
 /*
 
 if (isset($_GET['action']))
