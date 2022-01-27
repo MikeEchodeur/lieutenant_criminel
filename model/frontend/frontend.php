@@ -33,18 +33,20 @@ function inscription()
 		'cle' => $cle));
 
 	//Preparation du mail contenant le lien d'activation
-	$destinatire = $email;
-	$sujet = "Activer votre compte";
-	$header = "from : inscription@eidhendust.com";
+	$destinataire = $email;
+	$sujet = 'Activer votre compte';
+	$header = 'From: inscription@eidhendust.com';
 
 	$message = 'Bienvenue sur Mike Echo,
 
 	Pour activer votre compte, veuillez cliquer sur le lien ci-dessous ou copier/coller dans votre navigateur internet.
 
-	http://localhost/lieutnant_criminel/index.php?action=activation?log='.urlencode($login).'$cle='.urlencode($cle).'
+	http://localhost/lieutnant_criminel/index.php?action=activation?log='.urlencode($username).'$cle='.urlencode($cle).'
 
 	-------------------
 	Ceci est un mail automatique, merci de ne pas y répondre.';
+
+	mail($destinataire, $sujet, $message, $header) ; // Envoi du mail
 
 	return $req;
 	$req->closeCursor();
