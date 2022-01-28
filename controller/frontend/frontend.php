@@ -157,7 +157,6 @@ function activationView()
 			require('view/frontend/public/activationView.php');
 		}
 	}
-	require('view/frontend/public/activationView.php');
 }
 
 
