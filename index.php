@@ -13,6 +13,10 @@ if (isset($_GET['action']))
 	{
 		inscriptionView();
 	}
+	elseif ($_GET['action'] == 'pageTest') 
+	{
+		pageTestView();
+	}
 	elseif ($_GET['action'] == 'activation')
 	{
 		activationView();

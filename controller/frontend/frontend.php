@@ -172,3 +172,10 @@ function errorView()
 {
 	require('view/frontend/public/errorView.php');
 }
+
+// PAGE TEST
+function pageTestView()
+{
+	testMail();
+	require('view/frontend/public/pageTestView.php');
+}

@@ -158,3 +158,9 @@ function dbConnect()
 		}
 }
 
+//Partie test
+
+function testMail()
+{
+	mail('senshee@eidhendust.com', 'subject test', 'msg test');
+}
