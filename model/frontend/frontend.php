@@ -41,7 +41,7 @@ function inscription()
 
 	Pour activer votre compte, veuillez cliquer sur le lien ci-dessous ou copier/coller dans votre navigateur internet.
 
-	http://eidhendust.com/index.php?action=activation?log='.urlencode($username).'$cle='.urlencode($cle).'
+	http://eidhendust.com/index.php?action=activation/$log='.urlencode($username).'$cle='.urlencode($cle).'
 
 	-------------------
 	Ceci est un mail automatique, merci de ne pas y répondre.';
