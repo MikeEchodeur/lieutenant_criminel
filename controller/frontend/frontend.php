@@ -156,7 +156,6 @@ function activationView()
 			require('view/frontend/public/activationView.php');
 		}
 	}*/
-	verifActivationAccount();
 	require('view/frontend/public/activationView.php');
 }
 
