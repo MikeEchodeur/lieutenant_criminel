@@ -122,7 +122,7 @@ function inscriptionView()
 
 			inscription();
 
-			require('view/frontend/public/connectView.php');
+			require('view/frontend/public/inscriptionView.php');
 			echo 'INSCRIPTION VALIDEE';
 		}
 	}
