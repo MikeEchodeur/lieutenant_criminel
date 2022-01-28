@@ -134,7 +134,7 @@ function inscriptionView()
 
 function activationView()
 {
-	verifActivationAccount();
+	/*verifActivationAccount();
 	$clebdd = $row['cle'];
 	$actif = $row['actif'];
 	if($actif == '1')
@@ -155,7 +155,8 @@ function activationView()
 			echo "Erreur, votre compte ne peut pas être activé";
 			require('view/frontend/public/activationView.php');
 		}
-	}
+	}*/
+	require('view/frontend/public/activationView.php');
 }
 
 
