@@ -13,8 +13,6 @@
 			        <input type="submit" class="inscription" value="Connexion">
 			        <button class="inscription"><a href="index.php?action=inscription">Inscription</a></button>
 			    	</div>
-			    	<button class="testMail"><a href="index.php?action=pageTest">test envoi mail</a></button>
-
 			    </p>
 			</form>
 	</div>

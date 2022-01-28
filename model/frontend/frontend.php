@@ -41,7 +41,7 @@ function inscription()
 
 	Pour activer votre compte, veuillez cliquer sur le lien ci-dessous ou copier/coller dans votre navigateur internet.
 
-	http://eidhendust.com/index.php?action=activation&$log='.urlencode($username).'$cle='.urlencode($cle).'
+	http://eidhendust.com/index.php?action=activation&log='.urlencode($username).'&cle='.urlencode($cle).'
 
 	-------------------
 	Ceci est un mail automatique, merci de ne pas y répondre.';
@@ -69,23 +69,22 @@ function verifActivationAccount()
 {
 	// Récupération des variables nécessaires à l'activation
 	$login = $_GET['log'];
-	$cle = $_GET['cle'];
 
 	$db = dbConnect();
-	$req = $db->prepare('SELECT cle, actif FROM user WHERE login = :login');
+	$req = $db->prepare('SELECT cle, actif FROM user WHERE username = :login');
 	$req->execute(array(':login' => $login)); 
-	$row = $req->fetch();
+	$data = $req->fetch();
 
-	return $row;
+	return $data;
 	$req->closeCursor();
 }
 
 function activationAccount()
 {
+	$login = $_GET['log'];
 	$db = dbConnect();
-	$req = $db->prepare("UPDATE user SET actif = 1 WHERE login = :login");
-	$req->bindParam(':login', $login);
-	$req->execute();
+	$req = $db->prepare('UPDATE user SET actif = 1 WHERE username = :login');
+	$req->execute(['login' => $login]);
 	$req->closeCursor();
 }
 
@@ -156,11 +155,4 @@ function dbConnect()
 		{
 			die('Erreur : '.$e->getMessage());
 		}
-}
-
-//Partie test
-
-function testMail()
-{
-	mail('senshee@eidhendust.com', 'subject test', 'msg test');
 }

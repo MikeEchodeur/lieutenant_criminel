@@ -134,9 +134,10 @@ function inscriptionView()
 
 function activationView()
 {
-	/*verifActivationAccount();
-	$clebdd = $row['cle'];
-	$actif = $row['actif'];
+	$data = verifActivationAccount();
+	$cle = $_GET['cle'];
+	$clebdd = $data['cle'];
+	$actif = $data['actif'];
 	if($actif == '1')
 	{
 		echo "Votre compte est déjà actif";
@@ -155,7 +156,7 @@ function activationView()
 			echo "Erreur, votre compte ne peut pas être activé";
 			require('view/frontend/public/activationView.php');
 		}
-	}*/
+	}
 	require('view/frontend/public/activationView.php');
 }
 
@@ -172,11 +173,4 @@ function disconnectView()
 function errorView()
 {
 	require('view/frontend/public/errorView.php');
-}
-
-// PAGE TEST
-function pageTestView()
-{
-	testMail();
-	require('view/frontend/public/pageTestView.php');
 }
