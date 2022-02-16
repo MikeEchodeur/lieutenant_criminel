@@ -41,8 +41,8 @@ function contactView()
 
 function connectView()
 {
+	$login = "0";
 // Verification des password entrée et de la bdd pour connexion
-
 	if (isset($_POST['username']) && !empty($_POST['username']))
 	{
 		$data = getUsername();
@@ -58,13 +58,13 @@ function connectView()
         	}
         	else
         	{
-        		echo 'Mauvais mot de passe';
+        		$login = "erreur";
         		require('view/frontend/public/connectView.php');
         	}
 	    }
 		else 
 		{
-		    echo 'Entrez un surnom valide';
+		    $login = "erreur";
 		    require('view/frontend/public/connectView.php');
 		}
 	}

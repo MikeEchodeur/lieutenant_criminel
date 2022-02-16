@@ -6,6 +6,11 @@
 			<p style="text-decoration: underline">Page de connexion :</p>
 			<form action ="" method="post" id="form_connect">
 			    <p class="form_contact">
+			    	<?php 
+			    	if ($login == "erreur")
+			        { ?>
+			        	<p>Mot de passe ou pseudo incorrect<p>
+			        <?php } ?>
 			        <label for="username"> Votre pseudo :</label> <input type="text" name="username" id="username" required> <br>
 			        <label for="password"> Mot de passe :</label> <input type="password" name="password" id="password" required> 
 			        

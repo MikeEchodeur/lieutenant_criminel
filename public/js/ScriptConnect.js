@@ -1,2 +1,2 @@
 let myTest = document.getElementById('test');
-elt.textContent = "Je fais un test";
+myTest.textContent = "Je fais un test";
