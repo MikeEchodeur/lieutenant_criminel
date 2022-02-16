@@ -76,6 +76,8 @@ function connectView()
 
 function inscriptionView()
 {
+	$inscription = "0";
+	$validInscription = "0";
 	//Je m'asssure que les variables possèdent ou non des données
 	if (isset($_POST['username'], $_POST['password'], $_POST['confirmPassword'], $_POST['email']))
 	{
@@ -85,22 +87,22 @@ function inscriptionView()
 		if (empty($_POST['username']))
 		{
 			require('view/frontend/public/inscriptionView.php');
-			echo 'Champ du pseudo vide';
+			$inscription = "erreur1";
 		}
 		elseif (!preg_match("#^[a-zA-Z0-9]+$#", $_POST['username']))
 		{
 			require('view/frontend/public/inscriptionView.php');
-			echo "Le pseudo doit êre renseigné sans caractère spéciaux";
+			$inscription = "erreur1";
 		}
 		elseif (strlen($_POST['username']) > 25)
 		{
 			require('view/frontend/public/inscriptionView.php');
-			echo 'Pseudo trop long';
+			$inscription = "erreur1";
 		}
 		elseif (empty($_POST['password']) || ($_POST['confirmPassword'] != $_POST['password']))
 		{
 			require('view/frontend/public/inscriptionView.php');
-			echo 'Erreur lors de la confirmation des mots de passes.';
+			$inscripion = "erreur2";
 		}
 		elseif (empty($_POST['email']))
 		{
@@ -110,12 +112,12 @@ function inscriptionView()
 		elseif (!preg_match("#^[a-z0-9._-]+@([a-z0-9]{2,}\.){1,2}[a-z]{2,4}$#", strtolower($_POST['email'])))
 		{
 			require('view/frontend/public/inscriptionView.php');
-			echo 'Email non valide';
+			$inscripion = "erreur3";
 		}
 		elseif($data == TRUE)
 		{
 			require('view/frontend/public/inscriptionView.php');
-			echo 'Pseudo ou email déjà utilisé pour un autre compte';
+			$inscription = "erreur4";
 		}
 		else
 		{
@@ -123,7 +125,7 @@ function inscriptionView()
 			inscription();
 
 			require('view/frontend/public/inscriptionView.php');
-			echo 'INSCRIPTION VALIDEE';
+			$validInscription = "correct";
 		}
 	}
 	else	
