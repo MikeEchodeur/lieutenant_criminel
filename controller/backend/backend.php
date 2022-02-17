@@ -81,8 +81,8 @@ function addArticlesView()
 
 function adminArticleView()
 {
-	/*getArticles();
-	getComments();*/
+	getArticles();
+	getComments();
 	if (isset($_POST['supprimer']))
 	{
 		deleteArticle();
@@ -115,6 +115,6 @@ function adminArticleView()
 	}
 	else
 	{
-		require('../../View/backend/adminArticleView.php');
+		require('../../view/backend/adminArticleView.php');
 	}
 }
