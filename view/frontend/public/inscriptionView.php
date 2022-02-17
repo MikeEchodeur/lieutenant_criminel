@@ -12,22 +12,22 @@
 			    	<p>Félicitation bande de gueux vous vous êtes inscrits<p> <?php }
 			    else { 
 			    	if($inscription == "erreur4") { ?>
-			    	<p>Pseudo ou adresse Email déjà enregistré<p>
+			    	<mark>Pseudo ou adresse Email déjà enregistré</mark>
 			    	<?php } ?>
 				    <label for="username"> Pseudo :</label>
 				    <?php if($inscription == "erreur1")  { ?>
-				    	<p>Veuillez renseigner un pseudo de 25 caractères maximum et sans caractère spéciaux<p>
+				    	<mark>Veuillez renseigner un pseudo de 25 caractères maximum et sans caractère spéciaux</mark>
 				    <?php } ?> 
 				    <input type="text" name="username" id="username" required>
 				    <label for="password"> Mot de passe :</label> <input type="password" name="password" id="password" required>
 				    <label for="confirmPassword"> Confirmez le mot de passe :</label> 
 					<?php if($inscription == "erreur2")  { ?>
-				    	<p>Erreur lors de la confirmation du mot de passe<p>
+				    	<mark>Erreur lors de la confirmation du mot de passe</mark>
 				    <?php } ?> 
 				    <input type="password" name="confirmPassword" id="confirmPassword" required>
 				    <label for="email"> Adresse Email :</label> 
 				    <?php if($inscription == "erreur3")  { ?>
-				    	<p>Adresse mail non conforme<p>
+				    	<mark>Adresse mail non conforme</mark>
 				    <?php } ?> 
 				    <input type="email" name="email" id="email" required/>
 				    <div class="div_send">

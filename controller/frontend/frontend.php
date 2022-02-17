@@ -86,23 +86,24 @@ function inscriptionView()
 
 		if (empty($_POST['username']))
 		{
-			require('view/frontend/public/inscriptionView.php');
 			$inscription = "erreur1";
+			require('view/frontend/public/inscriptionView.php');
 		}
 		elseif (!preg_match("#^[a-zA-Z0-9]+$#", $_POST['username']))
 		{
-			require('view/frontend/public/inscriptionView.php');
 			$inscription = "erreur1";
+			require('view/frontend/public/inscriptionView.php');
 		}
 		elseif (strlen($_POST['username']) > 25)
 		{
-			require('view/frontend/public/inscriptionView.php');
 			$inscription = "erreur1";
+			require('view/frontend/public/inscriptionView.php');
 		}
 		elseif (empty($_POST['password']) || ($_POST['confirmPassword'] != $_POST['password']))
 		{
+			$inscription = "erreur2";
 			require('view/frontend/public/inscriptionView.php');
-			$inscripion = "erreur2";
+			echo "erreur 2";
 		}
 		elseif (empty($_POST['email']))
 		{
@@ -111,21 +112,21 @@ function inscriptionView()
 		}
 		elseif (!preg_match("#^[a-z0-9._-]+@([a-z0-9]{2,}\.){1,2}[a-z]{2,4}$#", strtolower($_POST['email'])))
 		{
+			$inscription = "erreur3";
 			require('view/frontend/public/inscriptionView.php');
-			$inscripion = "erreur3";
 		}
 		elseif($data == TRUE)
 		{
-			require('view/frontend/public/inscriptionView.php');
 			$inscription = "erreur4";
+			require('view/frontend/public/inscriptionView.php');
 		}
 		else
 		{
 
 			inscription();
-
-			require('view/frontend/public/inscriptionView.php');
 			$validInscription = "correct";
+			require('view/frontend/public/inscriptionView.php');
+			
 		}
 	}
 	else	
