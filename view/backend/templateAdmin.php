@@ -56,7 +56,7 @@
         </section>
 
         <footer>
-        	©copyright Agneugneu LifeStyle
+        	©copyright Eidhen Dust
         </footer>
     </body>
 </html>
