@@ -46,7 +46,7 @@ elseif (isset($_GET['edit_article_id']))
 	}
 	else
 	{
-		adminView();
+		adminArticleView();
 	}
 }
 else  

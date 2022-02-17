@@ -81,8 +81,8 @@ function addArticlesView()
 
 function adminArticleView()
 {
-	getArticles();
-	getComments();
+	/*getArticles();
+	getComments();*/
 	if (isset($_POST['supprimer']))
 	{
 		deleteArticle();
