@@ -2,6 +2,9 @@
 
 <?php ob_start(); ?>
 
+
+<script src="public/js/ScriptConnect.js"></script>
+
 <div class="mainAndFb">
 	<div class="registration">
 		<p style="text-decoration: underline">Inscrivez-vous :</p>
@@ -37,13 +40,8 @@
 		    </p>
 		</form>
 
-<!-- TEST JAVASCRIPT ____________________________ -->
 		
-		<script src="public/js/ScriptConnect.js">
-		</script>
-		<p id="test">My Content</p>
-<!-- ______________________________________________ -->
-		
+
 	</div>
 	<?php include("view/frontend/template/facebook.php"); ?>
 </div>
