@@ -80,4 +80,4 @@ while ($data_comment = $req->fetch())
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('../../View/backend/templateAdmin.php'); ?>
+<?php require('../../view/backend/templateAdmin.php'); ?>
