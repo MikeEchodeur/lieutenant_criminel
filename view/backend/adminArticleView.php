@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 	
-<?php
+<!-- <?php /*
 
 $req = getArticle();
 while ($data = $req->fetch())
@@ -45,7 +45,7 @@ while ($data = $req->fetch())
 
 
 
-<?php
+ <?php
 
 $req = getComments();
 while ($data_comment = $req->fetch())
@@ -74,9 +74,9 @@ while ($data_comment = $req->fetch())
 	echo htmlspecialchars($data_comment['auteur']) . ' le ' . $data_comment['date_comments_fr'] . '</br>' . htmlspecialchars($data_comment['comment']);
 }
 }
-?>
+*/ ?>
 
-</div>
+</div>-->
 
 <?php $content = ob_get_clean(); ?>
 
