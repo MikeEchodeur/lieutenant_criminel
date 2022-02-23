@@ -3,6 +3,7 @@ require('../../model/backend/backend.php');
 
 function adminView()
 {
+	$nbrComments = getNbrComments();
 	$nbrUsers = getNbrUsers();
 	require('../../view/backend/adminView.php');
 }
@@ -117,4 +118,13 @@ function adminArticleView()
 	{
 		require('../../view/backend/adminArticleView.php');
 	}
+}
+
+/* PARTIE GESTIONS DES COMMENTAIRES */
+
+function gestionCommentsView()
+{
+	$data = getNewComments();
+	#getArticlesWithNewComments();
+	require('../../view/backend/gestionCommentsView.php');
 }

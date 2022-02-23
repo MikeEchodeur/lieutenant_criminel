@@ -49,6 +49,10 @@ elseif (isset($_GET['edit_article_id']))
 		adminArticleView();
 	}
 }
+elseif (isset($_GET['gestion_comments']))
+{
+	gestionCommentsView();
+}
 else  
 {
 	adminView();

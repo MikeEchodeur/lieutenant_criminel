@@ -112,6 +112,43 @@ function retirer_comment()
 	$req->closeCursor();
 }
 
+################ NEW COMMENTAIRES ######################
+
+function getNewComments()
+{
+	$db = dbConnect();
+
+	$dataComments = $db->query('SELECT id, id_article, auteur, comment, statut, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM comments WHERE statut = "new" ORDER BY date_comment');
+
+	return $dataComments;
+	$dataComments->closeCursor();
+}
+
+function getNbrComments()
+{
+	$db = dbConnect();
+	$req = $db->query('SELECT COUNT(id) FROM comments WHERE statut = "new"');
+	$result = $req->fetchColumn();
+
+	return $result;
+	$req->closeCursor();
+}
+
+function getArticlesWithNewComments()
+{
+	#### PAGE ERRONNE A REVOIR ####
+
+	$db = dbConnect();
+	$req = $db->prepare('SELECT id, titre FROM articles');
+
+	$data = $req;
+
+
+	return $data;
+	$req->closeCursor();
+
+}
+
 ############################# ARTICLE SUR GESTION ADMIN VIEW ###############################
 
 function getArticles()
@@ -139,8 +176,8 @@ function getArticle()
 function getComments()
 {
 	$db = dbConnect();
-	$req = $db->prepare('SELECT id, auteur, comment, statut, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM comments WHERE id_article = ? ORDER BY date_comment');
-	$req->execute(array($_GET['edit_article_id']));
+	$req = $db->prepare('SELECT id, auteur, comment, statut, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM comments WHERE id_article = "new" ORDER BY date_comment');
+	$req->execute(array());
 
 	return $req;
 	$req->closeCursor();
