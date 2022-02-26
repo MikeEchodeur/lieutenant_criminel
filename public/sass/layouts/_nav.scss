@@ -4,8 +4,8 @@ nav
 	text-transform: uppercase;
 	display: flex;
 	border: 1px solid;
-	border-color: #F2F5E1;
-	background-color: $site_bg_color;
+	border-color: #A7976E;
+	background-color: #D3BF8D;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0px;
@@ -19,8 +19,8 @@ nav
 		margin-right: 20px;
 		color: #6D6D6D;
 		&:hover{
-			background-color: #F2F5E1;
-			color: #827528;
+			//background-color: #ADADAD;
+			color: #2A2A2A;
 		}
 	}
 

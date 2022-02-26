@@ -109,8 +109,8 @@ nav {
   text-transform: uppercase;
   display: flex;
   border: 1px solid;
-  border-color: #F2F5E1;
-  background-color: #FBFFE3;
+  border-color: #A7976E;
+  background-color: #D3BF8D;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -123,8 +123,7 @@ nav {
     margin-right: 20px;
     color: #6D6D6D; }
     nav a:hover {
-      background-color: #F2F5E1;
-      color: #827528; }
+      color: #2A2A2A; }
   nav .div_collapse {
     margin: 7px;
     height: 30px;
