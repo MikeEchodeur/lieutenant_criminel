@@ -12,7 +12,7 @@
 		    <p>
 		    	<?php  
 			    if ($validInscription == "correct") { ?> 
-			    	<p>Félicitation bande de gueux vous vous êtes inscrits<p> <?php }
+			    	<p>Félicitation bande de gueux vous vous êtes inscrits, il te faut cependant activer ton compte via le lien d'activation que tu as reçu sur ton adresse mail renseigné ;)<p> <?php }
 			    else { 
 			    	if($inscription == "erreur4") { ?>
 			    	<mark>Pseudo ou adresse Email déjà enregistré</mark>
