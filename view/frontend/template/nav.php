@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
         <a href="index.php">Articles</a><br>
         <a href="index.php?action=rules">Règles d'engagement</a><br>
-        <a href="index.php?action=contact">Contact</a><br>
+        <!--<a href="index.php?action=contact">Contact</a><br>-->
 
         <!-- FAIRE APPARAITRE L'ADMINISTRATION DU SITE ICI-->
         <?php

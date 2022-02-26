@@ -126,5 +126,18 @@ function gestionCommentsView()
 {
 	$data = getNewComments();
 	#getArticlesWithNewComments();
-	require('../../view/backend/gestionCommentsView.php');
+	if(isset($_POST['publier']))
+	{
+		publier_comment();
+		require('../../view/backend/gestionCommentsView.php');
+	}
+	elseif(isset($_POST['supprimer']))
+	{
+		retirer_comment();
+		require('../../view/backend/gestionCommentsView.php');
+	}
+	else
+	{
+		require('../../view/backend/gestionCommentsView.php');
+	}
 }

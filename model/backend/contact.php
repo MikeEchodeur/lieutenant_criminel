@@ -23,7 +23,7 @@
         } 
         else
         {
-            $emailText .= "Nom : {$array['username']}\n";
+            $emailText = "Nom : {$array['username']}\n";
         }
 
         if(!isEmail($array["email"])) 
@@ -33,7 +33,7 @@
         } 
         else
         {
-            $emailText .= "Email: {$array['email']}\n";
+            $emailText = "Email: {$array['email']}\n";
         }
 
         if (!isPhone($array["phone"]))
@@ -43,7 +43,7 @@
         }
         else
         {
-            $emailText .= "Telephone: {$array['phone']}\n";
+            $emailText = "Telephone: {$array['phone']}\n";
         }
         
         if (!isWebsite($array["website"]))
@@ -53,7 +53,7 @@
         }
         else
         {
-        $emailText .= "Site Web: {$array['website']}\n";
+        $emailText = "Site Web: {$array['website']}\n";
         }
 
         if (empty($array["sujet"]))
@@ -63,7 +63,7 @@
         }
         else
         {
-            $emailSujet .= "{$array['sujet']}\n";
+            $emailSujet = "{$array['sujet']}\n";
         }
 
         switch ($array["sujet"]) {
@@ -86,7 +86,7 @@
         }
         else
         {
-            $emailText .= "Message: {$array['message_contact']}\n";
+            $emailText = "Message: {$array['message_contact']}\n";
         }
         
         if($array["isSuccess"]) 

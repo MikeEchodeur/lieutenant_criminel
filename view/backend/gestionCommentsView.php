@@ -9,8 +9,9 @@
 	{ 
 		?>
 		<div class="news">
-			<form method="post" action="">
+			<form method="post" action="admin.php?gestion_comments=<?= $dataComment['id']?>">
 				<fieldset>
+					<input type="hidden" name="id_comment" value="<?= $dataComment['id']?>"/>
 					<input type="submit" name="publier" value="Publier">
 					<input type="submit" name="retirer" value="Retirer">
 					<input type="submit" onclick="return confirm('êtes vous sûr de vouloir supprimer définitivement le commentaire ?');" name="supprimer" value="Supprimer"/>

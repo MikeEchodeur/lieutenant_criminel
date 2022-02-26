@@ -51,7 +51,18 @@ elseif (isset($_GET['edit_article_id']))
 }
 elseif (isset($_GET['gestion_comments']))
 {
-	gestionCommentsView();
+	if (isset($_POST['publier']))
+	{
+		gestionCommentsView();
+	}
+	elseif (isset($_POST['supprimer']))
+	{
+		gestionCommentsView();
+	}
+	else
+	{
+		gestionCommentsView();
+	}
 }
 else  
 {
