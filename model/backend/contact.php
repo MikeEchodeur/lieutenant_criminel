@@ -1,7 +1,7 @@
 <?php
 
     $array = array("username" => "", "email" => "", "phone" => "", "website" => "", "sujet" => "", "message_contact" => "","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
-    $emailTo = "senshee@eidhendust.com";
+    $emailTo = "contact@eidhendust.com";
     // lieutenant.criminel@yahoo.com
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -68,11 +68,11 @@
 
         switch ($array["sujet"]) {
         case "PUB":
-            $emailTo = "senshee@eidhendust.com";
+            $emailTo = "contact@eidhendust.com";
             // mikeecho.contact@gmail.com
             break;
         case "EVASAN":
-            $emailTo = "senshee@eidhendust.com";
+            $emailTo = "evasan@eidhendust.com";
             // mikeecho.evasan@gmail.com
             break;
         default:
