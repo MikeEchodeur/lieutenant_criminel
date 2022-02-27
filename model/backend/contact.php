@@ -38,8 +38,7 @@
 
         if (!isPhone($array["phone"]))
         {
-            $array["phoneError"] = "Que des chiffres et des espaces";
-            $array["isSuccess"] = false; 
+            $array["phoneError"] = "Que des chiffres et des espaces"; 
         }
         else
         {
@@ -49,7 +48,6 @@
         if (!isWebsite($array["website"]))
         {
             $array["websiteError"] = "Un site commence par http(s) !";
-            $array["isSuccess"] = false; 
         }
         else
         {
