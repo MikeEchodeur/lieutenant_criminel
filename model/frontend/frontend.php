@@ -35,13 +35,13 @@ function inscription()
 	//Preparation du mail contenant le lien d'activation
 	$destinataire = $email;
 	$sujet = 'Activer votre compte';
-	$header = 'From: inscription@eidhendust.com';
+	$header = 'From: support@lieutenant-criminel.com';
 
 	$message = 'Bienvenue sur Mike Echo,
 
 	Pour activer votre compte, veuillez cliquer sur le lien ci-dessous ou copier/coller dans votre navigateur internet.
 
-	http://eidhendust.com/index.php?action=activation&log='.urlencode($username).'&cle='.urlencode($cle).'
+	http://lieutenant-criminel.com/index.php?action=activation&log='.urlencode($username).'&cle='.urlencode($cle).'
 
 	-------------------
 	Ceci est un mail automatique, merci de ne pas y répondre.';
@@ -88,6 +88,50 @@ function activationAccount()
 	$req->closeCursor();
 }
 
+function sendNewPW()
+{
+	$emailUser = $_POST['email'];
+	$db = dbConnect();
+	$req = $db->prepare('SELECT email, cle FROM user WHERE email = :emailUser');
+	$req->execute(array('emailUser' => $emailUser));
+	$data = $req->fetch();
+
+	return $data;
+	$req->closeCursor();
+}
+
+function sendMailNewPW()
+{
+	$verifEmail = sendNewPW();
+	$destinataire = $verifEmail['email'];
+	$cle = $verifEmail['cle'];
+	$sujet = 'Modifier votre mot de passe';
+	$header = 'From: support@lieutenant-criminel.com';
+
+	$message = 'Ce mail vous a été envoyé suite à un oubli de mot de passe,
+
+	Si vous n\êtes pas à l\origine de la demande, merci de ne pas prendre en compte ce mail.
+	Pour mettre en place votre nouveau mot de passe, veuillez cliquer sur le lien ci-dessous ou copier/coller dans votre navigateur internet.
+
+	http://lieutenant-criminel.com/index.php?action=changepassword&cle='.urlencode($cle).'
+
+	-------------------
+	Ceci est un mail automatique, merci de ne pas y répondre.';
+
+	mail($destinataire, $sujet, $message, $header) ; // Envoi du mail
+}
+function verifAccountPW()
+{
+	$cle = $_GET['cle'];
+
+	$db = dbConnect();
+	$req = $db->prepare('SELECT cle FROM user WHERE cle = :cle');
+	$req->execute(array(':cle' => $cle)); 
+	$data = $req->fetch();
+
+	return $data;
+	$req->closeCursor();
+}
 
 
 //                     ####### PARTIE HOME VIEW #######

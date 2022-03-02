@@ -33,6 +33,14 @@ if (isset($_GET['action']))
 	{
 		allArticlesView();
 	}
+	elseif ($_GET['action'] == 'reinitmdp')
+	{
+		forgetPasswordView();
+	}
+	elseif ($_GET['action'] == 'changepassword')
+	{
+		newPasswordView();
+	}
 	else
 	{
 		errorView();

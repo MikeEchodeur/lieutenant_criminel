@@ -135,6 +135,36 @@ function inscriptionView()
 	}	
 }
 
+function forgetPasswordView()
+{
+	$confirmEmail = "none";
+	if (isset($_POST['email']))
+	{
+		$verifEmail = sendNewPW();
+		if($_POST['email'] == $verifEmail['email'])
+		{
+			sendMailNewPW();
+			$confirmEmail = "correct";
+			require ('view/frontend/public/forgetPasswordView.php');
+		}
+	}
+	else
+	{
+		require ('view/frontend/public/forgetPasswordView.php');
+	}
+}
+
+function newPasswordView()
+{
+	$data = verifAccountPW();
+	$clebdd = $data['cle'];
+	$cle = $_GET['cle'];
+	if($cle == $clebdd)
+	{
+		require ('view/frontend/public/newPasswordView.php');
+	}
+}
+
 function activationView()
 {
 	$data = verifActivationAccount();
