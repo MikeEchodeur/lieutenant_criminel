@@ -156,12 +156,32 @@ function forgetPasswordView()
 
 function newPasswordView()
 {
-	$data = verifAccountPW();
-	$clebdd = $data['cle'];
+	$request = '0';
+	$clebdd = verifAccountPW();
 	$cle = $_GET['cle'];
-	if($cle == $clebdd)
+	if($cle == $clebdd['cle'])
 	{
-		require ('view/frontend/public/newPasswordView.php');
+		if (isset($_POST['password'], $_POST['confirmPassword']))
+		{
+			if($_POST['password'] == $_POST['confirmPassword'])
+			{
+				modifPWInBdd();
+				$request = 'done';
+				require ('view/frontend/public/newPasswordView.php');
+			}
+			else
+			{
+				require ('view/frontend/public/newPasswordView.php');
+			}
+		}
+		else
+		{
+			require ('view/frontend/public/newPasswordView.php');
+		}
+	}
+	else
+	{
+		require ('view/frontend/public/errorView.php');
 	}
 }
 

@@ -120,13 +120,22 @@ function sendMailNewPW()
 
 	mail($destinataire, $sujet, $message, $header) ; // Envoi du mail
 }
-function verifAccountPW()
+
+function modifPWInBdd()
 {
-	$cle = $_GET['cle'];
+	$newPass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 	$db = dbConnect();
+	$req = $db->prepare('UPDATE user SET password = :newPassword WHERE cle = :cle');
+	$req->execute(array('cle' => $_GET['cle'], 'newPassword' => $newPass_hache));
+	$req->closeCursor();
+}
+
+function verifAccountPW()
+{
+	$db = dbConnect();
 	$req = $db->prepare('SELECT cle FROM user WHERE cle = :cle');
-	$req->execute(array(':cle' => $cle)); 
+	$req->execute(array('cle' => $_GET['cle'])); 
 	$data = $req->fetch();
 
 	return $data;
