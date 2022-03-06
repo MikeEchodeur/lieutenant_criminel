@@ -1,8 +1,8 @@
 <?php
 
     $array = array("username" => "", "email" => "", "phone" => "", "website" => "", "sujet" => "", "message_contact" => "","usernameError" => "", "emailError" => "", "phoneError" => "", "websiteError" => "","sujetError" => "","message_contactError" => "", "isSuccess" => false);
-    $emailTo = "contact@lieutenant-criminel.com";
-    // lieutenant.criminel@yahoo.com
+    $emailTo = "lieutenant.criminel@yahoo.com";
+
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
     { 
@@ -18,7 +18,7 @@
 
         if (empty($array["username"]))
         {
-            $array["usernameError"] = "Aide toi de ta bande patro Bitoss";
+            $array["usernameError"] = "Aide toi de ta bande patro !";
             $array["isSuccess"] = false; 
         } 
         else
@@ -66,12 +66,11 @@
 
         switch ($array["sujet"]) {
         case "PUB":
-            $emailTo = "contact@lieutenant-criminel.com";
-            // mikeecho.contact@gmail.com
+            $emailTo = "mikeecho.contact@gmail.com";
+        
             break;
         case "EVASAN":
-            $emailTo = "evasan@lieutenant-criminel.com";
-            // mikeecho.evasan@gmail.com
+            $emailTo = "mikeecho.evasan@gmail.com";
             break;
         default:
             break;
