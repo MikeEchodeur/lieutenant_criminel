@@ -41,6 +41,10 @@ if (isset($_GET['action']))
 	{
 		newPasswordView();
 	}
+	elseif ($_GET['action'] == 'partenaires')
+	{
+		partenairesView();
+	}
 	else
 	{
 		errorView();

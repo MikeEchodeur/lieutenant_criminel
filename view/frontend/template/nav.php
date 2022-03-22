@@ -8,9 +8,10 @@
     </div>
 	
     <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
-        <a href="index.php">Articles</a><br>
-        <a href="index.php?action=rules">Règles d'engagement</a><br>
-        <a href="index.php?action=contact">Contact</a><br>
+        <li><a href="index.php">Articles</a></li><br>
+        <li><a href="index.php?action=rules">Règles d'engagement</a></li><br>
+        <li><a href="index.php?action=contact">Contacts</a></li><br>
+        <li><a href="index.php?action=partenaires">Partenaires</a></li><br>
 
         <!-- FAIRE APPARAITRE L'ADMINISTRATION DU SITE ICI-->
         <?php

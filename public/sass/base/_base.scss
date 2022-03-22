@@ -59,6 +59,7 @@ body{
 
 .mainAndFb{
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	max-width: 1024px;
 	width: 100%;

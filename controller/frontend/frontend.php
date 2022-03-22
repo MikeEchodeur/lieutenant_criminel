@@ -212,6 +212,11 @@ function activationView()
 	}
 }
 
+function partenairesView()
+{
+	require('view/frontend/public/partenairesView.php');
+}
+
 
 // PAGE DE DECONNECTION
 function disconnectView()

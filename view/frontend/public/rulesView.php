@@ -10,7 +10,7 @@
 			<h1>Règles d’engagement</h1>
 		</p>
 		<p>
-			<span class="ME">Mike-Echo.fr</span> est un site satyrique qui ne rapportes aucun fait réel, toutes les histoires sont inventées et ne coïncide aucunement avec la réalité. Toute ressemblance a une situation quelconques, un nom identique a une personne physique est totalement fortuite et loin de notre intention.<br>
+			<span class="ME">Mike-Echo</span> est un site satyrique qui ne rapportes aucun fait réel, toutes les histoires sont inventées et ne coïncide aucunement avec la réalité. Toute ressemblance a une situation quelconques, un nom identique a une personne physique est totalement fortuite et loin de notre intention.<br>
 			<br>
 			Nous chérissons notre bannière tricolore, notre grande armée que nous avons tous servi aussi bien que l’on pouvait, dans les meilleurs comme les pires moments.<br>
 		</p>

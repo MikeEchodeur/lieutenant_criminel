@@ -1,0 +1,7 @@
+.partenaires {
+  border: solid red 2px;
+  width: 100%;
+  margin: auto; }
+  .partenaires img {
+    width: 200px;
+    height: 200px; }

@@ -51,6 +51,7 @@ body {
 
 .mainAndFb {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   max-width: 1024px;
   width: 100%; }
@@ -103,6 +104,9 @@ section a {
   @media screen and (max-width: 599px) {
     .select_block p {
       width: 100%; } }
+
+li {
+  list-style-type: none; }
 
 nav {
   width: 100%;
@@ -449,3 +453,11 @@ div[class="contact_head"] {
   text-align: center;
   display: flex;
   flex-direction: column; }
+
+.partenaires {
+  border: solid red 2px;
+  width: 100%;
+  margin: auto; }
+  .partenaires img {
+    width: 200px;
+    height: 200px; }
