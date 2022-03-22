@@ -9,7 +9,7 @@
 	<article class="partenaire">
 		<div class="partenaire__img">
 			<a href="https://www.fitness-world-nutrition.com/">
-			<img src="public/image/partenaires/FitnessWN.jpeg" alt="Logo Fitness World Nutrition">
+			<img src="public/image/Partenaires/FitnessWN.jpeg" alt="Logo Fitness World Nutrition">
 		</div>
 		<div class="partenaire__texte">
 			<h2 class="partenaire__texte__title">FITNESS WORLD NUTRITION</h2></a>
@@ -28,7 +28,7 @@
 	<article class="partenaire">
 		<div class="partenaire__img">
 			<a href=" https://defensezone.podia.com/defense-zone-premium/1pd1b">
-			<img src="public/image/partenaires/logoDZ.jpeg" alt="Logo Défense zone">
+			<img src="public/image/Partenaires/logoDZ.jpeg" alt="Logo Défense zone">
 		</div>
 		<div class="partenaire__texte">
 			<h2 class="partenaire__texte__title">DEFENSE ZONE</h2></a>
