@@ -6,13 +6,13 @@
 <?php ob_start(); ?>
 
 <div class="mainAndFb">
-	<article class="article">
-		<div class="article__img">
+	<article class="partenaire">
+		<div class="partenaire__img">
 			<a href="https://www.fitness-world-nutrition.com/">
 			<img src="public/image/partenaires/FitnessWN.jpeg" alt="Logo Fitness World Nutrition">
 		</div>
-		<div class="article__texte">
-			<h2 class="article__texte__title">FITNESS WORLD NUTRITION</h2></a>
+		<div class="partenaire__texte">
+			<h2 class="partenaire__texte__title">FITNESS WORLD NUTRITION</h2></a>
 			<p>
 				<span>Fitness World Nutrition</span> est un site de vente de complément alimentaire en ligne monté par un ancien chasseur alpin <br>
 				<br>
@@ -25,13 +25,13 @@
 			</p>
 		</div>
 	</article>
-	<article class="article">
-		<div class="article__img">
+	<article class="partenaire">
+		<div class="partenaire__img">
 			<a href=" https://defensezone.podia.com/defense-zone-premium/1pd1b">
 			<img src="public/image/partenaires/logoDZ.jpeg" alt="Logo Défense zone">
 		</div>
-		<div class="article__texte">
-			<h2 class="article__texte__title">DEFENSE ZONE</h2></a>
+		<div class="partenaire__texte">
+			<h2 class="partenaire__texte__title">DEFENSE ZONE</h2></a>
 			<p>
 				<span>Défense zone magazine</span> est un journal d’info géopolitique et militaire confondé par un ancien mili
 			</p>
