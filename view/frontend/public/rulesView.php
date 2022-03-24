@@ -32,8 +32,6 @@
 			<a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-69" style='font-size: 16px;' class="share-facebook sd-button share-icon" href="https://lieutenant-criminel.com/regles-dengagement/?share=facebook&amp;nb=1" target="_blank" title="Cliquez pour partager sur Facebook"><span><i class="fab fa-facebook"></i> Partager</span></a>
 			
 	</div>
-
-	<?php include("view/frontend/template/facebook.php"); ?>
 </div>
 
 <?php $content = ob_get_clean(); ?>

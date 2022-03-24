@@ -17,10 +17,6 @@
 			    </p> <?php } ?>
 			</form>
 	</div>
-
-
-
-	<?php include("view/frontend/template/facebook.php"); ?>
 </div>
 
 <?php $content = ob_get_clean(); ?>
