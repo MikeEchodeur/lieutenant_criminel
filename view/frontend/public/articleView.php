@@ -46,7 +46,7 @@
 			$req = getComments();
 			while ($data_comment = $req->fetch())
 			{ ?>
-				<div class="articleComment">
+				<div id="comments" class="articleComment">
 						<div class="articleComment__entête">
 							<?php
 							echo htmlspecialchars($data_comment['auteur']); ?>

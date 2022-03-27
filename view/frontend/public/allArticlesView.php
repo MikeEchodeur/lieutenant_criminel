@@ -37,7 +37,7 @@
 						<br />
 					</p>
 					
-					<a class="article__texte__nbrComment" href=""><i><?= $data['comment']; ?> Commentaires</i></a>
+					<a class="article__texte__nbrComment" href="index.php?article_id=<?= $data['id']?>#comments"><i><?= $data['comment']; ?> Commentaires</i></a>
 				</div>
 
 			</article>
