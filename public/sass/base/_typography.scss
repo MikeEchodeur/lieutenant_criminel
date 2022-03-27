@@ -34,6 +34,10 @@ h1
 	@include mobile-only{
 		font-size: 50%;
 	}
+	&__texte__nbrComment
+	{
+		font-size: 12px;
+	}
 }
 
 section a

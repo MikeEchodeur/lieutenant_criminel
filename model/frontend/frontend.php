@@ -149,7 +149,7 @@ function getArticles()
 {
 	$db = dbConnect();
 
-	$req = $db->query('SELECT id, image, titre, contenu, statut, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles WHERE statut=\'posted\' ORDER BY date_creation DESC');
+	$req = $db->query('SELECT u.id, u.image, u.titre, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_article  FROM articles u LEFT JOIN comments c ON u.id = c.id_article WHERE u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
 	return $req;
 	$req->closeCursor();
 }

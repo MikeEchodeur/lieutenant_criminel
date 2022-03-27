@@ -127,11 +127,11 @@ function getNewComments()
 function getNbrComments()
 {
 	$db = dbConnect();
-	$req = $db->query('SELECT COUNT(id) FROM comments WHERE statut = "new"');
-	$result = $req->fetchColumn();
+	$test = $db->query('SELECT COUNT(id) FROM comments WHERE statut = "new"');
+	$result = $test->fetchColumn();
 
-	return $result;
-	$req->closeCursor();
+	return $test;
+	$test->closeCursor();
 }
 
 function getArticlesWithNewComments()

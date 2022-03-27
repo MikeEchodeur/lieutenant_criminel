@@ -91,6 +91,9 @@ h1 {
   @media screen and (max-width: 599px) {
     .article em {
       font-size: 50%; } }
+  .article em__texte__nbrComment {
+    font-size: 12px;
+    justify-content: right; }
 
 section a {
   text-decoration: none;

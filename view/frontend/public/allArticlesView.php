@@ -36,7 +36,10 @@
 						<?= strip_tags(substr($data['contenu'], 0, 400)). '...'; ?><a href="index.php?article_id=<?= $data['id']?>" class="suite">Lire la suite</a>
 						<br />
 					</p>
+					
+					<a class="article__texte__nbrComment" href=""><i><?= $data['comment']; ?> Commentaires</i></a>
 				</div>
+
 			</article>
 		</a>
 	<?php 
