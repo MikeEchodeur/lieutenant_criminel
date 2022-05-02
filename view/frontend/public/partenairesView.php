@@ -37,18 +37,6 @@
 			</p>
 		</div>
 	</article>
-	<article class="partenaire">
-		<div class="partenaire__img">
-			<a href="https://www.equipements-militaire.com/mike-echo/1583-patch-mike-echo-agneugneu-style.html">
-			<img src="public/image/Mike-echo.jpg" alt="Logo Mike-Echo">
-		</div>
-		<div class="partenaire__texte">
-			<h2 class="partenaire__texte__title">Patch Mike Echo</h2></a>
-			<p>
-				Pour afficher fièrement votre adhérence à la famille agneugneu lifestyle, vous pouvez acquérir ce magnifique patch brodé en France svp monsieur.
-			</p>
-		</div>
-	</article>
 </div>
 
 <?php $content = ob_get_clean(); ?>
