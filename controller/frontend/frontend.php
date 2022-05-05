@@ -8,6 +8,11 @@ function homeView()
 	require('view/frontend/public/allArticlesView.php');
 }
 
+function memesView()
+{
+	require('view/frontend/public/memesView.php');
+}
+
 function allArticlesView()
 {
 	getArticles();
