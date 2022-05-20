@@ -33,10 +33,6 @@ if (isset($_GET['action']))
 	{
 		allArticlesView();
 	}
-	elseif ($_GET['action'] == 'memes')
-	{
-		memesView();
-	}
 	elseif ($_GET['action'] == 'reinitmdp')
 	{
 		forgetPasswordView();
@@ -56,6 +52,10 @@ if (isset($_GET['action']))
 elseif (isset($_GET['article_id']))
 {
 	articleView();
+}
+elseif (isset($_GET['memes_id']))
+{
+	memesView();
 }
 else 
 {

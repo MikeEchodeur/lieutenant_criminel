@@ -9,29 +9,30 @@
 	{ ?>
 		<a href="index.php?memes_id=<?= $data['id']?>">
 			<article class="memes">
-				
-					<div class="memes__img">
-							<img src="<?= $data['image'];?>"/>
-					</div>
-					
-					<div class="memes__texte">
-						<!--<a href="index.php?article_id=<?= $data['id']?>">-->
-							<h2 class="memes__texte__title">
-								<?= $data['titre']; ?>
-							</h2>
-						<!--</a>-->
-					
-						<em class="memes__texte__date">
-							Publié le <?= $data['date_creation_fr']; ?>
-						</em>
 
-						<p class="memes__texte__resume">
-							<?= strip_tags(substr($data['contenu'], 0, 400)). '...'; ?><a href="index.php?article_id=<?= $data['id']?>" class="suite">Lire la suite</a>
-							<br />
-						</p>
-						
-						<a class="memes__texte__nbrComment" href="index.php?memes_id=<?= $data['id']?>#comments"><i><?= $data['comment']; ?> Commentaires</i></a>
-					</div>
+				<div>
+					<a href="index.php?article_id=<?= $data['id']?>">Précèdent</a>
+					<a href="index.php?article_id=<?= $data['id']?>">Aleatoire</a>
+					<a href="index.php?article_id=<?= $data['id']?>">Suivant</a>
+				</div>
+				
+				<div class="memes__img">
+						<img src="<?= $data['image'];?>"/>
+				</div>
+				
+				<div class="memes__texte">
+				
+					<em class="memes__texte__date">
+						Publié le <?= $data['date_creation_fr']; ?>
+					</em>
+
+					<p class="memes__texte__resume">
+						<?= strip_tags(substr($data['contenu'], 0, 400)). '...'; ?><a href="index.php?article_id=<?= $data['id']?>" class="suite">Lire la suite</a>
+						<br />
+					</p>
+					
+					<a class="memes__texte__nbrComment" href="index.php?memes_id=<?= $data['id']?>#comments"><i><?= $data['comment']; ?> Commentaires</i></a>
+				</div>
 			</article>
 		</a>
 	<?php 

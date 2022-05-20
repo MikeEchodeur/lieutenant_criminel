@@ -199,7 +199,19 @@ function getMemes()
 {
 	$db = dbConnect();
 
-	$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+	$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=(SELECT MAX(id) FROM memes) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+	return $req;
+	$req->closeCursor();
+}
+
+function nextMemes()
+{
+	$db = dbConnect();
+
+	$newId = $data['u.id']++;
+	$req = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.statut=\'posted\' AND u.id = :newId GROUP BY u.id ORDER BY date_creation DESC');
+	$req->execute(array('newId' => $newId));
+
 	return $req;
 	$req->closeCursor();
 }
