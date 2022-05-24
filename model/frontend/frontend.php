@@ -198,14 +198,20 @@ function add_comment()
 function getMemes()
 {
 	$db = dbConnect();
+	//$id = $_GET['memes_id'];
+	$id = $_GET['memes_id'];
+	if($id == NULL)
+	{
+		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=(SELECT MAX(id) FROM memes) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+	}
 
-// FAIRE UNE CONDITION SI GET MEME_ID n'a pas de valeur mettre l'id max sinon on lui prend la valeur et on voit comment faire avec la variable.
- // if =>
-//	$req = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=(SELECT MAX(id) FROM memes) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
-
-// else =>
-//	$req = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=:memes_id AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
-	$req->execute(array('memes_id' => $_GET['memes_id']));
+	elseif($id >= '1')
+	{
+		$req = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=:memes_id AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+		$req->execute(array('memes_id' => $id));
+	}
+	
+	else {$req = 'test';}
 
 	return $req;
 	$req->closeCursor();

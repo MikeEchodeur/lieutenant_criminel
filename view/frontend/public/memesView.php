@@ -3,9 +3,9 @@
 <?php ob_start(); ?>
 
 <section class="block_news">
-	<?php 
-	$req = getMemes();
-	while ($data = $req->fetch())
+	<?php
+	$test = getMemes();
+	while ($data = $test->fetch())
 	{ ?>
 		<a href="index.php?memes_id=<?= $data['id']?>">
 			<article class="memes">
