@@ -198,35 +198,49 @@ function add_comment()
 function getMemes()
 {
 	$db = dbConnect();
-	//$id = $_GET['memes_id'];
+
 	$id = $_GET['memes_id'];
+
+	$controle = $db->prepare('SELECT id FROM memes WHERE id=:memes_id');
+	$controle->execute(array('memes_id' => $id));
+	$controle_id = $controle->fetch();
+
 	if($id == NULL)
 	{
 		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=(SELECT MAX(id) FROM memes) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
 	}
 
-	elseif($id >= '1')
+	elseif($controle_id == true & $id >= '1')
 	{
 		$req = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=:memes_id AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
 		$req->execute(array('memes_id' => $id));
 	}
+
+	elseif($controle_id == false & $id == '0')
+	{
+		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=(SELECT MAX(id) FROM memes) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+	}
+
+	elseif($controle_id == false & $id >= '1')
+	{
+		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.id=(SELECT MIN(id) FROM memes) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+	}
 	
-	else {$req = 'test';}
+	else {$req = 'erreur';}
 
 	return $req;
 	$req->closeCursor();
+	$controle->closeCursor();
 }
 
-function nextMemes()
+function randMemes()
 {
 	$db = dbConnect();
+	$rand = $db->query('SELECT id FROM memes ORDER BY RAND() LIMIT 1');
+	$randMemes = $rand->fetch();
 
-	$newId = $data['u.id']++;
-	$next = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_memes  FROM memes u LEFT JOIN memes_comments c ON u.id = c.id_memes WHERE u.statut=\'posted\' AND u.id = :newId GROUP BY u.id ORDER BY date_creation DESC');
-	$next->execute(array('newId' => $newId));
-
-	return ;
-	$next->closeCursor();
+	return $randMemes;
+	$randMemes->closeCursor();
 }
 
 //                      ######## CONNECTION A LA DB ########

@@ -5,6 +5,7 @@
 <section class="block_news">
 	<?php
 	$test = getMemes();
+	$random_memes = randMemes();
 	while ($data = $test->fetch())
 	{ ?>
 		<a href="index.php?memes_id=<?= $data['id']?>">
@@ -12,7 +13,7 @@
 
 				<div>
 					<a href="index.php?memes_id=<?= $data['id']-1?>">Précèdent</a>
-					<a href="index.php?memes_id=<?= $data['id']?>">Aleatoire</a>
+					<a href="index.php?memes_id=<?= $random_memes['id']?>">Aleatoire</a>
 					<a href="index.php?memes_id=<?= $data['id']+1?>">Suivant</a>
 				</div>
 				
