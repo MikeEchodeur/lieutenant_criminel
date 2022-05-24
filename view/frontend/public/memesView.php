@@ -11,9 +11,9 @@
 			<article class="memes">
 
 				<div>
-					<a href="index.php?article_id=<?= $data['id']?>">Précèdent</a>
-					<a href="index.php?article_id=<?= $data['id']?>">Aleatoire</a>
-					<a href="index.php?article_id=<?= $data['id']?>">Suivant</a>
+					<a href="index.php?memes_id=<?= $data['id']-1?>">Précèdent</a>
+					<a href="index.php?memes_id=<?= $data['id']?>">Aleatoire</a>
+					<a href="index.php?memes_id=<?= $data['id']+1?>">Suivant</a>
 				</div>
 				
 				<div class="memes__img">
