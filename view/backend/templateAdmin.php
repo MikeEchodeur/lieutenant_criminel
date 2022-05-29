@@ -49,6 +49,7 @@
         <nav>
             <a href="admin.php">Accueil Admin</a></br>
             <a href="admin.php?action=articles">Gestion des articles</a></br>
+            <a href="admin.php?action=memes">Gestion Memes</a></br>
         </nav>
             
         <section class="contenu">

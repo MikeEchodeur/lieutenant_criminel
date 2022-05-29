@@ -86,6 +86,88 @@ function retirerArticle()
 	$req->closeCursor();
 }
 
+#####################################PARTIE EDITION MEME #################################
+
+function addMeme()
+{
+
+	$contenu = $_POST['contenu'];
+	$image = 'public/image/memes/' . $_FILES['fileselect']['name'];
+
+	$db = dbConnect();
+	$req = $db->prepare('INSERT INTO memes(image, contenu, date_creation, statut) VALUES(:image, :contenu, CURDATE(), \'save\')');
+	$req->execute(array(
+		'image' => $image,
+		'contenu' => $contenu));
+
+	return $req;
+	$req->closeCursor();
+}
+
+function updateImgMeme()
+{
+	$id = $_GET['edit_meme_id'];
+	$image = 'public/image/memes/' . $_FILES['fileselect']['name'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE memes SET image = :image WHERE id = :id');
+	$req->execute(array(
+		'image' => $image,
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function updateMeme()
+{
+	$contenu = $_POST['editContenu'];
+	$id = $_GET['edit_meme_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE memes SET contenu = :contenu WHERE id = :id');
+	$req->execute(array(
+		'contenu' => $contenu,
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function deleteMeme()
+{
+	$id = $_GET['edit_meme_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('DELETE FROM memes WHERE id = :id');
+	$req->execute(array(
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function publierMeme()
+{
+	$id = $_GET['edit_meme_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE memes SET statut = \'posted\' WHERE id = :id');
+	$req->execute(array(
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function retirerMeme()
+{
+	$id = $_GET['edit_meme_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE memes SET statut = \'save\' WHERE id = :id');
+	$req->execute(array(
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
 ################################ PARTIE GESTION COMMENTAIRES #############################
 
 function publier_comment()
@@ -149,7 +231,7 @@ function getArticlesWithNewComments()
 
 }
 
-############################# ARTICLE SUR GESTION ADMIN VIEW ###############################
+############################# GESTION ADMIN VIEW ###############################
 
 function getArticles()
 {
@@ -159,6 +241,14 @@ function getArticles()
 	$req->closeCursor();
 }
 
+function getMemes()
+{
+	$db = dbConnect();
+	$req = $db->query('SELECT id, image, contenu, statut, DATE_FORMAT(date_creation,\'%d/%m/%Y\') AS date_creation_fr FROM memes ORDER BY date_creation DESC');
+	return $req;
+	$req->closeCursor();
+
+}
 
 
 ############################ ARTICLE ADMIN INDIVIDUEL #####################################
@@ -177,6 +267,27 @@ function getComments()
 {
 	$db = dbConnect();
 	$req = $db->prepare('SELECT id, auteur, comment, statut, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM comments WHERE id_article = "new" ORDER BY date_comment');
+	$req->execute(array());
+
+	return $req;
+	$req->closeCursor();
+}
+
+
+function getMeme()
+{
+	$db = dbConnect();
+	$req = $db->prepare('SELECT id, image, contenu, statut, DATE_FORMAT(date_creation,\'%d/%m/%Y\') AS date_creation_fr FROM memes WHERE id = :meme_id');
+		$req->execute(array('meme_id' => $_GET['edit_meme_id']));
+
+	return $req;
+	$req->closeCursor();
+}
+
+function getMemeComments()
+{
+	$db = dbConnect();
+	$req = $db->prepare('SELECT id, auteur, comment, statut, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM memes_comments WHERE id_meme = "new" ORDER BY date_comment');
 	$req->execute(array());
 
 	return $req;

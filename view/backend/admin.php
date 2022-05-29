@@ -9,15 +9,24 @@ if (isset($_GET['action']))
 	{
 		gestionArticlesView();
 	}
+	elseif ($_GET['action'] == 'memes')
+	{
+		gestionMemesView();
+	}
 	elseif ($_GET['action'] == 'addArticles')
 	{
 		addArticlesView();
 	}
-		else
+		elseif ($_GET['action'] == 'addMemes')
+	{
+		addMemesView();
+	}
+	else
 	{
 		adminView();
 	}
 }
+// ########################### EDIT / PUBLIE ETC ARTICLES ###############################
 elseif (isset($_GET['edit_article_id']))
 {
 	if (isset($_POST['publier']))
@@ -49,6 +58,41 @@ elseif (isset($_GET['edit_article_id']))
 		adminArticleView();
 	}
 }
+
+// ##############################  EDIT / PUBLIE ETC MEMES ###############################
+elseif (isset($_GET['edit_meme_id']))
+{
+	if (isset($_POST['publier']))
+	{
+		adminMemeView();
+	}
+	elseif (isset($_POST['editer']))
+	{
+		addMemesView();
+	}
+	elseif (isset($_POST['update']) || isset($_POST['updateImg']))
+	{
+		addMemesView();
+	}
+	elseif (isset($_POST['supprimer']))
+	{
+		adminMemeView();
+	}
+	elseif (isset($_POST['retirer']))
+	{
+		adminMemeView();
+	}
+	elseif (isset($_POST['publier_comment']))
+	{
+		adminMemeView();
+	}
+	else
+	{
+		adminMemeView();
+	}
+}
+
+############################ Commentaire ########################
 elseif (isset($_GET['gestion_comments']))
 {
 	if (isset($_POST['publier']))

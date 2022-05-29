@@ -14,6 +14,12 @@ function gestionArticlesView()
 	require('../../view/backend/gestionArticlesView.php');
 }
 
+function gestionMemesView()
+{
+	getMemes();
+	require('../../view/backend/gestionMemesView.php');
+}
+
 function addArticlesView()
 {
 		getArticles();
@@ -80,6 +86,74 @@ function addArticlesView()
 	}
 }
 
+function addMemesView()
+{
+		getMemes();
+
+		################################# SI RAJOUT D'UN MEME ########################
+
+	if (isset($_POST['contenu']) && !empty($_POST['contenu']))
+	{
+		$target_dir = "../../public/image/memes/";
+		$target_file = $target_dir . basename($_FILES['fileselect']['name']);
+
+		if (file_exists($target_file))
+			{
+				echo 'Nom de fichier image déjà existant dans la base de donnée.';
+				require('../../view/backend/addMemesView.php');
+			}
+			else
+			{
+				move_uploaded_file($_FILES['fileselect']['tmp_name'], $target_file);
+				echo 'IMAGE THEoRIQUEMENT ENREGISTRE';
+
+				addMeme();
+				require('../../view/backend/addMemesView.php');
+				echo 'LE TEXTE ET IMAGE ONT ETE ENREGISTRE';
+			}
+	}
+
+	################### SI EDITION D'UN MEME ############################
+
+	elseif (isset($_POST['editContenu']) && !empty($_POST['editContenu'])) 
+	{
+		updateMeme();
+		$editDone = TRUE;
+		require('../../view/backend/addMemesView.php');
+		echo 'CONTROLLER : CONSIGNE ENVOYEE POUR MODIF LE TEXTE VIA MODEL';
+	}
+
+##################### EDITION DE L'IMAGE #####################################
+
+	elseif (isset($_FILES['fileselect']))
+	{
+		$target_dir = "../../public/image/memes/";
+		$target_file = $target_dir . basename($_FILES['fileselect']['name']);
+		if (file_exists($target_file))
+		{
+			#### Supprime ancien fichier pour le remplacer par le new ######
+			echo 'Nom de fichier image déjà existant dans la base de donnée veuillez le renommer.';
+			require('../../view/backend/addMemesView.php');
+			echo 'CONTROLLER : CONSIGNE ENVOYEE POUR IMAGE VIA MODEL';
+		}
+		else
+		{
+			move_uploaded_file($_FILES['fileselect']['tmp_name'], $target_file);
+			echo 'IMAGE THEoRIQUEMENT ENREGISTRE';
+			updateImgMeme();
+			require('../../view/backend/addMemesView.php');
+			echo 'CONTROLLER : CONSIGNE ENVOYEE POUR IMAGE VIA MODEL';
+		}
+	}
+	else 
+	{
+		require('../../view/backend/addMemesView.php');
+		echo 'TEXTE OU IMAGE NON ENREGISTRE';
+	}
+}
+
+// ##############################################################################
+
 function adminArticleView()
 {
 	getArticles();
@@ -117,6 +191,46 @@ function adminArticleView()
 	else
 	{
 		require('../../view/backend/adminArticleView.php');
+	}
+}
+
+function adminMemeView()
+{
+	getMemes();
+	getComments();
+	if (isset($_POST['supprimer']))
+	{
+		deleteMeme();
+		require('../../view/backend/adminMemeView.php');
+	}
+	elseif (isset($_POST['publier']))
+	{
+		publierMeme();
+		require('../../view/backend/adminMemeView.php');
+	}
+	elseif (isset($_POST['retirer']))
+	{
+		retirerMeme();
+		require('../../view/backend/adminMemeView.php');
+	}
+	elseif (isset($_POST['publier_comment']))
+	{
+		publier_comment();
+		require('../../view/backend/adminMemeView.php');
+	}
+	elseif (isset($_POST['supprimer_comment']))
+	{
+		supprimer_comment();
+		require('../../view/backend/adminMemeView.php');
+	}
+	elseif (isset($_POST['retirer_comment']))
+	{
+		retirer_comment();
+		require('../../view/backend/adminMemeView.php');
+	}
+	else
+	{
+		require('../../view/backend/adminMemeView.php');
 	}
 }
 
