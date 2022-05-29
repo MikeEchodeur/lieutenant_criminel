@@ -10,7 +10,15 @@ function homeView()
 
 function memesView()
 {
-	require('view/frontend/public/memesView.php');
+	if (isset($_POST['new_comment']) && !empty($_POST['new_comment']))
+	{
+		add_meme_comment();
+		require('view/frontend/public/memesView.php');
+	}
+	else
+	{
+		require('view/frontend/public/memesView.php');
+	}
 }
 
 function allArticlesView()

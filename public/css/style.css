@@ -417,6 +417,27 @@ form#form_registration {
     padding: 5px;
     border-radius: 5px; }
 
+.block_memes {
+  max-width: 1000px;
+  width: 100%; }
+
+.memes__nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.memes__indiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+@media screen and (max-width: 599px) {
+  .memes img {
+    width: 95%; }
+  .memes__indiv__img {
+    display: flex;
+    justify-content: center; } }
+
 .ME {
   font-weight: bold;
   color: #99BB4A; }

@@ -1,0 +1,35 @@
+.block_memes
+{
+	max-width: 1000px;
+	width: 100%;
+}
+
+.memes
+{
+	&__nav
+	{
+		height: 50px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__indiv
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	@include mobile-only
+	{
+		img
+		{
+			width: 95%;
+		}
+		&__indiv__img
+		{
+			display: flex;
+			justify-content: center;
+		}
+	}
+}

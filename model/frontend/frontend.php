@@ -243,6 +243,33 @@ function randMemes()
 	$randMemes->closeCursor();
 }
 
+function getMemeComments()
+{
+	$db = dbConnect();
+	$req = $db->prepare('SELECT auteur, comment, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM memes_comments WHERE id_memes = ? AND statut=\'posted\' ORDER BY date_comment');
+	$req->execute(array($_GET['memes_id']));
+
+	return $req;
+	$req->closeCursor();
+}
+
+function add_meme_comment()
+{
+	$id_meme = $_GET['memes_id'];
+	$auteur = $_SESSION['username'];
+	$comment = $_POST['add_comment'];
+
+	$db = dbConnect();
+	$req = $db->prepare('INSERT INTO memes_comments(id_memes, auteur, comment, date_comment, statut) VALUES(:id_meme, :auteur, :comment, CURDATE(), \'new\')');
+	$req->execute(array(
+		'id_meme' => $id_meme,
+		'auteur' => $auteur,
+		'comment' => $comment));
+
+	return $req;
+	$req->closeCursor();
+}
+
 //                      ######## CONNECTION A LA DB ########
 
 // Fonction pour se connecter à la db pour toutes les autres fonctions.

@@ -1,0 +1,18 @@
+.block_memes {
+  max-width: 1000px;
+  width: 100%;
+  border: 2px solid black; }
+
+.memes {
+  border: 1px solid green; }
+  .memes__nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .memes__indiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red; }
