@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
         <li><a href="index.php">Articles</a></li><br>
         <li><a href="index.php?memes_id">Memes</a></li><br>
-        <li><a href="https://www.agneugneu-lifestyle.com">Boutique</a></li><br>
+        <li><a href="https://www.agneugneu-lifestyle.com" target="_blank">Boutique</a></li><br>
         <li><a href="index.php?action=rules">Règles d'engagement</a></li><br>
         <li><a href="index.php?action=contact">Contacts</a></li><br>
         <li><a href="index.php?action=partenaires">Partenaires</a></li><br>
