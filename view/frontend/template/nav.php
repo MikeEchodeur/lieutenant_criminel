@@ -8,6 +8,7 @@
     </div>
 	
     <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
+        <li><a href="index.php?action=petitfdp">Le petit FDP illustré</a></li><br>
         <li><a href="index.php">Articles</a></li><br>
         <li><a href="index.php?memes_id">Memes</a></li><br>
         <li><a href="https://www.agneugneu-lifestyle.com" target="_blank">Boutique</a></li><br>

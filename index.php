@@ -33,6 +33,10 @@ if (isset($_GET['action']))
 	{
 		allArticlesView();
 	}
+	elseif ($_GET['action'] == 'petitfdp')
+	{
+		petitfdpView();
+	}
 	elseif ($_GET['action'] == 'reinitmdp')
 	{
 		forgetPasswordView();
