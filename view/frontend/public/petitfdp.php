@@ -4,7 +4,7 @@
 
 <section class="block_memes">
 	<?php
-	$test = getMemes();
+	$test = getArticlesFdp();
 	$random_memes = randMemes();
 	while ($data = $test->fetch())
 	{ ?>
