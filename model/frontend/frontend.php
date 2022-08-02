@@ -272,7 +272,30 @@ function add_meme_comment()
 
 #################################### PARTIE LE PETIT FDP ###########################
 
-//           ################ PARTIE MEMES #################
+//           ################ PARTIE NAV ARTICLE FDP ################
+
+function getArticlesFdpNav()
+{
+	$db = dbconnect();
+	$id = $_GET['petitfdp_id'];
+
+	$controle = $db->prepare('SELECT id FROM articles_fdp WHERE id=:petitfdp_id');
+	$controle->execute(array('petitfdp_id' => $id));
+	$controle_idFdp = $controle->fetch();
+
+	if($id == NULL)
+	{
+		$dataNav = $db->query('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' ORDER BY date_creation DESC LIMIT 4');
+	}
+
+	else{$dataNav = "erreur";}
+
+	return $dataNav;
+	$dataNav->closeCursor();
+	$controle->closeCursor();
+}
+
+//           ################ PARTIE ARTICLE #################
 
 function getArticlesFdp()
 {
@@ -286,23 +309,23 @@ function getArticlesFdp()
 
 	if($id == NULL)
 	{
-		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp  FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=(SELECT MAX(id) FROM articles_fdp) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, u.titre, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp  FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=(SELECT MAX(id) FROM articles_fdp) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
 	}
 
 	elseif($controle_id == true & $id >= '1')
 	{
-		$req = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp  FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=:articeFdp_id AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+		$req = $db->prepare('SELECT u.id, u.image, u.contenu, u.statut, u.titre, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp  FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=:petitfdp_id AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
 		$req->execute(array('petitfdp_id' => $id));
 	}
 
 	elseif($controle_id == false & $id == '0')
 	{
-		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=(SELECT MAX(id) FROM articles_fdp) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, u.titre, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=(SELECT MAX(id) FROM articles_fdp) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
 	}
 
 	elseif($controle_id == false & $id >= '1')
 	{
-		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp  FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=(SELECT MIN(id) FROM articles_fdp) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
+		$req = $db->query('SELECT u.id, u.image, u.contenu, u.statut, u.titre, DATE_FORMAT(u.date_creation,\'%d %M %Y\') AS date_creation_fr, COUNT(c.comment) AS comment, c.id_articleFdp  FROM articles_fdp u LEFT JOIN articlesfdp_comments c ON u.id = c.id_articleFdp WHERE u.id=(SELECT MIN(id) FROM articles_fdp) AND u.statut=\'posted\' GROUP BY u.id ORDER BY date_creation DESC');
 	}
 	
 	else {$req = 'erreur';}

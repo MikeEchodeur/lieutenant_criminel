@@ -438,6 +438,29 @@ form#form_registration {
     display: flex;
     justify-content: center; } }
 
+.articleFdp {
+  max-width: 1000px;
+  width: 100%;
+  border: solid green 1px; }
+  .articleFdp__nav {
+    width: 100%; }
+    .articleFdp__nav article {
+      width: 100%;
+      display: flex; }
+      .articleFdp__nav article img {
+        width: 20%; }
+  .articleFdp__indiv {
+    text-align: center; }
+    .articleFdp__indiv__titre {
+      font-family: 'impact';
+      text-transform: uppercase;
+      font-size: 100px; }
+    .articleFdp__indiv__resume {
+      column-count: 3;
+      column-rule: solid black;
+      width: 100%;
+      text-align: justify; }
+
 .ME {
   font-weight: bold;
   color: #99BB4A; }

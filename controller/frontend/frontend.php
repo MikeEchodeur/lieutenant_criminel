@@ -44,7 +44,7 @@ function articleView()
 
 function petitfdpView()
 {
-	require('view/frontend/public/petitfdp.php');
+	require('view/frontend/public/petitfdpView.php');
 }
 
 function rulesView()

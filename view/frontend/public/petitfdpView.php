@@ -5,29 +5,39 @@
 <section class="block_memes">
 	<?php
 	$test = getArticlesFdp();
-	$random_memes = randMemes();
 	while ($data = $test->fetch())
 	{ ?>
-		<article class="memes">
+		<article class="articleFdp">
 
-			<div class="memes__nav">
-				<a href="index.php?memes_id=<?= $data['id']-1?>">Précèdent</a>
-				<a href="index.php?memes_id=<?= $random_memes['id']?>">Aleatoire</a>
-				<a href="index.php?memes_id=<?= $data['id']+1?>">Suivant</a>
+
+			<div class="articleFdp__nav">
+				<?php $testnav = getArticlesFdpNav();
+				while ($dataNav = $testnav->fetch())
+				{ ?>
+					<article>
+						<img src="<?=$dataNav['image']?>"/>
+						<?=$dataNav['titre']?>
+						<?php } ?>
+					</article>
+			
+				<a href="index.php?petitfdp_id=<?= $data['id']-1?>">Précèdent</a>
+				<a href="index.php?petitfdp_id=<?= $random_memes['id']?>">Aleatoire</a>
+				<a href="index.php?petitfdp_id=<?= $data['id']+1?>">Suivant</a>
 			</div>
 			
-			<div class="memes__indiv">
-				<em class="memes__indiv__date">
-					Publié le <?= $data['date_creation_fr']; ?>
-				</em>
-
-				<p class="memes__indiv__resume">
+			<div class="articleFdp__indiv">
+				<h1 class="articleFdp__indiv__titre"> <?=$data['titre']?> 
+				</h1>
+				<div class="articleFdp__indiv__img">
+					<img src="<?= $data['image'];?>"/>
+				</div>
+				<p class="articleFdp__indiv__resume">
 					<?=$data['contenu']?>
 					<br />
 				</p>
-				<div class="memes__indiv__img">
-					<img src="<?= $data['image'];?>"/>
-				</div>
+				<em class="articleFdp__indiv__date">
+					Publié le <?= $data['date_creation_fr']; ?>
+				</em>
 			</div>
 
 			<div class="writeComment">
@@ -37,7 +47,7 @@
 				if (isset($_SESSION['username']))
 				{
 				?>
-				<form method="post" action="index.php?memes_id=<?= $data['id']?>">
+				<form method="post" action="index.php?ArticlesFdp_id=<?= $data['id']?>">
 					<p>
 						<label for="add_comment">Ajoutez votre commentaire :</label><br />
 						<textarea name="add_comment" id="add_comment"></textarea>
