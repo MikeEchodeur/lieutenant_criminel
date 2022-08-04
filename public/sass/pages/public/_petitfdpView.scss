@@ -2,19 +2,28 @@
 {
 	max-width: 1000px;
 	width: 100%;
-	border: solid green 1px;
 
 	&__nav
 	{
 		width: 100%;
+		display: flex;
+		justify-content: space-between;
 
-		article
+
+
+		section
 		{
-			width: 100%;
+			width: 20%;
+			height: 100px;
+			border: solid black 1px;
 			display: flex;
-			img
+			justify-content: center;
+			align-items: center;
+			
+			h1
 			{
-				width: 20%;
+				font-family: 'impact';
+				text-transform: uppercase;
 			}
 		}
 	}

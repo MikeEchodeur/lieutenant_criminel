@@ -14,15 +14,10 @@
 				<?php $testnav = getArticlesFdpNav();
 				while ($dataNav = $testnav->fetch())
 				{ ?>
-					<article>
-						<img src="<?=$dataNav['image']?>"/>
-						<?=$dataNav['titre']?>
-						<?php } ?>
-					</article>
-			
-				<a href="index.php?petitfdp_id=<?= $data['id']-1?>">Précèdent</a>
-				<a href="index.php?petitfdp_id=<?= $random_memes['id']?>">Aleatoire</a>
-				<a href="index.php?petitfdp_id=<?= $data['id']+1?>">Suivant</a>
+					<section style="background-image: url('<?=$dataNav['image']?>'); background-size: 100% 100%;">
+						<h2><?=$dataNav['titre']?></h2>
+					</section>
+				<?php } ?>
 			</div>
 			
 			<div class="articleFdp__indiv">
