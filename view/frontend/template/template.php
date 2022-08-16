@@ -37,6 +37,9 @@
     <link href="public/css/style.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">  <!-- Ajout police type Militaire -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> <!-- Ajout des favicons --> 
+
+    <!-- JavaScript de MikeEcho -->
+    <script type="text/javascript" src="lePetitFdp.js"></script>
 </head>
 
     <!--    FACEBOOK    -->

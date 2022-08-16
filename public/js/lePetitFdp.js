@@ -1,0 +1,1 @@
+let variableName = document.getElementsByClassName('nomDeClass');

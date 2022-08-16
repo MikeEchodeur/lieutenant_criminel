@@ -274,7 +274,7 @@ function add_meme_comment()
 
 //           ################ PARTIE NAV ARTICLE FDP ################
 
-function getArticlesFdpNav()
+function getArticlesFdpNavBefore()
 {
 	$db = dbconnect();
 	$id = $_GET['petitfdp_id'];
@@ -285,13 +285,60 @@ function getArticlesFdpNav()
 
 	if($id == NULL)
 	{
-		$dataNav = $db->query('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' ORDER BY date_creation DESC LIMIT 4');
+		$dataNavBefore = $db->query('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' ORDER BY date_creation DESC LIMIT 4');
 	}
 
-	else{$dataNav = "erreur";}
+	elseif($id == TRUE)
+	{
+		$dataNavBefore = $db->prepare('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' AND id<:petitfdp_id ORDER BY date_creation DESC LIMIT 3');
+		$dataNavBefore->execute(array('petitfdp_id' => $id));
+	}
 
-	return $dataNav;
-	$dataNav->closeCursor();
+	return $dataNavBefore;
+	$dataNavBefore->closeCursor();
+	$controle->closeCursor();
+}
+
+function getArticlesFdpNavAfter()
+{
+	$db = dbconnect();
+	$id = $_GET['petitfdp_id'];
+
+	$controle = $db->prepare('SELECT id FROM articles_fdp WHERE id=:petitfdp_id');
+	$controle->execute(array('petitfdp_id' => $id));
+	$controle_idFdp = $controle->fetch();
+
+	if($id == TRUE AND $id>='4')
+	{
+		$dataNavAfter = $db->prepare('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' AND id>:petitfdp_id ORDER BY date_creation DESC LIMIT 1');
+			$dataNavAfter->execute(array('petitfdp_id' => $id));
+	}
+
+	elseif($id == TRUE AND $id == '1')
+	{
+		$dataNavAfter = $db->prepare('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' AND id>:petitfdp_id ORDER BY date_creation DESC LIMIT 4');
+			$dataNavAfter->execute(array('petitfdp_id' => $id));
+	}
+
+	elseif($id == TRUE AND $id == '2')
+	{
+		$dataNavAfter = $db->prepare('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' AND id>:petitfdp_id ORDER BY date_creation DESC LIMIT 3');
+			$dataNavAfter->execute(array('petitfdp_id' => $id));
+	}
+
+	elseif($id == TRUE AND $id == '3')
+	{
+		$dataNavAfter = $db->prepare('SELECT titre, image, id, DATE_FORMAT(date_creation,\'%d %M %Y\') AS date_creation_fr FROM articles_fdp WHERE statut=\'posted\' AND id>:petitfdp_id ORDER BY date_creation DESC LIMIT 2');
+			$dataNavAfter->execute(array('petitfdp_id' => $id));
+	}
+
+	else
+	{
+		$dataNavAfter = 'error';
+	}
+
+	return $dataNavAfter;
+	$dataNavAfter->closeCursor();
 	$controle->closeCursor();
 }
 
@@ -333,6 +380,33 @@ function getArticlesFdp()
 	return $req;
 	$req->closeCursor();
 	$controle->closeCursor();
+}
+
+function getArticleFdpComments()
+{
+	$db = dbConnect();
+	$req = $db->prepare('SELECT auteur, comment, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM articlesfdp_comments WHERE id_articleFdp = ? AND statut=\'posted\' ORDER BY date_comment');
+	$req->execute(array($_GET['petitfdp_id']));
+
+	return $req;
+	$req->closeCursor();
+}
+
+function add_fdp_comment()
+{
+	$id_article = $_GET['petitfdp_id'];
+	$auteur = $_SESSION['username'];
+	$comment = $_POST['add_comment'];
+
+	$db = dbConnect();
+	$req = $db->prepare('INSERT INTO comments(id_article, auteur, comment, date_comment, statut) VALUES(:id_article, :auteur, :comment, CURDATE(), \'new\')');
+	$req->execute(array(
+		'id_article' => $id_article,
+		'auteur' => $auteur,
+		'comment' => $comment));
+
+	return $req;
+	$req->closeCursor();
 }
 
 

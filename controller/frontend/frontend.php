@@ -44,7 +44,15 @@ function articleView()
 
 function petitfdpView()
 {
-	require('view/frontend/public/petitfdpView.php');
+	if (isset($_POST['new_comment']) && !empty($_POST['new_comment']))
+	{
+		add_fdp_comment();
+		require('view/frontend/public/petitfdpView.php');
+	}
+	else
+	{
+		require('view/frontend/public/petitfdpView.php');
+	}
 }
 
 function rulesView()

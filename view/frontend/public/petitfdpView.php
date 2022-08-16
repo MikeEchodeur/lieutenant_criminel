@@ -3,36 +3,47 @@
 <?php ob_start(); ?>
 
 <section class="block_memes">
-	<?php
-	$test = getArticlesFdp();
-	while ($data = $test->fetch())
-	{ ?>
 		<article class="articleFdp">
 
 
 			<div class="articleFdp__nav">
-				<?php $testnav = getArticlesFdpNav();
+				<?php 
+				if ($_GET['petitfdp_id'] == TRUE)
+					{
+						$dataNavAfter = getArticlesFdpNavAfter(); 
+						while ($dataNavAfter2 = $dataNavAfter->fetch())
+						{ ?>
+						<a style="background-image: url('<?=$dataNavAfter2['image']?>'); background-size: 100% 100%;" href="index.php?petitfdp_id=<?= $dataNavAfter2['id']?>">
+							<h2><?=$dataNavAfter2['titre']?></h2>
+						</a>
+					<?php }
+					} ?>
+				<?php $testnav = getArticlesFdpNavBefore();
 				while ($dataNav = $testnav->fetch())
 				{ ?>
-					<section style="background-image: url('<?=$dataNav['image']?>'); background-size: 100% 100%;">
-						<h2><?=$dataNav['titre']?></h2>
-					</section>
+						<a style="background-image: url('<?=$dataNav['image']?>'); background-size: 100% 100%;" href="index.php?petitfdp_id=<?= $dataNav['id']?>">
+							<h2><?=$dataNav['titre']?></h2>
+						</a>
 				<?php } ?>
 			</div>
 			
 			<div class="articleFdp__indiv">
-				<h1 class="articleFdp__indiv__titre"> <?=$data['titre']?> 
-				</h1>
-				<div class="articleFdp__indiv__img">
-					<img src="<?= $data['image'];?>"/>
-				</div>
-				<p class="articleFdp__indiv__resume">
-					<?=$data['contenu']?>
-					<br />
-				</p>
-				<em class="articleFdp__indiv__date">
-					Publié le <?= $data['date_creation_fr']; ?>
-				</em>
+				<?php $test = getArticlesFdp();
+				while ($data = $test->fetch())
+				{ ?>
+					<h1 class="articleFdp__indiv__titre"> <?=$data['titre']?> 
+					</h1>
+					<div class="articleFdp__indiv__img">
+						<img src="<?= $data['image'];?>"/>
+					</div>
+					<p class="articleFdp__indiv__resume">
+						<?=$data['contenu']?>
+						<br />
+					</p>
+					<em class="articleFdp__indiv__date">
+						Publié le <?= $data['date_creation_fr']; ?>
+					</em>
+				<?php } ?>
 			</div>
 
 			<div class="writeComment">
@@ -42,7 +53,7 @@
 				if (isset($_SESSION['username']))
 				{
 				?>
-				<form method="post" action="index.php?ArticlesFdp_id=<?= $data['id']?>">
+				<form method="post" action="index.php?petitfdp_id=<?= $data['id']?>">
 					<p>
 						<label for="add_comment">Ajoutez votre commentaire :</label><br />
 						<textarea name="add_comment" id="add_comment"></textarea>
@@ -56,7 +67,7 @@
 			<br />
 
 			<?php
-			$req = getMemeComments();
+			$req = getArticleFdpComments();
 			while ($data_comment = $req->fetch())
 			{ ?>
 				<div id="comments" class="articleComment">
@@ -75,9 +86,6 @@
 			}?>
 
 		</article>
-	<?php 
-	} 
-	?>
 </section>
 
 <?php $content = ob_get_clean(); ?>

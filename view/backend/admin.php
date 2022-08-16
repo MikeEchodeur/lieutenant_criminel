@@ -13,13 +13,21 @@ if (isset($_GET['action']))
 	{
 		gestionMemesView();
 	}
+	elseif ($_GET['action'] == 'petitFdp')
+	{
+		gestionArticlesFdpView();
+	}
 	elseif ($_GET['action'] == 'addArticles')
 	{
 		addArticlesView();
 	}
-		elseif ($_GET['action'] == 'addMemes')
+	elseif ($_GET['action'] == 'addMemes')
 	{
 		addMemesView();
+	}
+	elseif ($_GET['action'] == 'addArticleFdp')
+	{
+		addArticleFdpView();
 	}
 	else
 	{
@@ -89,6 +97,39 @@ elseif (isset($_GET['edit_meme_id']))
 	else
 	{
 		adminMemeView();
+	}
+}
+
+// ########################### EDIT / PUBLIE ETC ARTICLES DU FDP ILLUSTRE ###############################
+elseif (isset($_GET['edit_articleFdp_id']))
+{
+	if (isset($_POST['publier']))
+	{
+		adminArticleFdpView();
+	}
+	elseif (isset($_POST['editer']))
+	{
+		addArticleFdpView();
+	}
+	elseif (isset($_POST['update']) || isset($_POST['updateImg']))
+	{
+		addArticleFdpView();
+	}
+	elseif (isset($_POST['supprimer']))
+	{
+		adminArticleFdpView();
+	}
+	elseif (isset($_POST['retirer']))
+	{
+		adminArticleFdpView();
+	}
+	elseif (isset($_POST['publier_comment']))
+	{
+		adminArticleFdpView();
+	}
+	else
+	{
+		adminArticleFdpView();
 	}
 }
 

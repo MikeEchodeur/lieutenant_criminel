@@ -168,6 +168,90 @@ function retirerMeme()
 	$req->closeCursor();
 }
 
+#####################################PARTIE EDITION DU PETIT FDP ILLUSTRE #################################
+
+function addArticleFdp()
+{
+
+	$contenu = $_POST['contenu'];
+	$titre = $_POST['titre'];
+	$image = 'public/image/articleFdp/' . $_FILES['fileselect']['name'];
+
+	$db = dbConnect();
+	$req = $db->prepare('INSERT INTO articles_fdp(titre, image, contenu, date_creation, statut) VALUES(:titre, :image, :contenu, CURDATE(), \'save\')');
+	$req->execute(array(
+		'titre' => $titre,
+		'image' => $image,
+		'contenu' => $contenu));
+
+	return $req;
+	$req->closeCursor();
+}
+
+function updateImgArticleFdp()
+{
+	$id = $_GET['edit_articleFdp_id'];
+	$image = 'public/image/articleFdp/' . $_FILES['fileselect']['name'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE articles_fdp SET image = :image WHERE id = :id');
+	$req->execute(array(
+		'image' => $image,
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function updateArticleFdp()
+{
+	$contenu = $_POST['editContenu'];
+	$id = $_GET['edit_articleFdp_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE articles_fdp SET contenu = :contenu WHERE id = :id');
+	$req->execute(array(
+		'contenu' => $contenu,
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function deleteArticleFdp()
+{
+	$id = $_GET['edit_articleFdp_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('DELETE FROM articles_fdp WHERE id = :id');
+	$req->execute(array(
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function publierArticleFdp()
+{
+	$id = $_GET['edit_articleFdp_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE articles_fdp SET statut = \'posted\' WHERE id = :id');
+	$req->execute(array(
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
+function retirerArticleFdp()
+{
+	$id = $_GET['edit_articleFdp_id'];
+
+	$db = dbConnect();
+	$req = $db->prepare('UPDATE articles_fdp SET statut = \'save\' WHERE id = :id');
+	$req->execute(array(
+		'id' => $id));
+
+	$req->closeCursor();
+}
+
 ################################ PARTIE GESTION COMMENTAIRES #############################
 
 function publier_comment()
@@ -250,6 +334,14 @@ function getMemes()
 
 }
 
+function getArticlesFdp()
+{
+	$db = dbConnect();
+	$req = $db->query('SELECT id, image, titre, contenu, statut, DATE_FORMAT(date_creation,\'%d/%m/%Y\') AS date_creation_fr FROM articles_fdp ORDER BY date_creation DESC');
+	return $req;
+	$req->closeCursor();
+}
+
 
 ############################ ARTICLE ADMIN INDIVIDUEL #####################################
 
@@ -288,6 +380,26 @@ function getMemeComments()
 {
 	$db = dbConnect();
 	$req = $db->prepare('SELECT id, auteur, comment, statut, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM memes_comments WHERE id_meme = "new" ORDER BY date_comment');
+	$req->execute(array());
+
+	return $req;
+	$req->closeCursor();
+}
+
+function getArticleFdp()
+{
+	$db = dbConnect();
+	$req = $db->prepare('SELECT id, image, titre, contenu, statut, DATE_FORMAT(date_creation,\'%d/%m/%Y\') AS date_creation_fr FROM articles_fdp WHERE id = :articleFdp_id');
+		$req->execute(array('articleFdp_id' => $_GET['edit_articleFdp_id']));
+
+	return $req;
+	$req->closeCursor();
+}
+
+function getCommentsFdp()
+{
+	$db = dbConnect();
+	$req = $db->prepare('SELECT id, auteur, comment, statut, DATE_FORMAT(date_comment, \'%d/%m/%y\') AS date_comments_fr FROM articlesfdp_comments WHERE id_articleFdp = "new" ORDER BY date_comment');
 	$req->execute(array());
 
 	return $req;

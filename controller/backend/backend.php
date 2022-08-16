@@ -20,6 +20,12 @@ function gestionMemesView()
 	require('../../view/backend/gestionMemesView.php');
 }
 
+function gestionArticlesFdpView()
+{
+	getArticlesFdp();
+	require('../../view/backend/gestionPetitFdpView.php');
+}
+
 function addArticlesView()
 {
 		getArticles();
@@ -152,7 +158,72 @@ function addMemesView()
 	}
 }
 
-// ##############################################################################
+// #################################ADD ARTICLE FDP#############################################
+
+function addArticleFdpView()
+{
+		getArticlesFdp();
+
+		################################# SI RAJOUT D'UN ARTICLE ########################
+
+	if (isset($_POST['contenu']) && !empty($_POST['contenu']) && isset($_POST['titre']) && !empty($_POST['titre']))
+	{
+		$target_dir = "../../public/image/articleFdp/";
+		$target_file = $target_dir . basename($_FILES['fileselect']['name']);
+
+		if (file_exists($target_file))
+			{
+				echo 'Nom de fichier image déjà existant dans la base de donnée.';
+				require('../../view/backend/addArticleFdpView.php');
+			}
+			else
+			{
+				move_uploaded_file($_FILES['fileselect']['tmp_name'], $target_file);
+				addArticleFdp();
+				require('../../view/backend/gestionPetitFdpView.php');
+			}
+	}
+
+	################### SI EDITION D'UN ARTICLE ############################
+
+	elseif (isset($_POST['editContenu']) && !empty($_POST['editContenu']) && isset($_POST['editTitre']) && !empty($_POST['editTitre'])) 
+	{
+		updateArticleFdp();
+		$editDone = TRUE;
+		require('../../view/backend/addArticleFdpView.php');
+		echo 'CONTROLLER : CONSIGNE ENVOYEE POUR MODIF LE TEXTE VIA MODEL';
+	}
+
+##################### EDITION DE L'IMAGE #####################################
+
+	elseif (isset($_FILES['fileselect']))
+	{
+		$target_dir = "../../public/image/articleFdp/";
+		$target_file = $target_dir . basename($_FILES['fileselect']['name']);
+		if (file_exists($target_file))
+		{
+			#### Supprime ancien fichier pour le remplacer par le new ######
+			echo 'Nom de fichier image déjà existant dans la base de donnée veuillez le renommer.';
+			require('../../view/backend/addArticleFdpView.php');
+			echo 'CONTROLLER : CONSIGNE ENVOYEE POUR IMAGE VIA MODEL';
+		}
+		else
+		{
+			move_uploaded_file($_FILES['fileselect']['tmp_name'], $target_file);
+			echo 'IMAGE THEoRIQUEMENT ENREGISTRE';
+			updateImgArticleFdp();
+			require('../../view/backend/addArticleFdpView.php');
+			echo 'CONTROLLER : CONSIGNE ENVOYEE POUR IMAGE VIA MODEL';
+		}
+	}
+	else 
+	{
+		require('../../view/backend/addArticleFdpView.php');
+		echo 'TEXTE OU IMAGE NON ENREGISTRE';
+	}
+}
+
+###########################################################################
 
 function adminArticleView()
 {
@@ -231,6 +302,46 @@ function adminMemeView()
 	else
 	{
 		require('../../view/backend/adminMemeView.php');
+	}
+}
+
+function adminArticleFdpView()
+{
+	getArticlesFdp();
+	getCommentsFdp();
+	if (isset($_POST['supprimer']))
+	{
+		deleteArticleFdp();
+		require('../../view/backend/gestionPetitFdpView.php');
+	}
+	elseif (isset($_POST['publier']))
+	{
+		publierArticleFdp();
+		require('../../view/backend/adminArticleFdpView.php');
+	}
+	elseif (isset($_POST['retirer']))
+	{
+		retirerArticleFdp();
+		require('../../view/backend/adminArticleFdpView.php');
+	}
+	elseif (isset($_POST['publier_comment']))
+	{
+		publier_commentFdp();
+		require('../../view/backend/adminArticleFdpView.php');
+	}
+	elseif (isset($_POST['supprimer_comment']))
+	{
+		supprimer_commentFdp();
+		require('../../view/backend/adminArticleFdpView.php');
+	}
+	elseif (isset($_POST['retirer_comment']))
+	{
+		retirer_commentFdp();
+		require('../../view/backend/adminArticleFdpView.php');
+	}
+	else
+	{
+		require('../../view/backend/adminArticleFdpView.php');
 	}
 }
 
