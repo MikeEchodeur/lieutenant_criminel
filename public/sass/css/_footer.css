@@ -1,0 +1,53 @@
+footer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #303030;
+  height: 175px;
+  color: white;
+  z-index: 100; }
+  footer .copyright a {
+    text-decoration: underline;
+    color: white; }
+  footer .picto_sociaux {
+    display: flex;
+    justify-content: end;
+    font-size: 30px;
+    position: sticky;
+    left: 75%; }
+    footer .picto_sociaux .share-insta {
+      color: #C32AA3; }
+      footer .picto_sociaux .share-insta:hover {
+        color: #C32AA3; }
+    footer .picto_sociaux .share-youtube {
+      color: #E62117;
+      cursor: not-allowed; }
+      footer .picto_sociaux .share-youtube:hover {
+        color: #E62117; }
+    footer .picto_sociaux .share-fb {
+      color: #3B5998; }
+      footer .picto_sociaux .share-fb:hover {
+        color: #3B5998; }
+    footer .picto_sociaux .share-linkedin {
+      color: #0e76a8; }
+      footer .picto_sociaux .share-linkedin:hover {
+        color: #0e76a8; }
+
+.chevron {
+  height: 30px;
+  width: 30px;
+  background-color: #D3BF8D;
+  border-radius: 50%;
+  position: sticky;
+  bottom: 10px;
+  margin-top: 10px; }
+  .chevron .fas {
+    color: white;
+    margin-left: 6px;
+    margin-top: 2.7px;
+    font-size: 21px; }
+    .chevron .fas:hover {
+      color: black;
+      opacity: 0.3; }

@@ -51,6 +51,8 @@
 
     <body id=" ">
 
+        <?php include("navPrincipale.php"); ?>
+
         <header class="banniere">
             <a href="index.php">
             	<h1 media="(min-width: 800px)">Mike Echo</h1>

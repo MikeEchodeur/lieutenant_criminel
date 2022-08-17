@@ -8,23 +8,37 @@ nav
 	background-color: #D3BF8D;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 0px;
-	z-index: 100;
 	font-size: 18px;
 	font-family: 'Black Ops One', cursive;
 
-	a{
+	a
+	{
 		text-decoration: none;
 		text-align: center;
 		margin-right: 20px;
 		color: #6D6D6D;
-		&:hover{
+		&:hover
+		{
 			//background-color: #ADADAD;
 			color: #2A2A2A;
 		}
 	}
 
-	
+	@include mobile-only
+	{
+		width: 100%;
+		
+		a{
+			padding: 0px;
+		}
+	}
+}
+
+.navbar-expand-md
+{
+	top: 0px;
+	z-index: 100;
+
 	.div_collapse
 	{
 		margin:7px;
@@ -32,52 +46,29 @@ nav
 		left: 10px;
 		button
 		{
-		text-align: left;
-		color: grey;
-		display: flex;
+			text-align: left;
+			color: grey;
+			display: flex;
 		}
 	}
 
-	.picto_sociaux{
-	display: flex;
-	justify-content: end;
-	font-size: 30px;
-	position: sticky;
-	left: 75%;
-		.share-insta{
-			color:#C32AA3;
-			&:hover{
-				color: #C32AA3;
-			}
-		}
-		.share-youtube{
-			color: #E62117;
-			cursor: not-allowed;
-			&:hover{
-				color: #E62117;
-			}
-		}
-
-		.share-fb{
-			color:#3B5998;
-			&:hover{
-				color: #3B5998;
-			}
-		}
-		.share-linkedin{
-			color:#0e76a8;
-			&:hover{
-				color: #0e76a8;
-			}
-		}
-	}
-
-	@include mobile-only
+	.userNavbar
 	{
-		width: 100%;
-		a{
-			padding: 0px;
-		}
+		display: flex;
 	}
 }
 
+.navbarArticles
+{
+	top: 30px;
+	z-index: 100;
+	justify-content: center;
+
+	&__liste
+	{	
+		display: flex;
+		max-width: 1357px;
+		width: 100%;
+		justify-content: space-around;
+	}
+}
