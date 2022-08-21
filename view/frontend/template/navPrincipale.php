@@ -1,18 +1,6 @@
-<nav class="navbar-expand-md">
-    
-    <div class="div_collapse">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-        <i class="fas fa-bars fa-lg"></i>
-        </button>
-    </div>
+<nav class="navbarHome">
 	
-    <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
-        <li><a href="https://www.agneugneu-lifestyle.com" target="_blank">Boutique</a></li><br>
-        <li><a href="index.php?action=rules">Règles d'engagement</a></li><br>
-        <li><a href="index.php?action=partenaires">Partenaires</a></li><br>
-    </div>
-
-    <div class="userNavbar">
+    <div class="navbarHome__user">
         <li><a href="index.php?action=contact">Contacts</a></li><br>
 
         <!-- FAIRE APPARAITRE L'ADMINISTRATION DU SITE ICI-->
@@ -32,4 +20,15 @@
             <li><a href="index.php?action=disconnect">Déconnexion</a></li>
         <?php } ?>
     </div>
+
+    <div class="navbarHome__menu">
+        <button type="button" class="navbarHome__menu__collapse"><i class="material-icons" style="font-size:36px">menu</i></button>
+        <div class="navbarHome__menu__list">
+            <li><a href="https://www.agneugneu-lifestyle.com" target="_blank">Boutique</a></li><br>
+            <li><a href="index.php?action=rules">Règles d'engagement</a></li><br>
+            <li><a href="index.php?action=partenaires">Partenaires</a></li><br>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="public/js/navPrincipale.js"></script>
 </nav>

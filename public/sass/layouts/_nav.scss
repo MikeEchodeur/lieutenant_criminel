@@ -6,8 +6,6 @@ nav
 	border: 1px solid;
 	border-color: #A7976E;
 	background-color: #D3BF8D;
-	position: -webkit-sticky;
-	position: sticky;
 	font-size: 18px;
 	font-family: 'Black Ops One', cursive;
 
@@ -27,41 +25,54 @@ nav
 	@include mobile-only
 	{
 		width: 100%;
-		
+
 		a{
 			padding: 0px;
 		}
 	}
 }
 
-.navbar-expand-md
+.navbarHome
 {
+	height: 60px;
 	top: 0px;
 	z-index: 100;
+	position: -webkit-sticky;
+	position: sticky;
+	display: flex;
+	justify-content: flex-end;
 
-	.div_collapse
-	{
-		margin:7px;
-		height:30px;
-		left: 10px;
-		button
-		{
-			text-align: left;
-			color: grey;
-			display: flex;
-		}
-	}
-
-	.userNavbar
+	&__user
 	{
 		display: flex;
+		align-items: center;
+	}
+
+	&__menu{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		&__collapse {
+			width: 60px;
+	 		cursor: pointer;
+	 		border: none;
+	  		outline: none;
+		}
+		&__list {
+			max-height: 0;
+			visibility: hidden;
+			transition: max-height 0.2s ease-out;
+			background-color: #f1f1f1;
+		}
+		.active, &__collapse:hover {
+			background-color: #555;
+		}
 	}
 }
 
-.navbarArticles
+.navbarForBody
 {
-	top: 30px;
-	z-index: 100;
+	z-index: 99;
 	justify-content: center;
 
 	&__liste
