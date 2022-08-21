@@ -161,13 +161,14 @@ nav {
       width: 200px;
       max-height: 0;
       visibility: hidden;
-      transition: max-height 0.2s ease-out;
       background-color: #f1f1f1; }
     .navbarHome__menu .active, .navbarHome__menu__collapse:hover {
       background-color: #555; }
 
 .navbarForBody {
   z-index: 99;
+  position: sticky;
+  top: 40px;
   justify-content: center; }
   .navbarForBody__liste {
     display: flex;
