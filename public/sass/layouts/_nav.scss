@@ -34,7 +34,7 @@ nav
 
 .navbarHome
 {
-	height: 60px;
+	height: 40px;
 	top: 0px;
 	z-index: 100;
 	position: -webkit-sticky;
@@ -49,16 +49,22 @@ nav
 	}
 
 	&__menu{
+		width: 60px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
+		margin-top: auto;
 		&__collapse {
-			width: 60px;
 	 		cursor: pointer;
 	 		border: none;
 	  		outline: none;
+	  		display: flex;
+	  		justify-content: center;
+	  		align-items: center;
+	  		background-color: #D3BF8D;
 		}
 		&__list {
+			width: 200px;
 			max-height: 0;
 			visibility: hidden;
 			transition: max-height 0.2s ease-out;

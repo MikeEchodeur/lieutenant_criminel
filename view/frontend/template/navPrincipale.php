@@ -22,7 +22,9 @@
     </div>
 
     <div class="navbarHome__menu">
-        <button type="button" class="navbarHome__menu__collapse"><i class="material-icons" style="font-size:36px">menu</i></button>
+        <button type="button" class="navbarHome__menu__collapse">
+            <i class="material-icons" style="font-size:36px">menu</i>
+        </button>
         <div class="navbarHome__menu__list">
             <li><a href="https://www.agneugneu-lifestyle.com" target="_blank">Boutique</a></li><br>
             <li><a href="index.php?action=rules">Règles d'engagement</a></li><br>
