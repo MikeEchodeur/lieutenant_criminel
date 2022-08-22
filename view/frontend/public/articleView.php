@@ -1,4 +1,3 @@
-
 <!-- Partie body du site -->
 
 <?php ob_start(); ?>
@@ -7,8 +6,9 @@
 	$req = getArticle();
 	while ($data = $req->fetch())
 	{
-$image = $data['image']; 
-$title = $data['titre']; ?>
+$ogImage = $data['image']; 
+$title = $data['titre'];
+$ogContent = $data['contenu']; ?>
 <div class="mainAndFb">
 
 		<div class="focus_article">

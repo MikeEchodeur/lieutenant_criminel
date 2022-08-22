@@ -1,4 +1,4 @@
-<?php $title = 'Memes - Lieutenant Criminel'; ?>
+<?php $title = 'Memes'; ?>
 
 <?php ob_start(); ?>
 
@@ -7,7 +7,9 @@
 	$test = getMemes();
 	$random_memes = randMemes();
 	while ($data = $test->fetch())
-	{ ?>
+	{ 
+		$ogContent = $data['contenu'];
+		$ogImage = $data['image']; ?>
 		<article class="memes">
 
 			<div class="memes__nav">
