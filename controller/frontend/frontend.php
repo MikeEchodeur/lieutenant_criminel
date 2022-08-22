@@ -4,6 +4,7 @@ require('model/frontend/frontend.php');
 
 function homeView()
 {
+	$title = false;
 	getArticles();
 	require('view/frontend/public/allArticlesView.php');
 }
