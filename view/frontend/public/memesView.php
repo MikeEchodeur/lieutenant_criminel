@@ -8,7 +8,6 @@
 	$random_memes = randMemes();
 	while ($data = $test->fetch())
 	{ 
-		$ogContent = $data['contenu'];
 		$ogImage = $data['image']; ?>
 		<article class="memes">
 
