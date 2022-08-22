@@ -27,6 +27,9 @@
     <!-- ################## OPEN GRAPH pour reseau sociaux #################### -->
 
     <meta property="og:image" content="<?= $image ?>" />
+    <meta property="og:image:secure_url" content="<?= $image ?>" />
+    <meta property="og:title" content="Lieutenant-Criminel"/>
+    <meta property="og:description" content="<?= $title?>"/>
     
     <title><?= $title ?></title>
 
