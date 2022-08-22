@@ -30,7 +30,8 @@
 			<div class="articleFdp__indiv">
 				<?php $test = getArticlesFdp();
 				while ($data = $test->fetch())
-				{ $ogContent = $data['titre']?>
+				{	$ogContent = $data['titre'];
+					$ogImage = $data['image'];?>
 					<h1 class="articleFdp__indiv__titre"> <?=$data['titre']?> 
 					</h1>
 					<div class="articleFdp__indiv__img">
