@@ -6,6 +6,8 @@
 
 <p>Vous avez <a href="admin.php?gestion_comments"><?php echo $nbrComments; ?> nouveaux commentaires</a></p>
 
+<p>Nouveaux commentaires dans la partie du petit FDP : <?= $nbrNewCommentFdp?></p>
+
 
 <?php $content = ob_get_clean(); ?>
 

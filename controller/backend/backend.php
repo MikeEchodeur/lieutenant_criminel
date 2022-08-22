@@ -5,6 +5,7 @@ function adminView()
 {
 	$nbrComments = getNbrComments();
 	$nbrUsers = getNbrUsers();
+	$nbrNewCommentFdp = getNbrCommentsFdp();
 	require('../../view/backend/adminView.php');
 }
 

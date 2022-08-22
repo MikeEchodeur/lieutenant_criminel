@@ -62,7 +62,7 @@
 
         <header class="banniere">
             <a href="index.php">
-            	<h1 media="(min-width: 800px)">Mike Echo</h1>
+            	<h1 media="(min-width: 800px)" style="text-transform:uppercase">Mike Echo</h1>
                 <picture>
                     <source media="(max-width: 799px" srcset="public/image/mike-echo_fb.jpg">
                     <source media="(min-width: 800px)" srcset="public/image/banner-me.jpg">

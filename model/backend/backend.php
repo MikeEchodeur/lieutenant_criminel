@@ -416,6 +416,16 @@ function getNbrUsers()
 	$req->closeCursor();
 }
 
+function getNbrCommentsFdp()
+{
+	$db = dbConnect();
+	$req = $db->query('SELECT COUNT(id) FROM articlesfdp_comments WHERE statut="new"');
+	$nbrNewCommentFdp = $req->fetchColumn();
+
+	return $nbrNewCommentFdp;
+	$req->closeCursor();
+}
+
 
 //                      ######## CONNECTION A LA DB ########
 
