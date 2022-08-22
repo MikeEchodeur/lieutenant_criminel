@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
 
     <!-- ############# FAVICON ############ -->
-    <!--<link rel="apple-touch-icon" sizes="57x57" href="public/image/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/image/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="public/image/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="public/image/favicon/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="public/image/favicon/apple-icon-76x76.png">
@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="shortcut icon" type="image/x-icon" href="public/image/favicon.ico" />-->
+    <link rel="shortcut icon" type="image/x-icon" href="public/image/favicon.ico" />
 
     <!-- ################## OPEN GRAPH pour reseau sociaux #################### -->
 
