@@ -7,8 +7,7 @@
 	while ($data = $req->fetch())
 	{
 $ogImage = $data['image']; 
-$title = $data['titre'];
-$ogContent = $data['contenu'];?>
+$title = $data['titre'];?>
 <div class="mainAndFb">
 
 		<div class="focus_article">

@@ -8,8 +8,7 @@
 	$random_memes = randMemes();
 	while ($data = $test->fetch())
 	{ 
-		$ogImage = $data['image'];
-		$ogContent = $data['contenu'] ?>
+		$ogImage = $data['image'];?>
 		<article class="memes">
 
 			<div class="memes__nav">
