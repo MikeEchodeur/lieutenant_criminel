@@ -1,4 +1,5 @@
-<?php $title = 'Le petit FDP Illustré - Lieutenant Criminel'; ?>
+<?php $title = 'Le petit FDP Illustré - Lieutenant Criminel'; 
+$image = 'test;'?>
 
 <?php ob_start(); ?>
 
