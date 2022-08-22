@@ -1,4 +1,4 @@
-<?php $title = 'Article - Lieutenant Criminel'; ?>
+<?php $title = 'Partenaires - Lieutenant Criminel'; ?>
 
 
 <!-- Partie body du site -->

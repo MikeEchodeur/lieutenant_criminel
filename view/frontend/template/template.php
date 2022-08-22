@@ -23,7 +23,10 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="shortcut icon" type="image/x-icon" href="public/image/favicon.ico" />
-    <!-- ###################################### -->
+
+    <!-- ################## OPEN GRAPH pour reseau sociaux #################### -->
+
+    <meta property="og:image" content="<?= $image ?>" />
     
     <title><?= $title ?></title>
 

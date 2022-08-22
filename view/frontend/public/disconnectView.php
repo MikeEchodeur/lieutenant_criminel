@@ -1,4 +1,4 @@
-<?php $title = 'Déconnecion - Lieutenant Criminel'; ?>
+<?php $title = 'Déconnexion - Lieutenant Criminel'; ?>
 
 <?php ob_start(); ?>
 <div class='connect'>

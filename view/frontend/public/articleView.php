@@ -1,16 +1,16 @@
-<?php $title = 'Article - Lieutenant Criminel'; ?>
-
 
 <!-- Partie body du site -->
 
 <?php ob_start(); ?>
-<div class="mainAndFb">
 
-	<?php 
-
+<?php 
 	$req = getArticle();
 	while ($data = $req->fetch())
-	{ ?>
+	{
+$image = $data['image']; 
+$title = $data['titre']; ?>
+<div class="mainAndFb">
+
 		<div class="focus_article">
 			<h2>
 				<?= $data['titre']; ?><br />

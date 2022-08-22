@@ -1,4 +1,4 @@
-<?php $title = 'Lieutenant Criminel'; ?>
+<?php $title = 'Contact - Lieutenant Criminel'; ?>
 
 
 <!-- Partie body du site -->
