@@ -63,7 +63,7 @@
 
         <?php include("navPrincipale.php"); ?>
 
-        <!--<header class="banniere">
+        <header class="banniere">
             <a href="index.php">
             	<h1 media="(min-width: 800px)" style="text-transform:uppercase">Mike Echo</h1>
                 <picture>
@@ -72,7 +72,7 @@
                     <img src="public/image/Mike-echologo.png" alt="Banniere du site">
                 </picture>
             </a>
-        </header>-->
+        </header>
 
         <?php include("nav.php"); ?>
 
