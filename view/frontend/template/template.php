@@ -28,7 +28,7 @@
 
     <meta property="og:image" content="<?= $image ?>" />
     
-    <title><?php if($title =! false) {echo $title;} else {echo 'Lieutenant-criminel';} ?></title>
+    <title><?= $title ?></title>
 
     <!-- AJOUT LIBRAIRIE POUR BOOTSTRAP POUR LE COLLAPSE -->
 
