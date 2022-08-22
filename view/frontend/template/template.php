@@ -31,7 +31,7 @@
     <meta property="og:title" content="<?= $title?>"/>
     <meta property="og:description" content="<?= $title?>"/>
     
-    <!--<title><?= $title ?></title>-->
+    <title><?= $title ?></title>
 
     <!-- AJOUT LIBRAIRIE POUR BOOTSTRAP POUR LE COLLAPSE -->
 
