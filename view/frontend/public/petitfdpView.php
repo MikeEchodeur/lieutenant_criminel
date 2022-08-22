@@ -1,5 +1,4 @@
-<?php $title = 'Le petit FDP Illustré - Lieutenant Criminel';
-$ogContent = 'Article du petit fdp illustré'?>
+<?php $title = 'Le petit FDP Illustré - Lieutenant Criminel';?>
 
 <?php ob_start(); ?>
 
@@ -31,7 +30,7 @@ $ogContent = 'Article du petit fdp illustré'?>
 			<div class="articleFdp__indiv">
 				<?php $test = getArticlesFdp();
 				while ($data = $test->fetch())
-				{ ?>
+				{ $ogContent = $data['titre']?>
 					<h1 class="articleFdp__indiv__titre"> <?=$data['titre']?> 
 					</h1>
 					<div class="articleFdp__indiv__img">
