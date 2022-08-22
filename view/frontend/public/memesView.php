@@ -1,4 +1,5 @@
-<?php $title = 'Memes'; ?>
+<?php $title = 'Memes'; 
+$ogContent = 'Ne loupez pas ce même !';?>
 
 <?php ob_start(); ?>
 

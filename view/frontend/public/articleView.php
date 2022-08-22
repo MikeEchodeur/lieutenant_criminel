@@ -1,11 +1,11 @@
 <!-- Partie body du site -->
-
 <?php ob_start(); ?>
 
 <?php 
 	$req = getArticle();
 	while ($data = $req->fetch())
 	{
+		$ogContent = 'Un article qui en vaut le détour !';
 $ogImage = $data['image']; 
 $title = $data['titre'];?>
 <div class="mainAndFb">
