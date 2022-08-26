@@ -43,6 +43,10 @@
 			text-transform: uppercase;
 			font-size: 100px;
 			max-width: 100%;
+			@include mobile-only
+			{
+				font-size: 50px;
+			}
 		}
 		&__img
 		{
