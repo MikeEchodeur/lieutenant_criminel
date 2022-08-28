@@ -528,10 +528,14 @@ form#form_registration {
     .articleFdp__indiv__img img {
       max-width: 60%; }
     .articleFdp__indiv__resume {
+      margin: auto;
       column-count: 3;
-      column-rule: solid black;
-      width: 100%;
+      column-rule: solid black 1px;
+      width: 90%;
       text-align: justify; }
+      @media screen and (max-width: 599px) {
+        .articleFdp__indiv__resume {
+          column-count: 1; } }
 
 .ME {
   font-weight: bold;

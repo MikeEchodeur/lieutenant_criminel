@@ -26,6 +26,8 @@
 						</a>
 				<?php } ?>
 			</div>
+
+			<hr width="80%" align="center"> 
 			
 			<div class="articleFdp__indiv">
 				<?php $test = getArticlesFdp();
@@ -37,16 +39,21 @@
 					<div class="articleFdp__indiv__img">
 						<img src="<?= $data['image'];?>"/>
 					</div>
-					<p class="articleFdp__indiv__resume">
+					<br>
+					<div class="articleFdp__indiv__resume">
 						<?=$data['contenu']?>
 						<br />
-					</p>
+					</div>
+					<br>
+					<br>
 					<em class="articleFdp__indiv__date">
 						Publié le <?= $data['date_creation_fr']; ?>
 					</em>
 				<?php } ?>
 			</div>
 
+			<br>
+			<br>
 			<div class="writeComment">
 				<h2>Commentaires : </h2> 
 
